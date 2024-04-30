@@ -1,6 +1,4 @@
 name: Generate and deploy Doxygen documentation
-description: |
-  Generate Doxygen documentation and deploy it to GitHub Pages.
 
 on:
   push:
