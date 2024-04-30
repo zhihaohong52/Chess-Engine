@@ -23,6 +23,9 @@ jobs:
       working-directory: ${{ github.workspace }}
 
     - name: Deploy to GitHub Pages
+      permissions:
+        contents: write
+        pages: write
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
