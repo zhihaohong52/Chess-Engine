@@ -270,4 +270,7 @@ extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
 extern int MakeMove(S_BOARD *pos, int move);
 extern void TakeMove(S_BOARD *pos);
 
+// perft.c
+extern void PerftTest(int depth, S_BOARD *pos);
+
 #endif
