@@ -17,7 +17,7 @@ jobs:
         run: sudo apt-get install doxygen
 
       - name: Generate Doxygen documentation
-        run: doxygen Doxyfile
+        run: doxygen doxyfile
         working-directory: ${{ github.workspace }}
 
       - name: Deploy Doxygen documentation
