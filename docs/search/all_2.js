@@ -13,10 +13,11 @@ var searchData=
   ['castle2_10',['CASTLE2',['../vice_8c.html#a158c9e2831a4d4f177cf3eeae732fe4e',1,'vice.c']]],
   ['castlekeys_11',['CastleKeys',['../defs_8h.html#a6ca9e201015eea408b71908751d1bb17',1,'CastleKeys:&#160;init.c'],['../init_8c.html#a6ca9e201015eea408b71908751d1bb17',1,'CastleKeys:&#160;init.c']]],
   ['castleperm_12',['castlePerm',['../struct_s___u_n_d_o.html#a1d3f3f28248a912d30cbde433c77e4fc',1,'S_UNDO::castlePerm'],['../struct_s___b_o_a_r_d.html#a2a3f51cb7821bb2a5a60075ae4200ced',1,'S_BOARD::castlePerm']]],
-  ['checkboard_13',['CheckBoard',['../defs_8h.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c'],['../board_8c.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c']]],
-  ['clearmask_14',['ClearMask',['../defs_8h.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask:&#160;init.c'],['../init_8c.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask:&#160;init.c']]],
-  ['clrbit_15',['CLRBIT',['../defs_8h.html#a830a4070e4e3f75c23dd580cf56561f8',1,'defs.h']]],
-  ['cnt_16',['CNT',['../defs_8h.html#af8c668a2d1e2661c09162bda27fc7ec7',1,'defs.h']]],
-  ['count_17',['count',['../struct_s___m_o_v_e_l_i_s_t.html#a4be6ff93290554ed36a1967406ff60c6',1,'S_MOVELIST']]],
-  ['countbits_18',['CountBits',['../defs_8h.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c'],['../bitboard_8c.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c']]]
+  ['castleperm_13',['CastlePerm',['../makemove_8c.html#a39da5875f12590c1733a0b0d61727197',1,'makemove.c']]],
+  ['checkboard_14',['CheckBoard',['../defs_8h.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c'],['../board_8c.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c']]],
+  ['clearmask_15',['ClearMask',['../defs_8h.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask:&#160;init.c'],['../init_8c.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask:&#160;init.c']]],
+  ['clrbit_16',['CLRBIT',['../defs_8h.html#a830a4070e4e3f75c23dd580cf56561f8',1,'defs.h']]],
+  ['cnt_17',['CNT',['../defs_8h.html#af8c668a2d1e2661c09162bda27fc7ec7',1,'defs.h']]],
+  ['count_18',['count',['../struct_s___m_o_v_e_l_i_s_t.html#a4be6ff93290554ed36a1967406ff60c6',1,'S_MOVELIST']]],
+  ['countbits_19',['CountBits',['../defs_8h.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c'],['../bitboard_8c.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c']]]
 ];

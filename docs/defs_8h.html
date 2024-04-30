@@ -394,6 +394,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae2be60666ed0e5f82fa409c250b4e054" id="r_ae2be60666ed0e5f82fa409c250b4e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:ae2be60666ed0e5f82fa409c250b4e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all moves.  <br /></td></tr>
 <tr class="separator:ae2be60666ed0e5f82fa409c250b4e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9c3644fe98d2e1a3d9ac7f68e40937c2" id="r_a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3644fe98d2e1a3d9ac7f68e40937c2">MakeMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, int move)</td></tr>
+<tr class="memdesc:a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a move.  <br /></td></tr>
+<tr class="separator:a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae8ebe63f27996af9d769245539d7a9fd" id="r_ae8ebe63f27996af9d769245539d7a9fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:ae8ebe63f27996af9d769245539d7a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take back a move.  <br /></td></tr>
+<tr class="separator:ae8ebe63f27996af9d769245539d7a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -445,6 +451,9 @@ Variables</h2></td></tr>
 <tr class="memitem:a36ac123ba56c6eaf84ccdc76ce46eb33" id="r_a36ac123ba56c6eaf84ccdc76ce46eb33"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a36ac123ba56c6eaf84ccdc76ce46eb33">PieceCol</a> [13]</td></tr>
 <tr class="memdesc:a36ac123ba56c6eaf84ccdc76ce46eb33"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrays for the piece colors.  <br /></td></tr>
 <tr class="separator:a36ac123ba56c6eaf84ccdc76ce46eb33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afe5271efe6502a972b37d04f2d3188cb" id="r_afe5271efe6502a972b37d04f2d3188cb"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afe5271efe6502a972b37d04f2d3188cb">PiecePawn</a> [13]</td></tr>
+<tr class="memdesc:afe5271efe6502a972b37d04f2d3188cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrays for the pawn pieces.  <br /></td></tr>
+<tr class="separator:afe5271efe6502a972b37d04f2d3188cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac16a2fd356966459ce481edcdde858d2" id="r_ac16a2fd356966459ce481edcdde858d2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac16a2fd356966459ce481edcdde858d2">FilesBrd</a> [<a class="el" href="#a92bbcebd1f24130a0c0e62a08083aa61">BRD_SQ_NUM</a>]</td></tr>
 <tr class="memdesc:ac16a2fd356966459ce481edcdde858d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Board files.  <br /></td></tr>
 <tr class="separator:ac16a2fd356966459ce481edcdde858d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1453,6 +1462,47 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a9c3644fe98d2e1a3d9ac7f68e40937c2" name="a9c3644fe98d2e1a3d9ac7f68e40937c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9c3644fe98d2e1a3d9ac7f68e40937c2">&#9670;&#160;</a></span>MakeMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MakeMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>move</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to make a move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>Move to make </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int TRUE if move is made, FALSE if move leaves king in check </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00176">176</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
 <a id="ae1947aedff90dd90cd9ad0db1b884a57" name="ae1947aedff90dd90cd9ad0db1b884a57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1947aedff90dd90cd9ad0db1b884a57">&#9670;&#160;</a></span>ParseFen()</h2>
 
@@ -1933,6 +1983,41 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ae8ebe63f27996af9d769245539d7a9fd" name="ae8ebe63f27996af9d769245539d7a9fd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae8ebe63f27996af9d769245539d7a9fd">&#9670;&#160;</a></span>TakeMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TakeMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to take back a move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00286">286</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
 <a id="aea43ba2bdbb26b6de990979798de7e0f" name="aea43ba2bdbb26b6de990979798de7e0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea43ba2bdbb26b6de990979798de7e0f">&#9670;&#160;</a></span>UpdateListMaterial()</h2>
 
@@ -2147,7 +2232,7 @@ Variables</h2></td></tr>
 
 <p>Arrays for the bishop and queen pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00090">90</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00096">96</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -2225,7 +2310,7 @@ Variables</h2></td></tr>
 
 <p>Arrays for the king pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00078">78</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00084">84</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -2251,7 +2336,7 @@ Variables</h2></td></tr>
 
 <p>Arrays for the knight pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00072">72</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00078">78</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -2307,6 +2392,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afe5271efe6502a972b37d04f2d3188cb" name="afe5271efe6502a972b37d04f2d3188cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afe5271efe6502a972b37d04f2d3188cb">&#9670;&#160;</a></span>PiecePawn</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int PiecePawn[13]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Arrays for the pawn pieces. </p>
+
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00072">72</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+
+</div>
+</div>
 <a id="a7a5b719221e04c059e327856dac82cdd" name="a7a5b719221e04c059e327856dac82cdd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7a5b719221e04c059e327856dac82cdd">&#9670;&#160;</a></span>PieceRookQueen</h2>
 
@@ -2329,7 +2440,7 @@ Variables</h2></td></tr>
 
 <p>Arrays for the rook and queen pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00084">84</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00090">90</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -2355,7 +2466,7 @@ Variables</h2></td></tr>
 
 <p>Arrays for the sliding pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00096">96</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00102">102</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>

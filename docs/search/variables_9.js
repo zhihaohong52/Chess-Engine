@@ -12,11 +12,12 @@ var searchData=
   ['pieceknight_9',['PieceKnight',['../defs_8h.html#a0e27e834feae01a2b6dd40705c498c4d',1,'PieceKnight:&#160;data.c'],['../data_8c.html#a0e27e834feae01a2b6dd40705c498c4d',1,'PieceKnight:&#160;data.c']]],
   ['piecemaj_10',['PieceMaj',['../defs_8h.html#af6502ec880965eb7e063e41a1ef57f2f',1,'PieceMaj:&#160;data.c'],['../data_8c.html#af6502ec880965eb7e063e41a1ef57f2f',1,'PieceMaj:&#160;data.c']]],
   ['piecemin_11',['PieceMin',['../defs_8h.html#a58caabc8040772e31e16f2c8d70f0c70',1,'PieceMin:&#160;data.c'],['../data_8c.html#a58caabc8040772e31e16f2c8d70f0c70',1,'PieceMin:&#160;data.c']]],
-  ['piecerookqueen_12',['PieceRookQueen',['../defs_8h.html#a7a5b719221e04c059e327856dac82cdd',1,'PieceRookQueen:&#160;data.c'],['../data_8c.html#a7a5b719221e04c059e327856dac82cdd',1,'PieceRookQueen:&#160;data.c']]],
-  ['pieces_13',['pieces',['../struct_s___b_o_a_r_d.html#a10af844d96e5843dea94034af0d7fa23',1,'S_BOARD']]],
-  ['pieceslides_14',['PieceSlides',['../defs_8h.html#aa3d6307973cd43a6689b062e54c04602',1,'PieceSlides:&#160;data.c'],['../data_8c.html#aa3d6307973cd43a6689b062e54c04602',1,'PieceSlides:&#160;data.c']]],
-  ['pieceval_15',['PieceVal',['../defs_8h.html#a7f1f5ad2930443439408abfdd1bc6e73',1,'PieceVal:&#160;data.c'],['../data_8c.html#a7f1f5ad2930443439408abfdd1bc6e73',1,'PieceVal:&#160;data.c']]],
-  ['plist_16',['pList',['../struct_s___b_o_a_r_d.html#a0152d2c1e65473d9d3651f726a3d57ea',1,'S_BOARD']]],
-  ['ply_17',['ply',['../struct_s___b_o_a_r_d.html#ab5ddeb2c57129fbde0422e79af74d8a9',1,'S_BOARD']]],
-  ['poskey_18',['posKey',['../struct_s___u_n_d_o.html#a0569bf94ccf97183e2c5b8ad52a1aa98',1,'S_UNDO::posKey'],['../struct_s___b_o_a_r_d.html#a6e80f556de443dc1ac2bca165aa97989',1,'S_BOARD::posKey']]]
+  ['piecepawn_12',['PiecePawn',['../defs_8h.html#afe5271efe6502a972b37d04f2d3188cb',1,'PiecePawn:&#160;data.c'],['../data_8c.html#afe5271efe6502a972b37d04f2d3188cb',1,'PiecePawn:&#160;data.c']]],
+  ['piecerookqueen_13',['PieceRookQueen',['../defs_8h.html#a7a5b719221e04c059e327856dac82cdd',1,'PieceRookQueen:&#160;data.c'],['../data_8c.html#a7a5b719221e04c059e327856dac82cdd',1,'PieceRookQueen:&#160;data.c']]],
+  ['pieces_14',['pieces',['../struct_s___b_o_a_r_d.html#a10af844d96e5843dea94034af0d7fa23',1,'S_BOARD']]],
+  ['pieceslides_15',['PieceSlides',['../defs_8h.html#aa3d6307973cd43a6689b062e54c04602',1,'PieceSlides:&#160;data.c'],['../data_8c.html#aa3d6307973cd43a6689b062e54c04602',1,'PieceSlides:&#160;data.c']]],
+  ['pieceval_16',['PieceVal',['../defs_8h.html#a7f1f5ad2930443439408abfdd1bc6e73',1,'PieceVal:&#160;data.c'],['../data_8c.html#a7f1f5ad2930443439408abfdd1bc6e73',1,'PieceVal:&#160;data.c']]],
+  ['plist_17',['pList',['../struct_s___b_o_a_r_d.html#a0152d2c1e65473d9d3651f726a3d57ea',1,'S_BOARD']]],
+  ['ply_18',['ply',['../struct_s___b_o_a_r_d.html#ab5ddeb2c57129fbde0422e79af74d8a9',1,'S_BOARD']]],
+  ['poskey_19',['posKey',['../struct_s___u_n_d_o.html#a0569bf94ccf97183e2c5b8ad52a1aa98',1,'S_UNDO::posKey'],['../struct_s___b_o_a_r_d.html#a6e80f556de443dc1ac2bca165aa97989',1,'S_BOARD::posKey']]]
 ];
