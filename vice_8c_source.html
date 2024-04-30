@@ -75,33 +75,29 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defs_8h.html">defs.h</a>&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vice_8c.html#a18cedd10194013fab07b7ca02763502d">   44</a></span>&#160;<span class="preprocessor">#define CASTLE1 &quot;r3k2r/8/8/8/8/8/8/R3K2R w KQkq - 0 1&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="vice_8c.html#a158c9e2831a4d4f177cf3eeae732fe4e">   45</a></span>&#160;<span class="preprocessor">#define CASTLE2 &quot;r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structS__BOARD.html">S_BOARD</a> board[1];</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structS__MOVELIST.html">S_MOVELIST</a> list[1];</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a>(<a class="code" href="vice_8c.html#a158c9e2831a4d4f177cf3eeae732fe4e">CASTLE2</a>, board);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <a class="code" href="defs_8h.html#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a>(board, list);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <a class="code" href="defs_8h.html#a962a285cdfc1ec24237ca176f29a6108">PrintMoveList</a>(list);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vice_8c.html#a6c6224dc44358034791048ad65ad49cb">   44</a></span>&#160;<span class="preprocessor">#define PERFTFEN &quot;r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1&quot;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <a class="code" href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structS__BOARD.html">S_BOARD</a> board[1];</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structS__MOVELIST.html">S_MOVELIST</a> list[1];</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a>(<a class="code" href="vice_8c.html#a6c6224dc44358034791048ad65ad49cb">PERFTFEN</a>, board);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <a class="code" href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">PerftTest</a>(4, board);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 <div class="ttc" id="adefs_8h_html"><div class="ttname"><a href="defs_8h.html">defs.h</a></div><div class="ttdoc">Contains definitions for the game.</div></div>
+<div class="ttc" id="adefs_8h_html_a1b6b13d186dab20a18cec1a6b041220b"><div class="ttname"><a href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">PerftTest</a></div><div class="ttdeci">void PerftTest(int depth, S_BOARD *pos)</div><div class="ttdoc">Function for testing the move generation using perft.</div><div class="ttdef"><b>Definition:</b> <a href="perft_8c_source.html#l00058">perft.c:58</a></div></div>
 <div class="ttc" id="adefs_8h_html_a89b8e68174211698218707504bb03c1f"><div class="ttname"><a href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a></div><div class="ttdeci">void AllInit()</div><div class="ttdoc">Initializes the board.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00171">init.c:171</a></div></div>
-<div class="ttc" id="adefs_8h_html_a962a285cdfc1ec24237ca176f29a6108"><div class="ttname"><a href="defs_8h.html#a962a285cdfc1ec24237ca176f29a6108">PrintMoveList</a></div><div class="ttdeci">void PrintMoveList(const S_MOVELIST *list)</div><div class="ttdoc">Prints the move list.</div><div class="ttdef"><b>Definition:</b> <a href="io_8c_source.html#l00073">io.c:73</a></div></div>
 <div class="ttc" id="adefs_8h_html_ae1947aedff90dd90cd9ad0db1b884a57"><div class="ttname"><a href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a></div><div class="ttdeci">int ParseFen(char *fen, S_BOARD *pos)</div><div class="ttdoc">Parse the FEN string.</div><div class="ttdef"><b>Definition:</b> <a href="board_8c_source.html#l00149">board.c:149</a></div></div>
-<div class="ttc" id="adefs_8h_html_ae2be60666ed0e5f82fa409c250b4e054"><div class="ttname"><a href="defs_8h.html#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a></div><div class="ttdeci">void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list)</div><div class="ttdoc">Generate all moves.</div><div class="ttdef"><b>Definition:</b> <a href="movegen_8c_source.html#l00203">movegen.c:203</a></div></div>
 <div class="ttc" id="astructS__BOARD_html"><div class="ttname"><a href="structS__BOARD.html">S_BOARD</a></div><div class="ttdoc">Structure to store the board.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00130">defs.h:130</a></div></div>
 <div class="ttc" id="astructS__MOVELIST_html"><div class="ttname"><a href="structS__MOVELIST.html">S_MOVELIST</a></div><div class="ttdoc">Structure to store a list of moves.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00107">defs.h:107</a></div></div>
-<div class="ttc" id="avice_8c_html_a158c9e2831a4d4f177cf3eeae732fe4e"><div class="ttname"><a href="vice_8c.html#a158c9e2831a4d4f177cf3eeae732fe4e">CASTLE2</a></div><div class="ttdeci">#define CASTLE2</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00045">vice.c:45</a></div></div>
-<div class="ttc" id="avice_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00052">vice.c:52</a></div></div>
+<div class="ttc" id="avice_8c_html_a6c6224dc44358034791048ad65ad49cb"><div class="ttname"><a href="vice_8c.html#a6c6224dc44358034791048ad65ad49cb">PERFTFEN</a></div><div class="ttdeci">#define PERFTFEN</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00044">vice.c:44</a></div></div>
+<div class="ttc" id="avice_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00051">vice.c:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
