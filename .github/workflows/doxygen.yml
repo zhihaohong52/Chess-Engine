@@ -10,6 +10,9 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pages: write
 
     steps:
     - name: Checkout repository
@@ -23,9 +26,6 @@ jobs:
       working-directory: ${{ github.workspace }}
 
     - name: Deploy to GitHub Pages
-      permissions:
-        contents: write
-        pages: write
       uses: peaceiris/actions-gh-pages@v3
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
