@@ -252,7 +252,7 @@ int ParseFen(char *fen, S_BOARD *pos) {
 }
 
 /**
- * @brief Print the board
+ * @brief Reset the board
  *
  * @param pos Pointer to the board
  */
@@ -295,9 +295,6 @@ void ResetBoard(S_BOARD *pos) {
     pos->castlePerm = 0;
 
     pos->posKey = 0ULL;
-
-    InitPvTable(pos->PvTable);
-
 }
 
 /**

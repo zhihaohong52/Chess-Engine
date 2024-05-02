@@ -24,6 +24,31 @@ static void CheckUp() {
 }
 
 /**
+ * @brief Pick the next move based on the score
+ *
+ * @param moveNum Move number
+ * @param list Pointer to the move list
+ */
+static void PickNextMove(int moveNum, S_MOVELIST *list) {
+
+    S_MOVE temp;
+    int index = 0;
+    int bestScore = 0;
+    int bestNum = moveNum;
+
+    for (index = moveNum; index < list->count; ++index) {
+        if (list->moves[index].score > bestScore) {
+            bestScore = list->moves[index].score;
+            bestNum = index;
+        }
+    }
+
+    temp = list->moves[moveNum];
+    list->moves[moveNum] = list->moves[bestNum];
+    list->moves[bestNum] = temp;
+}
+
+/**
  * @brief Check if the position is a repetition
  *
  * @param pos Pointer to the board
@@ -127,8 +152,20 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
     int OldAlpha = alpha;
     int BestMove = NOMOVE;
     int Score = -INFINITE;
+    int PvMove = ProbePvTable(pos);
+
+    if (PvMove != NOMOVE) {
+        for (MoveNum = 0; MoveNum < list->count; ++MoveNum) {
+            if (list->moves[MoveNum].move == PvMove) {
+                list->moves[MoveNum].score = 2000000;
+                break;
+            }
+        }
+    }
 
     for(MoveNum = 0; MoveNum < list->count; ++MoveNum) {
+
+        PickNextMove(MoveNum, list);
 
         if (!MakeMove(pos, list->moves[MoveNum].move)) {
             continue;
@@ -140,14 +177,23 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 
         if (Score > alpha) {
             if (Score >= beta) {
-                if (Legal == 0) {
+                if (Legal == 1) {
                     info->fhf++;
                 }
                 info->fh++;
+
+                if(!(list->moves[MoveNum].move & MFLAGCAP)) {
+                    pos->searchKillers[1][pos->ply] = pos->searchKillers[0][pos->ply];
+                    pos->searchKillers[0][pos->ply] = list->moves[MoveNum].move;
+                }
+
                 return beta;
             }
             alpha = Score;
             BestMove = list->moves[MoveNum].move;
+            if(!(list->moves[MoveNum].move & MFLAGCAP)) {
+                pos->searchHistory[pos->pieces[FROMSQ(BestMove)]][TOSQ(BestMove)] += depth;
+            }
         }
     }
 
@@ -189,7 +235,7 @@ void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info) {
 
         pvMoves = GetPvLine(currentDepth, pos);
         bestMove = pos->PvArray[0];
-        printf("Depth:%d score:%d move:%s nodes%ld ",
+        printf("Depth:%d score:%d move:%s nodes:%ld ",
             currentDepth, bestScore, PrMove(bestMove), info->nodes);
         printf("pv");
         for (pvNum = 0; pvNum < pvMoves; ++pvNum) {

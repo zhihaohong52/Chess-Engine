@@ -64,6 +64,34 @@ const int PceDir[13][8] = {
 };
 
 /**
+ * @brief Scores for each piece when they are the victim
+ *
+ */
+const int VictimScore[13] = { 0, 100, 200, 300, 400, 500, 600, 100, 200, 300, 400, 500, 600 };
+
+/**
+ * @brief Scores for each piece when they are the attacker
+ *
+ */
+static int MvvLvaScores[13][13];
+
+/**
+ * @brief Initialize the MvvLvaScores array
+ *
+ * @return int
+ */
+int InitMvvLva() {
+	int Attacker;
+	int Victim;
+
+	for(Attacker = wP; Attacker <= bK; ++Attacker) {
+		for(Victim = wP; Victim <= bK; ++Victim) {
+			MvvLvaScores[Victim][Attacker] = VictimScore[Victim] + 6 - (VictimScore[Attacker] / 100);
+		}
+	}
+}
+
+/**
  * @brief Array of number of directions for each piece
  *
  */
@@ -106,7 +134,14 @@ int MoveExists(S_BOARD *pos, const int move) {
  */
 static void AddQuietMove(const S_BOARD *pos, int move, S_MOVELIST *list) {
     list->moves[list->count].move = move;
-    list->moves[list->count].score = 0;
+
+	if(pos->searchKillers[0][pos->ply] == move) {
+		list->moves[list->count].score = 900000;
+	} else if(pos->searchKillers[1][pos->ply] == move) {
+		list->moves[list->count].score = 800000;
+	} else {
+		list->moves[list->count].score = pos->searchHistory[pos->pieces[FROMSQ(move)]][TOSQ(move)];
+	}
     list->count++;
 }
 
@@ -119,7 +154,7 @@ static void AddQuietMove(const S_BOARD *pos, int move, S_MOVELIST *list) {
  */
 static void AddCaptureMove(const S_BOARD *pos, int move, S_MOVELIST *list) {
     list->moves[list->count].move = move;
-    list->moves[list->count].score = 0;
+    list->moves[list->count].score = MvvLvaScores[CAPTURED(move)][pos->pieces[FROMSQ(move)]] + 1000000;
     list->count++;
 }
 
@@ -132,7 +167,7 @@ static void AddCaptureMove(const S_BOARD *pos, int move, S_MOVELIST *list) {
  */
 static void AddEnPassantMove(const S_BOARD *pos, int move, S_MOVELIST *list) {
     list->moves[list->count].move = move;
-    list->moves[list->count].score = 0;
+    list->moves[list->count].score = 105 + 1000000;
     list->count++;
 }
 

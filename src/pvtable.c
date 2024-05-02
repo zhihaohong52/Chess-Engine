@@ -23,7 +23,7 @@ int GetPvLine(const int depth, S_BOARD *pos) {
 
     ASSERT(depth < MAXDEPTH);
 
-    int move = ProbePVTable(pos);
+    int move = ProbePvTable(pos);
     int count = 0;
 
     while (move != NOMOVE && count < depth) {
@@ -36,7 +36,7 @@ int GetPvLine(const int depth, S_BOARD *pos) {
         } else {
             break;
         }
-        move = ProbePVTable(pos);
+        move = ProbePvTable(pos);
     }
 
     while(pos->ply > 0) {
@@ -105,7 +105,7 @@ void StorePvMove(const S_BOARD *pos, const int move) {
  * @param pos Pointer to the board
  * @return int The move from the PV table
  */
-int ProbePVTable(const S_BOARD *pos) {
+int ProbePvTable(const S_BOARD *pos) {
 
     int index = pos->posKey % pos->PvTable->numEntries;
     ASSERT(index >= 0 && index <= pos->PvTable->numEntries - 1);
