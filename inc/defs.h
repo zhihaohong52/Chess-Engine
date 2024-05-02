@@ -37,6 +37,7 @@ typedef unsigned long long U64;
 
 #define MAXGAMEMOVES 2048
 #define MAXPOSITIONMOVES 256
+#define MAXDEPTH 64
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
@@ -110,8 +111,26 @@ typedef struct {
 } S_MOVELIST;
 
 /**
+ * @brief Structure to store the principal variation entry
+ * @details The principal variation entry stores the position key of the best move and the best move
+ */
+typedef struct {
+    U64 posKey;
+    int move;
+} S_PVENTRY;
+
+/**
+ * @brief Structure to store the principal variation table
+ * @details The principal variation table stores the table and the number of entries
+ */
+typedef struct {
+    S_PVENTRY *pTable;
+    int numEntries;
+} S_PVTABLE;
+
+/**
  * @brief Structure to store the history of the game
- *
+ * @details The history of the game stores the move, the castling permissions, the en passant square, the fifty move rule and the position key
  */
 typedef struct{
 
@@ -155,6 +174,10 @@ typedef struct {
     // Piece list
     int pList[13][10];
 
+    // Principal variation table
+    S_PVTABLE PvTable[1];
+    int PvArray[MAXDEPTH];
+
 } S_BOARD;
 
 /* GAME MOVE */
@@ -180,6 +203,8 @@ typedef struct {
 
 #define MFLAGCAP 0x7C000
 #define MFLAGPROM 0xF00000
+
+#define NOMOVE 0
 
 /* MACROS */
 
@@ -254,6 +279,7 @@ extern int SqAttacked(const int sq, const int side, const S_BOARD *pos);
 // io.c
 extern char *PrMove(const int move);
 extern char *PrSq(const int sq);
+extern int ParseMove(char *ptrChar, S_BOARD *pos);
 extern void PrintMoveList(const S_MOVELIST *list);
 
 // validate.c
@@ -265,6 +291,7 @@ extern int PieceValid(const int pce);
 
 // movegen.c
 extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
+extern int MoveExists(S_BOARD *pos, const int move);
 
 // makemove.c
 extern int MakeMove(S_BOARD *pos, int move);
@@ -272,5 +299,17 @@ extern void TakeMove(S_BOARD *pos);
 
 // perft.c
 extern void PerftTest(int depth, S_BOARD *pos);
+
+// search.c
+extern void SearchPosition(S_BOARD *pos);
+
+// misc.c
+extern int GetTimeMs();
+
+// pvtable.c
+extern void InitPvTable(S_PVTABLE *table);
+extern void StorePvMove(const S_BOARD *pos, const int move);
+extern int ProbePvTable(const S_BOARD *pos);
+extern int GetPvLine(const int depth, S_BOARD *pos);
 
 #endif

@@ -72,6 +72,32 @@ const int NumDir[13] = {
 };
 
 /**
+ * @brief Check if move exists
+ *
+ * @param pos Pointer to the board
+ * @param move The move to be checked
+ * @return int TRUE if move exists, FALSE otherwise
+ */
+int MoveExists(S_BOARD *pos, const int move) {
+
+	S_MOVELIST list[1];
+	GenerateAllMoves(pos,list);
+
+	int MoveNum = 0;
+	for (MoveNum = 0; MoveNum < list->count; ++MoveNum) {
+
+		if (!MakeMove(pos,list->moves[MoveNum].move)) {
+			continue;
+		}
+		TakeMove(pos);
+		if (list->moves[MoveNum].move == move) {
+			return TRUE;
+		}
+	}
+	return FALSE;
+}
+
+/**
  * @brief Add a quiet move (non-capture move) to the move list
  *
  * @param pos Pointer to the board
