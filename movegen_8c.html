@@ -91,6 +91,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a9cef5ab5191a75c2b168711c50c756db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movegen_8c.html#a9cef5ab5191a75c2b168711c50c756db">MoveExists</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move)</td></tr>
+<tr class="memdesc:a9cef5ab5191a75c2b168711c50c756db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if move exists.  <a href="movegen_8c.html#a9cef5ab5191a75c2b168711c50c756db">More...</a><br /></td></tr>
+<tr class="separator:a9cef5ab5191a75c2b168711c50c756db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2be60666ed0e5f82fa409c250b4e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="movegen_8c.html#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__MOVELIST.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:ae2be60666ed0e5f82fa409c250b4e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all moves.  <a href="movegen_8c.html#ae2be60666ed0e5f82fa409c250b4e054">More...</a><br /></td></tr>
 <tr class="separator:ae2be60666ed0e5f82fa409c250b4e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,7 +232,47 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00209">209</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00235">235</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
+<a id="a9cef5ab5191a75c2b168711c50c756db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef5ab5191a75c2b168711c50c756db">&#9670;&nbsp;</a></span>MoveExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MoveExists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>move</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if move exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>The move to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int TRUE if move exists, FALSE otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00081">81</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -266,10 +309,10 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a>, 0, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a>, 0</div>
 <div class="line">}</div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a></div><div class="ttdeci">@ wN</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a></div><div class="ttdeci">@ bN</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a></div><div class="ttdeci">@ bK</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a></div><div class="ttdeci">@ wK</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a></div><div class="ttdeci">@ wN</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a></div><div class="ttdeci">@ bN</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a></div><div class="ttdeci">@ bK</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a></div><div class="ttdeci">@ wK</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
 </div><!-- fragment -->
 <p>Array of non-sliding pieces. </p>
 
@@ -309,12 +352,12 @@ Variables</h2></td></tr>
 <b>Initial value:</b><div class="fragment"><div class="line">= {</div>
 <div class="line">    <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a>, 0, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a>, <a class="code" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a>, 0</div>
 <div class="line">}</div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a></div><div class="ttdeci">@ bQ</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a></div><div class="ttdeci">@ wR</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a></div><div class="ttdeci">@ bR</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a></div><div class="ttdeci">@ bB</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a></div><div class="ttdeci">@ wB</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
-<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a></div><div class="ttdeci">@ wQ</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00047">defs.h:47</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a></div><div class="ttdeci">@ bQ</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a></div><div class="ttdeci">@ wR</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a></div><div class="ttdeci">@ bR</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a></div><div class="ttdeci">@ bB</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a></div><div class="ttdeci">@ wB</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a></div><div class="ttdeci">@ wQ</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00048">defs.h:48</a></div></div>
 </div><!-- fragment -->
 <p>Array of sliding pieces. </p>
 

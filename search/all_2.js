@@ -15,8 +15,9 @@ var searchData=
   ['castleperm_47',['castlePerm',['../structS__UNDO.html#a1d3f3f28248a912d30cbde433c77e4fc',1,'S_UNDO']]],
   ['checkboard_48',['CheckBoard',['../defs_8h.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c'],['../board_8c.html#a94a8326712cd3ca77f7e99e5a7ce2663',1,'CheckBoard(const S_BOARD *pos):&#160;board.c']]],
   ['clearmask_49',['ClearMask',['../defs_8h.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask():&#160;init.c'],['../init_8c.html#a19e9932fb4839e5799a52f94c26d8feb',1,'ClearMask():&#160;init.c']]],
-  ['clrbit_50',['CLRBIT',['../defs_8h.html#a830a4070e4e3f75c23dd580cf56561f8',1,'defs.h']]],
-  ['cnt_51',['CNT',['../defs_8h.html#af8c668a2d1e2661c09162bda27fc7ec7',1,'defs.h']]],
-  ['count_52',['count',['../structS__MOVELIST.html#a4be6ff93290554ed36a1967406ff60c6',1,'S_MOVELIST']]],
-  ['countbits_53',['CountBits',['../defs_8h.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c'],['../bitboard_8c.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c']]]
+  ['clearpvtable_50',['ClearPVTable',['../pvtable_8c.html#a556b9334758c28b314b954be088eff0f',1,'pvtable.c']]],
+  ['clrbit_51',['CLRBIT',['../defs_8h.html#a830a4070e4e3f75c23dd580cf56561f8',1,'defs.h']]],
+  ['cnt_52',['CNT',['../defs_8h.html#af8c668a2d1e2661c09162bda27fc7ec7',1,'defs.h']]],
+  ['count_53',['count',['../structS__MOVELIST.html#a4be6ff93290554ed36a1967406ff60c6',1,'S_MOVELIST']]],
+  ['countbits_54',['CountBits',['../defs_8h.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c'],['../bitboard_8c.html#ac3175e5b15b2b236d8ba40f395819d21',1,'CountBits(U64 b):&#160;bitboard.c']]]
 ];
