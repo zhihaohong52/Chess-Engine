@@ -41,6 +41,9 @@ typedef unsigned long long U64;
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
+#define INFINITE 30000
+#define MATE 29000
+
 /**
  * @brief Enum to store the pieces
  *
@@ -178,7 +181,35 @@ typedef struct {
     S_PVTABLE PvTable[1];
     int PvArray[MAXDEPTH];
 
+    // Search history
+    int searchHistory[13][BRD_SQ_NUM];
+    int searchKillers[2][MAXDEPTH];
+
 } S_BOARD;
+
+/**
+ * @brief Structure to store the search information
+ *
+ */
+typedef struct {
+
+    int starttime;
+    int stoptime;
+    int depth;
+    int depthset;
+    int timeset;
+    int movestogo;
+    int infinite;
+
+    long nodes;
+
+    int quit;
+    int stopped;
+
+    float fh;
+    float fhf;
+
+} S_SEARCHINFO;
 
 /* GAME MOVE */
 
@@ -301,15 +332,19 @@ extern void TakeMove(S_BOARD *pos);
 extern void PerftTest(int depth, S_BOARD *pos);
 
 // search.c
-extern void SearchPosition(S_BOARD *pos);
+extern void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info);
 
 // misc.c
 extern int GetTimeMs();
 
 // pvtable.c
 extern void InitPvTable(S_PVTABLE *table);
+extern void ClearPVTable(S_PVTABLE *table);
 extern void StorePvMove(const S_BOARD *pos, const int move);
-extern int ProbePvTable(const S_BOARD *pos);
+extern int ProbePVTable(const S_BOARD *pos);
 extern int GetPvLine(const int depth, S_BOARD *pos);
+
+// evaluate.c
+extern int EvalPosition(const S_BOARD *pos);
 
 #endif
