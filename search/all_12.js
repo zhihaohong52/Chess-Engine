@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['u64_258',['U64',['../defs_8h.html#a24c386d3758eba951eb7532fdbb45804',1,'defs.h']]],
-  ['updatelistmaterial_259',['UpdateListMaterial',['../defs_8h.html#aea43ba2bdbb26b6de990979798de7e0f',1,'UpdateListMaterial(S_BOARD *pos):&#160;board.c'],['../board_8c.html#aea43ba2bdbb26b6de990979798de7e0f',1,'UpdateListMaterial(S_BOARD *pos):&#160;board.c']]]
+  ['takemove_276',['TakeMove',['../defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c'],['../makemove_8c.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c']]],
+  ['timeset_277',['timeset',['../structS__SEARCHINFO.html#a2187179aef950847fa745d80dd831254',1,'S_SEARCHINFO']]],
+  ['tosq_278',['TOSQ',['../defs_8h.html#a1376416d3a0e870a9a1241b3a54a3f9b',1,'defs.h']]],
+  ['true_279',['TRUE',['../defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839',1,'defs.h']]]
 ];

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['enpas_341',['enPas',['../structS__UNDO.html#a0ab58faf0b329a9edfa07eee661f2d6a',1,'S_UNDO::enPas()'],['../structS__BOARD.html#a40c058c192f1fa2efe7072add2bc47d0',1,'S_BOARD::enPas()']]]
+  ['depth_366',['depth',['../structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO']]],
+  ['depthset_367',['depthset',['../structS__SEARCHINFO.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]]
 ];

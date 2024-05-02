@@ -67,6 +67,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#define-members">Macros</a> &#124;
 <a href="#func-members">Functions</a>  </div>
   <div class="headertitle">
 <div class="title">search.c File Reference</div>  </div>
@@ -80,10 +81,18 @@ $(function() {
 </div>
 <p><a href="search_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+Macros</h2></td></tr>
+<tr class="memitem:aa84a29002ab81c719c0d07bb446296e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="search_8c.html#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a>&#160;&#160;&#160;30000</td></tr>
+<tr class="separator:aa84a29002ab81c719c0d07bb446296e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92076e18b8b8909efb14e068b531bce3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="search_8c.html#a92076e18b8b8909efb14e068b531bce3">MATE</a>&#160;&#160;&#160;29000</td></tr>
+<tr class="separator:a92076e18b8b8909efb14e068b531bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ac078ccb2cf46c9a4f407974d478ee8e6"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="search_8c.html#ac078ccb2cf46c9a4f407974d478ee8e6">IsRepetition</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
-<tr class="separator:ac078ccb2cf46c9a4f407974d478ee8e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612414d1ad97c743f6e54d20e4b32e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="search_8c.html#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a612414d1ad97c743f6e54d20e4b32e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterative deepening search.  <a href="search_8c.html#a612414d1ad97c743f6e54d20e4b32e37">More...</a><br /></td></tr>
+<tr class="separator:a612414d1ad97c743f6e54d20e4b32e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains functions to search the board. </p>
@@ -93,24 +102,76 @@ Functions</h2></td></tr>
 <dl class="section copyright"><dt>Copyright</dt><dd>Copyright (c) 2024 </dd></dl>
 
 <p class="definition">Definition in file <a class="el" href="search_8c_source.html">search.c</a>.</p>
-</div><h2 class="groupheader">Function Documentation</h2>
-<a id="ac078ccb2cf46c9a4f407974d478ee8e6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac078ccb2cf46c9a4f407974d478ee8e6">&#9670;&nbsp;</a></span>IsRepetition()</h2>
+</div><h2 class="groupheader">Macro Definition Documentation</h2>
+<a id="aa84a29002ab81c719c0d07bb446296e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a29002ab81c719c0d07bb446296e0">&#9670;&nbsp;</a></span>INFINITE</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int IsRepetition </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
+          <td class="memname">#define INFINITE&#160;&#160;&#160;30000</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00015">15</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
+
+</div>
+</div>
+<a id="a92076e18b8b8909efb14e068b531bce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92076e18b8b8909efb14e068b531bce3">&#9670;&nbsp;</a></span>MATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MATE&#160;&#160;&#160;29000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00016">16</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Function Documentation</h2>
+<a id="a612414d1ad97c743f6e54d20e4b32e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612414d1ad97c743f6e54d20e4b32e37">&#9670;&nbsp;</a></span>SearchPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SearchPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Iterative deepening search. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">info</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00175">175</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
 
 </div>
 </div>

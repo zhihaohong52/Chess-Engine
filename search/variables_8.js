@@ -1,5 +1,8 @@
 var searchData=
 [
-  ['numdir_360',['NumDir',['../movegen_8c.html#a5b2cd45fa3a5dba79ecef57e855a1ea8',1,'movegen.c']]],
-  ['numentries_361',['numEntries',['../structS__PVTABLE.html#acc1bc9eefe3be54cf98c7a885e65b3b3',1,'S_PVTABLE']]]
+  ['leafnodes_381',['leafNodes',['../perft_8c.html#ad24c58317cf924b00d49ef408dbc5825',1,'perft.c']]],
+  ['loopnonslideindex_382',['LoopNonSlideIndex',['../movegen_8c.html#a8b76d903ac6bea68521020b6ae9c2c08',1,'movegen.c']]],
+  ['loopnonslidepce_383',['LoopNonSlidePce',['../movegen_8c.html#aa241d1d0c35dbaeaec3f39e901f39a54',1,'movegen.c']]],
+  ['loopslideindex_384',['LoopSlideIndex',['../movegen_8c.html#af3a74ec2a7f0f48a812764de59ac887d',1,'movegen.c']]],
+  ['loopslidepce_385',['LoopSlidePce',['../movegen_8c.html#aaad861bd80c2de89515b64fc4dda1d71',1,'movegen.c']]]
 ];

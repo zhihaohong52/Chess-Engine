@@ -75,7 +75,7 @@ $(function() {
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defs_8h.html">defs.h</a>&quot;</span></div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vice_8c.html#a6c6224dc44358034791048ad65ad49cb">   44</a></span>&#160;<span class="preprocessor">#define PERFTFEN &quot;n1n5/PPPk4/8/8/8/8/4Kppp/5N1N w - - 0 1&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vice_8c.html#af1a88e288a3cdadff3b391b6fc60bb18">   44</a></span>&#160;<span class="preprocessor">#define WAC1 &quot;2rr3k/pp3pp1/1nnqbN1p/3pN3/2pP4/2P3Q1/PPB4P/R4RK1 w - - 0 1&quot;</span></div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
 <div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   51</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
@@ -83,64 +83,59 @@ $(function() {
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="structS__BOARD.html">S_BOARD</a> board[1];</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <a class="code" href="structS__MOVELIST.html">S_MOVELIST</a> list[1];</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a>(<a class="code" href="defs_8h.html#a580227094908aca72cf64f75d55c86df">START_FEN</a>, board);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordtype">char</span> input[6];</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">int</span> Move = <a class="code" href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> PvNum = 0;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> Max = 0;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a>) {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <a class="code" href="defs_8h.html#a5e19e1ebce3b579abec184a164e21801">PrintBoard</a>(board);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        printf(<span class="stringliteral">&quot;Please enter a move &gt; &quot;</span>);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        fgets(input, 6, stdin);</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;q&#39;</span>) {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;t&#39;</span>) {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a>(board);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;p&#39;</span>) {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// PerftTest(4, board);</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            Max = <a class="code" href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a>(4, board);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            printf(<span class="stringliteral">&quot;PvLine of %d moves: &quot;</span>, Max);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">for</span> (PvNum = 0; PvNum &lt; Max; ++PvNum) {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                Move = board-&gt;<a class="code" href="structS__BOARD.html#af37d6fc7e64837f2a2fc5da3baa676f1">PvArray</a>[PvNum];</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                printf(<span class="stringliteral">&quot; %s&quot;</span>, <a class="code" href="defs_8h.html#a011a99274a4b8aa5c4c692bb8085277c">PrMove</a>(Move));</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            printf(<span class="stringliteral">&quot;\n&quot;</span>);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            Move = <a class="code" href="defs_8h.html#a3501422a21fb0b37cf1573dd4f410a60">ParseMove</a>(input, board);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordflow">if</span> (Move != <a class="code" href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a>) {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <a class="code" href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a>(board, Move);</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <a class="code" href="defs_8h.html#a9c3644fe98d2e1a3d9ac7f68e40937c2">MakeMove</a>(board, Move);</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                printf(<span class="stringliteral">&quot;Move not parsed: %s\n&quot;</span>, input);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        fflush(stdin);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;}</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> info[1];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a>(<a class="code" href="defs_8h.html#a580227094908aca72cf64f75d55c86df">START_FEN</a>, board);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    <span class="keywordtype">char</span> input[6];</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    <span class="keywordtype">int</span> Move = <a class="code" href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">int</span> PvNum = 0;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordtype">int</span> Max = 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a>) {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="defs_8h.html#a5e19e1ebce3b579abec184a164e21801">PrintBoard</a>(board);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        printf(<span class="stringliteral">&quot;Please enter a move &gt; &quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        fgets(input, 6, stdin);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;q&#39;</span>) {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;t&#39;</span>) {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <a class="code" href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a>(board);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (input[0] == <span class="charliteral">&#39;s&#39;</span>) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            info-&gt;<a class="code" href="structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695">depth</a> = 4;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <a class="code" href="defs_8h.html#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a>(board, info);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            Move = <a class="code" href="defs_8h.html#a3501422a21fb0b37cf1573dd4f410a60">ParseMove</a>(input, board);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordflow">if</span> (Move != <a class="code" href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a>) {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                <a class="code" href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a>(board, Move);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <a class="code" href="defs_8h.html#a9c3644fe98d2e1a3d9ac7f68e40937c2">MakeMove</a>(board, Move);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            } <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                printf(<span class="stringliteral">&quot;Move not parsed: %s\n&quot;</span>, input);</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        fflush(stdin);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
 <div class="ttc" id="adefs_8h_html"><div class="ttname"><a href="defs_8h.html">defs.h</a></div><div class="ttdoc">Contains definitions for the game.</div></div>
-<div class="ttc" id="adefs_8h_html_a011a99274a4b8aa5c4c692bb8085277c"><div class="ttname"><a href="defs_8h.html#a011a99274a4b8aa5c4c692bb8085277c">PrMove</a></div><div class="ttdeci">char * PrMove(const int move)</div><div class="ttdoc">Prints the move.</div><div class="ttdef"><b>Definition:</b> <a href="io_8c_source.html#l00040">io.c:40</a></div></div>
 <div class="ttc" id="adefs_8h_html_a3501422a21fb0b37cf1573dd4f410a60"><div class="ttname"><a href="defs_8h.html#a3501422a21fb0b37cf1573dd4f410a60">ParseMove</a></div><div class="ttdeci">int ParseMove(char *ptrChar, S_BOARD *pos)</div><div class="ttdoc">Function to parse the move and return the integer representation.</div><div class="ttdef"><b>Definition:</b> <a href="io_8c_source.html#l00075">io.c:75</a></div></div>
 <div class="ttc" id="adefs_8h_html_a37bd5789d5621c17f3ffe3e790cdd33b"><div class="ttname"><a href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a></div><div class="ttdeci">void StorePvMove(const S_BOARD *pos, const int move)</div><div class="ttdoc">Function to store the principal variation move.</div><div class="ttdef"><b>Definition:</b> <a href="pvtable_8c_source.html#l00093">pvtable.c:93</a></div></div>
 <div class="ttc" id="adefs_8h_html_a580227094908aca72cf64f75d55c86df"><div class="ttname"><a href="defs_8h.html#a580227094908aca72cf64f75d55c86df">START_FEN</a></div><div class="ttdeci">#define START_FEN</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00042">defs.h:42</a></div></div>
 <div class="ttc" id="adefs_8h_html_a5e19e1ebce3b579abec184a164e21801"><div class="ttname"><a href="defs_8h.html#a5e19e1ebce3b579abec184a164e21801">PrintBoard</a></div><div class="ttdeci">void PrintBoard(const S_BOARD *pos)</div><div class="ttdoc">Print the board.</div><div class="ttdef"><b>Definition:</b> <a href="board_8c_source.html#l00308">board.c:308</a></div></div>
-<div class="ttc" id="adefs_8h_html_a5fb1e2c08e9bc21f6412285f5a74c02f"><div class="ttname"><a href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a></div><div class="ttdeci">#define NOMOVE</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00207">defs.h:207</a></div></div>
-<div class="ttc" id="adefs_8h_html_a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839"><div class="ttname"><a href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a></div><div class="ttdeci">@ TRUE</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00087">defs.h:87</a></div></div>
+<div class="ttc" id="adefs_8h_html_a5fb1e2c08e9bc21f6412285f5a74c02f"><div class="ttname"><a href="defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a></div><div class="ttdeci">#define NOMOVE</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00238">defs.h:238</a></div></div>
+<div class="ttc" id="adefs_8h_html_a612414d1ad97c743f6e54d20e4b32e37"><div class="ttname"><a href="defs_8h.html#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a></div><div class="ttdeci">void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info)</div><div class="ttdoc">Iterative deepening search.</div><div class="ttdef"><b>Definition:</b> <a href="search_8c_source.html#l00175">search.c:175</a></div></div>
+<div class="ttc" id="adefs_8h_html_a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839"><div class="ttname"><a href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a></div><div class="ttdeci">@ TRUE</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00090">defs.h:90</a></div></div>
 <div class="ttc" id="adefs_8h_html_a89b8e68174211698218707504bb03c1f"><div class="ttname"><a href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a></div><div class="ttdeci">void AllInit()</div><div class="ttdoc">Initializes the board.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00171">init.c:171</a></div></div>
 <div class="ttc" id="adefs_8h_html_a9c3644fe98d2e1a3d9ac7f68e40937c2"><div class="ttname"><a href="defs_8h.html#a9c3644fe98d2e1a3d9ac7f68e40937c2">MakeMove</a></div><div class="ttdeci">int MakeMove(S_BOARD *pos, int move)</div><div class="ttdoc">Function to make a move.</div><div class="ttdef"><b>Definition:</b> <a href="makemove_8c_source.html#l00176">makemove.c:176</a></div></div>
-<div class="ttc" id="adefs_8h_html_ac6648b94e86e3f2eab1d4f0f2f721a86"><div class="ttname"><a href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a></div><div class="ttdeci">int GetPvLine(const int depth, S_BOARD *pos)</div><div class="ttdoc">Get the Pv Line object.</div><div class="ttdef"><b>Definition:</b> <a href="pvtable_8c_source.html#l00022">pvtable.c:22</a></div></div>
 <div class="ttc" id="adefs_8h_html_ae1947aedff90dd90cd9ad0db1b884a57"><div class="ttname"><a href="defs_8h.html#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a></div><div class="ttdeci">int ParseFen(char *fen, S_BOARD *pos)</div><div class="ttdoc">Parse the FEN string.</div><div class="ttdef"><b>Definition:</b> <a href="board_8c_source.html#l00149">board.c:149</a></div></div>
 <div class="ttc" id="adefs_8h_html_ae8ebe63f27996af9d769245539d7a9fd"><div class="ttname"><a href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a></div><div class="ttdeci">void TakeMove(S_BOARD *pos)</div><div class="ttdoc">Function to take back a move.</div><div class="ttdef"><b>Definition:</b> <a href="makemove_8c_source.html#l00286">makemove.c:286</a></div></div>
-<div class="ttc" id="astructS__BOARD_html"><div class="ttname"><a href="structS__BOARD.html">S_BOARD</a></div><div class="ttdoc">Structure to store the board.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00149">defs.h:149</a></div></div>
-<div class="ttc" id="astructS__BOARD_html_af37d6fc7e64837f2a2fc5da3baa676f1"><div class="ttname"><a href="structS__BOARD.html#af37d6fc7e64837f2a2fc5da3baa676f1">S_BOARD::PvArray</a></div><div class="ttdeci">int PvArray[MAXDEPTH]</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00179">defs.h:179</a></div></div>
-<div class="ttc" id="astructS__MOVELIST_html"><div class="ttname"><a href="structS__MOVELIST.html">S_MOVELIST</a></div><div class="ttdoc">Structure to store a list of moves.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00108">defs.h:108</a></div></div>
+<div class="ttc" id="astructS__BOARD_html"><div class="ttname"><a href="structS__BOARD.html">S_BOARD</a></div><div class="ttdoc">Structure to store the board.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00152">defs.h:152</a></div></div>
+<div class="ttc" id="astructS__MOVELIST_html"><div class="ttname"><a href="structS__MOVELIST.html">S_MOVELIST</a></div><div class="ttdoc">Structure to store a list of moves.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00111">defs.h:111</a></div></div>
+<div class="ttc" id="astructS__SEARCHINFO_html"><div class="ttname"><a href="structS__SEARCHINFO.html">S_SEARCHINFO</a></div><div class="ttdoc">Structure to store the search information.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00194">defs.h:194</a></div></div>
+<div class="ttc" id="astructS__SEARCHINFO_html_a766f8cbd4a0d7d895a355e8a9b96e695"><div class="ttname"><a href="structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695">S_SEARCHINFO::depth</a></div><div class="ttdeci">int depth</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00198">defs.h:198</a></div></div>
 <div class="ttc" id="avice_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00051">vice.c:51</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->

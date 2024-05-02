@@ -1,8 +1,7 @@
 var searchData=
 [
-  ['majpce_355',['majPce',['../structS__BOARD.html#a37272554805560fa339dce1d7bdf5293',1,'S_BOARD']]],
-  ['material_356',['material',['../structS__BOARD.html#addd30f12f611b1ea4ef4ab721051ea86',1,'S_BOARD']]],
-  ['minpce_357',['minPce',['../structS__BOARD.html#ae445f8a83769ad0b2265fc7b0fa1d1f3',1,'S_BOARD']]],
-  ['move_358',['move',['../structS__MOVE.html#adf70f75da2c5964527059686218b1c39',1,'S_MOVE::move()'],['../structS__PVENTRY.html#ab188f03fbc3d432cb9e0be6e7f41709a',1,'S_PVENTRY::move()'],['../structS__UNDO.html#a2af35fd122dddb514c8ce0e62536aa7d',1,'S_UNDO::move()']]],
-  ['moves_359',['moves',['../structS__MOVELIST.html#a7b3e25354c7c5058348231e77e25f8af',1,'S_MOVELIST']]]
+  ['kidir_377',['KiDir',['../attack_8c.html#a398f5a159982c2d234146d6bfcc74758',1,'attack.c']]],
+  ['kingsq_378',['KingSq',['../structS__BOARD.html#a51e2c4c0a36a5c09f17266bc35fe9a2a',1,'S_BOARD']]],
+  ['kndir_379',['KnDir',['../attack_8c.html#a8e0e9a75b699f923538a2e3be97ffecf',1,'attack.c']]],
+  ['knighttable_380',['KnightTable',['../evaluate_8c.html#a515c4b3adf0d5cc6e7bd6bdf1f50e08b',1,'evaluate.c']]]
 ];

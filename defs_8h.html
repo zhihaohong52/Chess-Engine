@@ -105,6 +105,9 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__BOARD.html">S_BOARD</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the board.  <a href="structS__BOARD.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the search information.  <a href="structS__SEARCHINFO.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
 Macros</h2></td></tr>
@@ -124,6 +127,10 @@ Macros</h2></td></tr>
 <tr class="separator:a0a852ddde438845110943cb3e2a0beea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580227094908aca72cf64f75d55c86df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a580227094908aca72cf64f75d55c86df">START_FEN</a>&#160;&#160;&#160;&quot;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&quot;</td></tr>
 <tr class="separator:a580227094908aca72cf64f75d55c86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84a29002ab81c719c0d07bb446296e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a>&#160;&#160;&#160;30000</td></tr>
+<tr class="separator:aa84a29002ab81c719c0d07bb446296e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a92076e18b8b8909efb14e068b531bce3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a92076e18b8b8909efb14e068b531bce3">MATE</a>&#160;&#160;&#160;29000</td></tr>
+<tr class="separator:a92076e18b8b8909efb14e068b531bce3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb5e7106c9610b1e228bbc92dcd9289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aafb5e7106c9610b1e228bbc92dcd9289">FROMSQ</a>(m)&#160;&#160;&#160;((m) &amp; 0x7F)</td></tr>
 <tr class="separator:aafb5e7106c9610b1e228bbc92dcd9289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1376416d3a0e870a9a1241b3a54a3f9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a1376416d3a0e870a9a1241b3a54a3f9b">TOSQ</a>(m)&#160;&#160;&#160;(((m)&gt;&gt;7) &amp; 0x7F)</td></tr>
@@ -410,21 +417,29 @@ Functions</h2></td></tr>
 <tr class="memitem:a1b6b13d186dab20a18cec1a6b041220b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">PerftTest</a> (int depth, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a1b6b13d186dab20a18cec1a6b041220b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for testing the move generation using perft.  <a href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">More...</a><br /></td></tr>
 <tr class="separator:a1b6b13d186dab20a18cec1a6b041220b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af965cd727b72ac07d2cd788a5deabf0e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#af965cd727b72ac07d2cd788a5deabf0e">SearchPosition</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
-<tr class="separator:af965cd727b72ac07d2cd788a5deabf0e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612414d1ad97c743f6e54d20e4b32e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a612414d1ad97c743f6e54d20e4b32e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterative deepening search.  <a href="defs_8h.html#a612414d1ad97c743f6e54d20e4b32e37">More...</a><br /></td></tr>
+<tr class="separator:a612414d1ad97c743f6e54d20e4b32e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87fed9d5570ea84a3df0c8e208a73098"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a87fed9d5570ea84a3df0c8e208a73098">GetTimeMs</a> ()</td></tr>
 <tr class="separator:a87fed9d5570ea84a3df0c8e208a73098"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47e25a6ad38b1244a38700f14da54e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">InitPvTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
 <tr class="memdesc:a47e25a6ad38b1244a38700f14da54e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the PV table.  <a href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">More...</a><br /></td></tr>
 <tr class="separator:a47e25a6ad38b1244a38700f14da54e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a556b9334758c28b314b954be088eff0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a556b9334758c28b314b954be088eff0f">ClearPVTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
+<tr class="memdesc:a556b9334758c28b314b954be088eff0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the PV table.  <a href="defs_8h.html#a556b9334758c28b314b954be088eff0f">More...</a><br /></td></tr>
+<tr class="separator:a556b9334758c28b314b954be088eff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move)</td></tr>
 <tr class="memdesc:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the principal variation move.  <a href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">More...</a><br /></td></tr>
 <tr class="separator:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">ProbePvTable</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
-<tr class="separator:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab67b779def0e7fe76c26a6a18f5b704c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ab67b779def0e7fe76c26a6a18f5b704c">ProbePVTable</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:ab67b779def0e7fe76c26a6a18f5b704c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the PV table.  <a href="defs_8h.html#ab67b779def0e7fe76c26a6a18f5b704c">More...</a><br /></td></tr>
+<tr class="separator:ab67b779def0e7fe76c26a6a18f5b704c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a> (const int depth, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pv Line object.  <a href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">More...</a><br /></td></tr>
 <tr class="separator:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">EvalPosition</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the position.  <a href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">More...</a><br /></td></tr>
+<tr class="separator:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -569,7 +584,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00197">197</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00228">228</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -599,7 +614,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00216">216</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00247">247</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -619,7 +634,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00215">215</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00246">246</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -665,7 +680,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00211">211</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00242">242</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -685,7 +700,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00195">195</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00226">226</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="aa84a29002ab81c719c0d07bb446296e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a29002ab81c719c0d07bb446296e0">&#9670;&nbsp;</a></span>INFINITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INFINITE&#160;&#160;&#160;30000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00044">44</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -705,7 +736,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00219">219</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -725,7 +756,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00222">222</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00253">253</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -745,7 +776,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00221">221</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00252">252</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -765,7 +796,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00220">220</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00251">251</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a92076e18b8b8909efb14e068b531bce3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a92076e18b8b8909efb14e068b531bce3">&#9670;&nbsp;</a></span>MATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MATE&#160;&#160;&#160;29000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00045">45</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -829,7 +876,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00202">202</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00233">233</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -845,7 +892,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00204">204</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00235">235</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -861,7 +908,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00200">200</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00231">231</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -877,7 +924,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00205">205</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00236">236</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -893,7 +940,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00201">201</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00232">232</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -925,7 +972,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00207">207</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00238">238</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -945,7 +992,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00214">214</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00245">245</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -965,7 +1012,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00198">198</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00229">229</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -995,7 +1042,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00217">217</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00248">248</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1015,7 +1062,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00213">213</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00244">244</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1035,7 +1082,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00212">212</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00243">243</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1071,7 +1118,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00196">196</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00227">227</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1122,7 +1169,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"></a>bK&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00048">48</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00051">51</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1151,7 +1198,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a72766092149e349d9a71fdb7f8160e10"></a>FILE_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00054">54</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00057">57</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1180,7 +1227,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a5b3781d1b86380aa29e37948e85b0060"></a>RANK_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00060">60</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00063">63</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1203,7 +1250,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abc6126af1d45847bc59afa0aa3216b04a627abe5a430420baf29ebe1940a7f2fb"></a>BOTH&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00066">66</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00069">69</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1289,7 +1336,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00072">72</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00075">75</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1311,7 +1358,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00087">87</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00090">90</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1335,7 +1382,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00093">93</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00096">96</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1390,6 +1437,28 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a556b9334758c28b314b954be088eff0f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a556b9334758c28b314b954be088eff0f">&#9670;&nbsp;</a></span>ClearPVTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearPVTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *&#160;</td>
+          <td class="paramname"><em>table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Clear the PV table. </p>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00060">60</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
 <a id="ac3175e5b15b2b236d8ba40f395819d21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3175e5b15b2b236d8ba40f395819d21">&#9670;&nbsp;</a></span>CountBits()</h2>
 
@@ -1416,6 +1485,35 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int Number of bits </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="bitboard_8c_source.html#l00049">49</a> of file <a class="el" href="bitboard_8c_source.html">bitboard.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c4dd2e784cf7f2333cf507e35d8d5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4dd2e784cf7f2333cf507e35d8d5fa">&#9670;&nbsp;</a></span>EvalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EvalPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Evaluate the position. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Score of the position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="evaluate_8c_source.html#l00118">118</a> of file <a class="el" href="evaluate_8c_source.html">evaluate.c</a>.</p>
 
 </div>
 </div>
@@ -2002,14 +2100,14 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a90f6f5e5e3e55ba3ac97274d78aa5f6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90f6f5e5e3e55ba3ac97274d78aa5f6f">&#9670;&nbsp;</a></span>ProbePvTable()</h2>
+<a id="ab67b779def0e7fe76c26a6a18f5b704c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab67b779def0e7fe76c26a6a18f5b704c">&#9670;&nbsp;</a></span>ProbePVTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ProbePvTable </td>
+          <td class="memname">int ProbePVTable </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
           <td class="paramname"><em>pos</em></td><td>)</td>
@@ -2017,6 +2115,17 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Function to probe the PV table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the PV table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00108">108</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
@@ -2077,8 +2186,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="af965cd727b72ac07d2cd788a5deabf0e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af965cd727b72ac07d2cd788a5deabf0e">&#9670;&nbsp;</a></span>SearchPosition()</h2>
+<a id="a612414d1ad97c743f6e54d20e4b32e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612414d1ad97c743f6e54d20e4b32e37">&#9670;&nbsp;</a></span>SearchPosition()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2087,11 +2196,32 @@ Variables</h2></td></tr>
           <td class="memname">void SearchPosition </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Iterative deepening search. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">info</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00175">175</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
 
 </div>
 </div>

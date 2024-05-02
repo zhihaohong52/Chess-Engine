@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['filerankvalid_297',['FileRankValid',['../defs_8h.html#ab07d4a10c99178b3ac54a5c42c01127f',1,'FileRankValid(const int fr):&#160;validate.c'],['../validate_8c.html#ab07d4a10c99178b3ac54a5c42c01127f',1,'FileRankValid(const int fr):&#160;validate.c']]]
+  ['evalposition_322',['EvalPosition',['../defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa',1,'EvalPosition(const S_BOARD *pos):&#160;evaluate.c'],['../evaluate_8c.html#a5c4dd2e784cf7f2333cf507e35d8d5fa',1,'EvalPosition(const S_BOARD *pos):&#160;evaluate.c']]]
 ];

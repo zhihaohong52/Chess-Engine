@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['perft_2ec_288',['perft.c',['../perft_8c.html',1,'']]],
-  ['pvtable_2ec_289',['pvtable.c',['../pvtable_8c.html',1,'']]]
+  ['makemove_2ec_310',['makemove.c',['../makemove_8c.html',1,'']]],
+  ['misc_2ec_311',['misc.c',['../misc_8c.html',1,'']]],
+  ['movegen_2ec_312',['movegen.c',['../movegen_8c.html',1,'']]]
 ];
