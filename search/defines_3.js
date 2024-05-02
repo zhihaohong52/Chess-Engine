@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['debug_551',['DEBUG',['../defs_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'defs.h']]]
+  ['fr2sq_554',['FR2SQ',['../defs_8h.html#a02b67a393d8796296fb1eb602a9a7503',1,'defs.h']]],
+  ['fromsq_555',['FROMSQ',['../defs_8h.html#aafb5e7106c9610b1e228bbc92dcd9289',1,'defs.h']]]
 ];

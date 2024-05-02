@@ -4,7 +4,7 @@ var searchData=
   ['majpce_157',['majPce',['../structS__BOARD.html#a37272554805560fa339dce1d7bdf5293',1,'S_BOARD']]],
   ['makemove_158',['MakeMove',['../makemove_8c.html#a9c3644fe98d2e1a3d9ac7f68e40937c2',1,'MakeMove(S_BOARD *pos, int move):&#160;makemove.c'],['../defs_8h.html#a9c3644fe98d2e1a3d9ac7f68e40937c2',1,'MakeMove(S_BOARD *pos, int move):&#160;makemove.c']]],
   ['makemove_2ec_159',['makemove.c',['../makemove_8c.html',1,'']]],
-  ['mate_160',['MATE',['../search_8c.html#a92076e18b8b8909efb14e068b531bce3',1,'MATE():&#160;search.c'],['../defs_8h.html#a92076e18b8b8909efb14e068b531bce3',1,'MATE():&#160;defs.h']]],
+  ['mate_160',['MATE',['../search_8c.html#a92076e18b8b8909efb14e068b531bce3',1,'search.c']]],
   ['material_161',['material',['../structS__BOARD.html#addd30f12f611b1ea4ef4ab721051ea86',1,'S_BOARD']]],
   ['maxdepth_162',['MAXDEPTH',['../defs_8h.html#a0a852ddde438845110943cb3e2a0beea',1,'defs.h']]],
   ['maxgamemoves_163',['MAXGAMEMOVES',['../defs_8h.html#a709e34a757803360843ea61cf13fed8d',1,'defs.h']]],

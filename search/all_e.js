@@ -34,7 +34,7 @@ var searchData=
   ['printboard_218',['PrintBoard',['../defs_8h.html#a5e19e1ebce3b579abec184a164e21801',1,'PrintBoard(const S_BOARD *pos):&#160;board.c'],['../board_8c.html#a5e19e1ebce3b579abec184a164e21801',1,'PrintBoard(const S_BOARD *pos):&#160;board.c']]],
   ['printmovelist_219',['PrintMoveList',['../defs_8h.html#a962a285cdfc1ec24237ca176f29a6108',1,'PrintMoveList(const S_MOVELIST *list):&#160;io.c'],['../io_8c.html#a962a285cdfc1ec24237ca176f29a6108',1,'PrintMoveList(const S_MOVELIST *list):&#160;io.c']]],
   ['prmove_220',['PrMove',['../io_8c.html#a011a99274a4b8aa5c4c692bb8085277c',1,'PrMove(const int move):&#160;io.c'],['../defs_8h.html#a011a99274a4b8aa5c4c692bb8085277c',1,'PrMove(const int move):&#160;io.c']]],
-  ['probepvtable_221',['ProbePVTable',['../pvtable_8c.html#ab67b779def0e7fe76c26a6a18f5b704c',1,'ProbePVTable(const S_BOARD *pos):&#160;pvtable.c'],['../defs_8h.html#ab67b779def0e7fe76c26a6a18f5b704c',1,'ProbePVTable(const S_BOARD *pos):&#160;pvtable.c']]],
+  ['probepvtable_221',['ProbePvTable',['../pvtable_8c.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f',1,'ProbePvTable(const S_BOARD *pos):&#160;pvtable.c'],['../defs_8h.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f',1,'ProbePvTable(const S_BOARD *pos):&#160;pvtable.c']]],
   ['project_20documentation_222',['Project Documentation',['../index.html',1,'']]],
   ['promoted_223',['PROMOTED',['../defs_8h.html#acc5ba8f9c6d2478135cd9b2db31a0751',1,'defs.h']]],
   ['prsq_224',['PrSq',['../defs_8h.html#a61e4b9abb42c2322fc92ac9c67ea4b07',1,'PrSq(const int sq):&#160;io.c'],['../io_8c.html#a61e4b9abb42c2322fc92ac9c67ea4b07',1,'PrSq(const int sq):&#160;io.c']]],

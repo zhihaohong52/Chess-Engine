@@ -9,8 +9,7 @@ var searchData=
   ['d7_62',['D7',['../defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa',1,'defs.h']]],
   ['d8_63',['D8',['../defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1',1,'defs.h']]],
   ['data_2ec_64',['data.c',['../data_8c.html',1,'']]],
-  ['debug_65',['DEBUG',['../defs_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'defs.h']]],
-  ['defs_2eh_66',['defs.h',['../defs_8h.html',1,'']]],
-  ['depth_67',['depth',['../structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO']]],
-  ['depthset_68',['depthset',['../structS__SEARCHINFO.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]]
+  ['defs_2eh_65',['defs.h',['../defs_8h.html',1,'']]],
+  ['depth_66',['depth',['../structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO']]],
+  ['depthset_67',['depthset',['../structS__SEARCHINFO.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]]
 ];

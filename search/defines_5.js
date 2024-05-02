@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['hash_5fca_554',['HASH_CA',['../makemove_8c.html#aa91601393e3452a456a1e0f56d7c9e37',1,'makemove.c']]],
-  ['hash_5fep_555',['HASH_EP',['../makemove_8c.html#a2cc442b6e004cce3e06071a89d134e19',1,'makemove.c']]],
-  ['hash_5fpce_556',['HASH_PCE',['../makemove_8c.html#aa526c99ca3c1bb79449681ceda03c961',1,'makemove.c']]],
-  ['hash_5fside_557',['HASH_SIDE',['../makemove_8c.html#aa57ffe7698ca37bc9fca03e65b0278b2',1,'makemove.c']]]
+  ['infinite_560',['INFINITE',['../search_8c.html#aa84a29002ab81c719c0d07bb446296e0',1,'search.c']]],
+  ['isbq_561',['IsBQ',['../defs_8h.html#a26a71187416f1b3e0e0f83163b0fa9f8',1,'defs.h']]],
+  ['iski_562',['IsKi',['../defs_8h.html#af82510c92fa4858abe56d5e3650a51f0',1,'defs.h']]],
+  ['iskn_563',['IsKn',['../defs_8h.html#a11c5b1aa7f36ce1a2e5bc0a4f7d297f5',1,'defs.h']]],
+  ['isrq_564',['IsRQ',['../defs_8h.html#abb60aeb63c691df1ccc4b765c38a1c52',1,'defs.h']]]
 ];
