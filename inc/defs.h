@@ -335,6 +335,7 @@ extern void SearchPosition(S_BOARD *pos, S_SEARCHINFO *info);
 
 // misc.c
 extern int GetTimeMs();
+void ReadInput(S_SEARCHINFO *info);
 
 // pvtable.c
 extern void InitPvTable(S_PVTABLE *table);
@@ -345,5 +346,8 @@ extern int GetPvLine(const int depth, S_BOARD *pos);
 
 // evaluate.c
 extern int EvalPosition(const S_BOARD *pos);
+
+// uci.c
+extern void Uci_Loop();
 
 #endif
