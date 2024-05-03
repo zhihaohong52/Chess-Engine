@@ -78,13 +78,23 @@ $(function() {
 <div class="textblock"><code>#include &quot;stdio.h&quot;</code><br />
 <code>#include &quot;<a class="el" href="defs_8h_source.html">defs.h</a>&quot;</code><br />
 <code>#include &quot;sys/time.h&quot;</code><br />
+<code>#include &quot;sys/select.h&quot;</code><br />
+<code>#include &quot;unistd.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
 </div>
 <p><a href="misc_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a87fed9d5570ea84a3df0c8e208a73098"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="misc_8c.html#a87fed9d5570ea84a3df0c8e208a73098">GetTimeMs</a> ()</td></tr>
+<tr class="memdesc:a87fed9d5570ea84a3df0c8e208a73098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time Ms object.  <a href="misc_8c.html#a87fed9d5570ea84a3df0c8e208a73098">More...</a><br /></td></tr>
 <tr class="separator:a87fed9d5570ea84a3df0c8e208a73098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad4b24a6726f1f0bf071fec1015534fc0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="misc_8c.html#ad4b24a6726f1f0bf071fec1015534fc0">InputWaiting</a> ()</td></tr>
+<tr class="memdesc:ad4b24a6726f1f0bf071fec1015534fc0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wait for the user to input <b>[http://home.arcor.de/dreamlike/chess/]</b>.  <a href="misc_8c.html#ad4b24a6726f1f0bf071fec1015534fc0">More...</a><br /></td></tr>
+<tr class="separator:ad4b24a6726f1f0bf071fec1015534fc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35ec650650ae344bdc0985cd4ece431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="misc_8c.html#ac35ec650650ae344bdc0985cd4ece431">ReadInput</a> (<a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:ac35ec650650ae344bdc0985cd4ece431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input from the user <b>[http://home.arcor.de/dreamlike/chess/]</b>.  <a href="misc_8c.html#ac35ec650650ae344bdc0985cd4ece431">More...</a><br /></td></tr>
+<tr class="separator:ac35ec650650ae344bdc0985cd4ece431"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains miscellaneous functions. </p>
@@ -110,7 +120,60 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00021">21</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
+<p>Get the Time Ms object. </p>
+<dl class="section return"><dt>Returns</dt><dd>int The time in milliseconds </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00030">30</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
+
+</div>
+</div>
+<a id="ad4b24a6726f1f0bf071fec1015534fc0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad4b24a6726f1f0bf071fec1015534fc0">&#9670;&nbsp;</a></span>InputWaiting()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InputWaiting </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Wait for the user to input <b>[http://home.arcor.de/dreamlike/chess/]</b>. </p>
+<dl class="section return"><dt>Returns</dt><dd>int User input </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00045">45</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
+
+</div>
+</div>
+<a id="ac35ec650650ae344bdc0985cd4ece431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35ec650650ae344bdc0985cd4ece431">&#9670;&nbsp;</a></span>ReadInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReadInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read input from the user <b>[http://home.arcor.de/dreamlike/chess/]</b>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00085">85</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
 
 </div>
 </div>
