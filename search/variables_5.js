@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hisply_376',['hisPly',['../structS__BOARD.html#a89e192e1d3f053129d4205e0655dab50',1,'S_BOARD']]],
-  ['history_377',['history',['../structS__BOARD.html#afc566b47e1f2a3ef8bcf87655ffab195',1,'S_BOARD']]]
+  ['hisply_378',['hisPly',['../structS__BOARD.html#a89e192e1d3f053129d4205e0655dab50',1,'S_BOARD']]],
+  ['history_379',['history',['../structS__BOARD.html#afc566b47e1f2a3ef8bcf87655ffab195',1,'S_BOARD']]]
 ];
