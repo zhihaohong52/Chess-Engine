@@ -12,8 +12,8 @@
 #ifndef DEFS_H
 #define DEFS_H
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "stdlib.h"
+#include "stdio.h"
 
 //#define DEBUG
 
@@ -64,6 +64,12 @@ enum { RANK_1, RANK_2, RANK_3, RANK_4, RANK_5, RANK_6, RANK_7, RANK_8, RANK_NONE
  *
  */
 enum { WHITE, BLACK, BOTH };
+
+/**
+ * @brief Enum to store mode being used for the game
+ *
+ */
+enum { UCIMODE, XBOARDMODE, CONSOLEMODE };
 
 /**
  * @brief Enum to store the squares
@@ -205,6 +211,9 @@ typedef struct {
 
     float fh;
     float fhf;
+
+    int GAME_MODE;
+    int POST_THINKING;
 
 } S_SEARCHINFO;
 
@@ -348,6 +357,10 @@ extern int GetPvLine(const int depth, S_BOARD *pos);
 extern int EvalPosition(const S_BOARD *pos);
 
 // uci.c
-extern void Uci_Loop();
+extern void Uci_Loop(S_BOARD *pos, S_SEARCHINFO *info);
+
+// xboard.c
+extern void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info);
+extern void Console_Loop(S_BOARD *pos, S_SEARCHINFO *info);
 
 #endif

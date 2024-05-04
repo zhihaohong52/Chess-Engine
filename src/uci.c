@@ -126,8 +126,12 @@ void ParsePosition(char* lineIn, S_BOARD *pos) {
 /**
  * @brief Main loop to handle UCI protocol
  *
+ * @param pos Pointer to the board
+ * @param info Pointer to the search info
  */
-void Uci_Loop() {
+void Uci_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
+
+    info->GAME_MODE = UCIMODE;
 
     setbuf(stdin, NULL);
     setbuf(stdout, NULL);
@@ -136,10 +140,6 @@ void Uci_Loop() {
     printf("id name %s\n", NAME);
     printf("id author zhihaohong52\n");
     printf("uciok\n");
-
-    S_BOARD pos[1];
-    S_SEARCHINFO info[1];
-    InitPvTable(pos->PvTable);
 
     while (TRUE) {
         memset(&line[0], 0, sizeof(line));
@@ -169,5 +169,4 @@ void Uci_Loop() {
         }
         if (info->quit) break;
     }
-    free(pos->PvTable->pTable);
 }

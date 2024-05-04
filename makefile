@@ -26,9 +26,11 @@ OBJ := $(SRC:$(SRCDIR)/%.c=$(OBJDIR)/%.o)
 ifeq ($(OS),Windows_NT)
     RM = del /Q
     FIX_PATH = $(subst /,\,$1)
+    RMDIR = rmdir /Q /S
 else
     RM = rm -f
     FIX_PATH = $1
+    RMDIR = rm -rf
 endif
 
 # Ensure output directory exists
@@ -50,3 +52,4 @@ $(OBJDIR)/%.o: $(SRCDIR)/%.c
 
 clean:
 	$(RM) $(call FIX_PATH,$(TARGET) $(TARGET).exe $(OBJDIR)/*.o)
+	$(RMDIR) $(call FIX_PATH,$(OBJDIR))
