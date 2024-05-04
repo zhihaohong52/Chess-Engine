@@ -80,8 +80,8 @@ $(function() {
 
 <p>Contains definitions for the game.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;stdlib.h&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
 </div>
 <p><a href="defs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -234,105 +234,111 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:abc6126af1d45847bc59afa0aa3216b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the colors.  <a href="defs_8h.html#abc6126af1d45847bc59afa0aa3216b04">More...</a><br /></td></tr>
 <tr class="separator:abc6126af1d45847bc59afa0aa3216b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6ff26890857c886c86453f0c8078bf95">A1</a> = 21
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cad90c5e7444630b8d170b08d0853aae21">B1</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cae54c31a855b907f263d49edcdbe677bd">C1</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca29b8ecb29049f38cbf752d95f479bff7">D1</a>
+<tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca50ad28561f0aac3c76dd95dd97fffe74">UCIMODE</a>
+, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caf8753b09d02a203105f442af32e63260">XBOARDMODE</a>
+, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79">CONSOLEMODE</a>
+ }</td></tr>
+<tr class="memdesc:adc29c2ff13d900c2f185ee95427fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store mode being used for the game.  <a href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06c">More...</a><br /></td></tr>
+<tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6ff26890857c886c86453f0c8078bf95">A1</a> = 21
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ead90c5e7444630b8d170b08d0853aae21">B1</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eae54c31a855b907f263d49edcdbe677bd">C1</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea29b8ecb29049f38cbf752d95f479bff7">D1</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cab1710e6a49014ba389d57c8753c530f4">E1</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca5afea46882b06768ac8563d462999735">F1</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caaec6d2231567cdb9063f093d8effa224">G1</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca7ec6526640e5add74fe4b322e6343120">H1</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eab1710e6a49014ba389d57c8753c530f4">E1</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea5afea46882b06768ac8563d462999735">F1</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaaec6d2231567cdb9063f093d8effa224">G1</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea7ec6526640e5add74fe4b322e6343120">H1</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca47329f455692c2a8284d7594405f16d4">A2</a> = 31
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9bfbe74b27169e5bd5bd5dc020fdd00b">B2</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca5e602f1d68586231698bda7be6af7d2e">C2</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca86c69dc8849d17673b52b9a8d94d8b9f">D2</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea47329f455692c2a8284d7594405f16d4">A2</a> = 31
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea9bfbe74b27169e5bd5bd5dc020fdd00b">B2</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea5e602f1d68586231698bda7be6af7d2e">C2</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea86c69dc8849d17673b52b9a8d94d8b9f">D2</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cace9a5783f96994d28bc6ec5c9ece8c80">E2</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caa3c13a70de6599f4470373ec46d4f6bf">F2</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caedce8067580fa0c4c235f8534f25a7b3">G2</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cabc856fd5d1be355fd3d34b860c506cd0">H2</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eace9a5783f96994d28bc6ec5c9ece8c80">E2</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa3c13a70de6599f4470373ec46d4f6bf">F2</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaedce8067580fa0c4c235f8534f25a7b3">G2</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eabc856fd5d1be355fd3d34b860c506cd0">H2</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca47dbfcefc8fabadcd82806b21de14bfc">A3</a> = 41
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca008e5845e069ecd71e49f3d18ec21130">B3</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cada966660d95922946f59862d9ce54b1c">C3</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cade8ef7573c5fa770f07ac7616cbf5d34">D3</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea47dbfcefc8fabadcd82806b21de14bfc">A3</a> = 41
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea008e5845e069ecd71e49f3d18ec21130">B3</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eada966660d95922946f59862d9ce54b1c">C3</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eade8ef7573c5fa770f07ac7616cbf5d34">D3</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca460eae7ccdb66a96136eb0afb98ba51b">E3</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca10a5417c8e696606af65ec28c5fb2495">F3</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca99381344bd0c2206ca3bcf98254783f0">G3</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cab5f7333471179f24ed9ce81659847cc7">H3</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea460eae7ccdb66a96136eb0afb98ba51b">E3</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea10a5417c8e696606af65ec28c5fb2495">F3</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea99381344bd0c2206ca3bcf98254783f0">G3</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eab5f7333471179f24ed9ce81659847cc7">H3</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cada06582608e19a3f2438f54eeb0bcad5">A4</a> = 51
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6e242c85f0b91e8879200ec3004a4cab">B4</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca24727389909cb6406ed9483df7810c78">C4</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca12761dd9f3b74590b720d87d6ca9fbcf">D4</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eada06582608e19a3f2438f54eeb0bcad5">A4</a> = 51
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6e242c85f0b91e8879200ec3004a4cab">B4</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea24727389909cb6406ed9483df7810c78">C4</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea12761dd9f3b74590b720d87d6ca9fbcf">D4</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca21d812cf3e9fd32ae1d834555c5d0baa">E4</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca8d311dd8454951b86e27873c49ff1ec5">F4</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caf0083cb5d419863c9fa614b3e5a3213b">G4</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca2b19eb4f28582dc345e707197160f485">H4</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea21d812cf3e9fd32ae1d834555c5d0baa">E4</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea8d311dd8454951b86e27873c49ff1ec5">F4</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaf0083cb5d419863c9fa614b3e5a3213b">G4</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea2b19eb4f28582dc345e707197160f485">H4</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caacdd5acf9dd0376a4073a1f27d8df74e">A5</a> = 61
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caf238f32976f4a2c27a517bd1ad47be36">B5</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca26c0a10a3dc0a69747539541f4a82172">C5</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9bfc9615ce2836fe43fe37e0eda2a68a">D5</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaacdd5acf9dd0376a4073a1f27d8df74e">A5</a> = 61
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaf238f32976f4a2c27a517bd1ad47be36">B5</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea26c0a10a3dc0a69747539541f4a82172">C5</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea9bfc9615ce2836fe43fe37e0eda2a68a">D5</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6debb3cd347b3a1a2a85500ced6e7c10">E5</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca265fb264db0c419e6cb73bce564cd517">F5</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca33e4e589075c868910acfa95b14efb5f">G5</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca555abd1b0d375a8ae8c77b90afb6695c">H5</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6debb3cd347b3a1a2a85500ced6e7c10">E5</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea265fb264db0c419e6cb73bce564cd517">F5</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea33e4e589075c868910acfa95b14efb5f">G5</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea555abd1b0d375a8ae8c77b90afb6695c">H5</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca260faf43232fc57a22e280e8912d6689">A6</a> = 71
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca0eb7e951c71ad8f7ea59d513e8d57747">B6</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cae138d2e0243a8b4dcca22738eebc2197">C6</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cab6e74cb404ad3a7370b6cbb05f004fcb">D6</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea260faf43232fc57a22e280e8912d6689">A6</a> = 71
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea0eb7e951c71ad8f7ea59d513e8d57747">B6</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eae138d2e0243a8b4dcca22738eebc2197">C6</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eab6e74cb404ad3a7370b6cbb05f004fcb">D6</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca22c7951dba1a1943224d259176412bfd">E6</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caa1e9d714a0238434a819235d4832f7d2">F6</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6ab0f7aca08fd2ba5505168472501d98">G6</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caaa1e5185cf98f81e2e8a710f907c3174">H6</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea22c7951dba1a1943224d259176412bfd">E6</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa1e9d714a0238434a819235d4832f7d2">F6</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6ab0f7aca08fd2ba5505168472501d98">G6</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaaa1e5185cf98f81e2e8a710f907c3174">H6</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca7ae46613d850fc0cb3d82eb0bb8811c6">A7</a> = 81
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca561ae7a12dd8bf549f1b7e647354297e">B7</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4f858b829392e960b43c57a9731c98ac">C7</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa">D7</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea7ae46613d850fc0cb3d82eb0bb8811c6">A7</a> = 81
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea561ae7a12dd8bf549f1b7e647354297e">B7</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea4f858b829392e960b43c57a9731c98ac">C7</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa">D7</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca40ca2674103ced2895998d0383ac50e5">E7</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6f111feaebfe5971b1243256d6417dc7">F7</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cae236ad64088ffc77d9e098628d5ba342">G7</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cab5528db6787796e749fa3f4af05bc239">H7</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea40ca2674103ced2895998d0383ac50e5">E7</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6f111feaebfe5971b1243256d6417dc7">F7</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eae236ad64088ffc77d9e098628d5ba342">G7</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eab5528db6787796e749fa3f4af05bc239">H7</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caf3ba956cfc94b23b44487413b27c646a">A8</a> = 91
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca36820f60b2f0bee85a682e3f0b6e0fea">B8</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca6a72e133ec9df7aadaeef87557e5cbb0">C8</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1">D8</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaf3ba956cfc94b23b44487413b27c646a">A8</a> = 91
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea36820f60b2f0bee85a682e3f0b6e0fea">B8</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea6a72e133ec9df7aadaeef87557e5cbb0">C8</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1">D8</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca1eacedb7bc191a326eafc02f96c93a6f">E8</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cacb02fa2cede46dab94694927da16433d">F8</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06caa1c865ccd52132fb116c4587969e6ad8">G8</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06cade042a52f63647c9e92085a07bb9fd66">H8</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea1eacedb7bc191a326eafc02f96c93a6f">E8</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eacb02fa2cede46dab94694927da16433d">F8</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa1c865ccd52132fb116c4587969e6ad8">G8</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eade042a52f63647c9e92085a07bb9fd66">H8</a>
 , <br />
-&#160;&#160;<a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca8920a90700927bb9d204cd229b8c08f8">NO_SQ</a>
-, <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>
+&#160;&#160;<a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea8920a90700927bb9d204cd229b8c08f8">NO_SQ</a>
+, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>
 <br />
  }</td></tr>
-<tr class="memdesc:adc29c2ff13d900c2f185ee95427fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the squares.  <a href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06c">More...</a><br /></td></tr>
-<tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>
-, <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a>
- }</td></tr>
-<tr class="memdesc:a61dadd085c1777f559549e05962b2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store boolean values.  <a href="defs_8h.html#a61dadd085c1777f559549e05962b2c9e">More...</a><br /></td></tr>
+<tr class="memdesc:a61dadd085c1777f559549e05962b2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the squares.  <a href="defs_8h.html#a61dadd085c1777f559549e05962b2c9e">More...</a><br /></td></tr>
 <tr class="separator:a61dadd085c1777f559549e05962b2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635ac2f915c8e28362ff0423ae01d4b5c638">WKCA</a> = 1
-, <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635a90ed269227fd51007dd61578124378a2">WQCA</a> = 2
-, <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635adca5d258ee038af989898b86acb9476d">BKCA</a> = 4
-, <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b">BQCA</a> = 8
+<tr class="memitem:a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>
+, <a class="el" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>
  }</td></tr>
-<tr class="memdesc:a726ca809ffd3d67ab4b8476646f26635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the castling permissions.  <a href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635">More...</a><br /></td></tr>
+<tr class="memdesc:a726ca809ffd3d67ab4b8476646f26635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store boolean values.  <a href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635">More...</a><br /></td></tr>
 <tr class="separator:a726ca809ffd3d67ab4b8476646f26635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dac2f915c8e28362ff0423ae01d4b5c638">WKCA</a> = 1
+, <a class="el" href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da90ed269227fd51007dd61578124378a2">WQCA</a> = 2
+, <a class="el" href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2dadca5d258ee038af989898b86acb9476d">BKCA</a> = 4
+, <a class="el" href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b">BQCA</a> = 8
+ }</td></tr>
+<tr class="memdesc:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the castling permissions.  <a href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2d">More...</a><br /></td></tr>
+<tr class="separator:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -444,9 +450,15 @@ Functions</h2></td></tr>
 <tr class="memitem:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">EvalPosition</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the position.  <a href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">More...</a><br /></td></tr>
 <tr class="separator:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81943bfe8fafe71d2216ee5e36f41713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a81943bfe8fafe71d2216ee5e36f41713">Uci_Loop</a> ()</td></tr>
-<tr class="memdesc:a81943bfe8fafe71d2216ee5e36f41713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle UCI protocol.  <a href="defs_8h.html#a81943bfe8fafe71d2216ee5e36f41713">More...</a><br /></td></tr>
-<tr class="separator:a81943bfe8fafe71d2216ee5e36f41713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5d40969d72cd4ed3145580786a56a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aea5d40969d72cd4ed3145580786a56a2">Uci_Loop</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:aea5d40969d72cd4ed3145580786a56a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle UCI protocol.  <a href="defs_8h.html#aea5d40969d72cd4ed3145580786a56a2">More...</a><br /></td></tr>
+<tr class="separator:aea5d40969d72cd4ed3145580786a56a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7513485aff2d4a3470ede9595f97beee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a7513485aff2d4a3470ede9595f97beee">XBoard_Loop</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a7513485aff2d4a3470ede9595f97beee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle XBoard protocol.  <a href="defs_8h.html#a7513485aff2d4a3470ede9595f97beee">More...</a><br /></td></tr>
+<tr class="separator:a7513485aff2d4a3470ede9595f97beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle console mode.  <a href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">More...</a><br /></td></tr>
+<tr class="separator:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -584,7 +596,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00225">225</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00234">234</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -614,7 +626,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00244">244</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00253">253</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -634,7 +646,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00243">243</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00252">252</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -664,7 +676,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00239">239</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00248">248</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -684,7 +696,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00223">223</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00232">232</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -704,7 +716,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00247">247</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00256">256</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -724,7 +736,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00259">259</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -744,7 +756,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00249">249</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00258">258</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -764,7 +776,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00248">248</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00257">257</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -828,7 +840,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00230">230</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00239">239</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -844,7 +856,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00232">232</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00241">241</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -860,7 +872,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00228">228</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00237">237</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -876,7 +888,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00233">233</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00242">242</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -892,7 +904,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00229">229</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00238">238</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -924,7 +936,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00235">235</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00244">244</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -944,7 +956,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00242">242</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00251">251</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -964,7 +976,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00226">226</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00235">235</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -994,7 +1006,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00245">245</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00254">254</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1014,7 +1026,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00241">241</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1034,7 +1046,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00240">240</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00249">249</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1070,7 +1082,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00224">224</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00233">233</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1218,74 +1230,11 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store the squares. </p>
+<p>Enum to store mode being used for the game. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6ff26890857c886c86453f0c8078bf95"></a>A1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cad90c5e7444630b8d170b08d0853aae21"></a>B1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae54c31a855b907f263d49edcdbe677bd"></a>C1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca29b8ecb29049f38cbf752d95f479bff7"></a>D1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab1710e6a49014ba389d57c8753c530f4"></a>E1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca5afea46882b06768ac8563d462999735"></a>F1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caaec6d2231567cdb9063f093d8effa224"></a>G1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca7ec6526640e5add74fe4b322e6343120"></a>H1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca47329f455692c2a8284d7594405f16d4"></a>A2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9bfbe74b27169e5bd5bd5dc020fdd00b"></a>B2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca5e602f1d68586231698bda7be6af7d2e"></a>C2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca86c69dc8849d17673b52b9a8d94d8b9f"></a>D2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cace9a5783f96994d28bc6ec5c9ece8c80"></a>E2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa3c13a70de6599f4470373ec46d4f6bf"></a>F2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caedce8067580fa0c4c235f8534f25a7b3"></a>G2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cabc856fd5d1be355fd3d34b860c506cd0"></a>H2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca47dbfcefc8fabadcd82806b21de14bfc"></a>A3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca008e5845e069ecd71e49f3d18ec21130"></a>B3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cada966660d95922946f59862d9ce54b1c"></a>C3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cade8ef7573c5fa770f07ac7616cbf5d34"></a>D3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca460eae7ccdb66a96136eb0afb98ba51b"></a>E3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca10a5417c8e696606af65ec28c5fb2495"></a>F3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca99381344bd0c2206ca3bcf98254783f0"></a>G3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab5f7333471179f24ed9ce81659847cc7"></a>H3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cada06582608e19a3f2438f54eeb0bcad5"></a>A4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6e242c85f0b91e8879200ec3004a4cab"></a>B4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca24727389909cb6406ed9483df7810c78"></a>C4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca12761dd9f3b74590b720d87d6ca9fbcf"></a>D4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca21d812cf3e9fd32ae1d834555c5d0baa"></a>E4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca8d311dd8454951b86e27873c49ff1ec5"></a>F4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf0083cb5d419863c9fa614b3e5a3213b"></a>G4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca2b19eb4f28582dc345e707197160f485"></a>H4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caacdd5acf9dd0376a4073a1f27d8df74e"></a>A5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf238f32976f4a2c27a517bd1ad47be36"></a>B5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca26c0a10a3dc0a69747539541f4a82172"></a>C5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9bfc9615ce2836fe43fe37e0eda2a68a"></a>D5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6debb3cd347b3a1a2a85500ced6e7c10"></a>E5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca265fb264db0c419e6cb73bce564cd517"></a>F5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca33e4e589075c868910acfa95b14efb5f"></a>G5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca555abd1b0d375a8ae8c77b90afb6695c"></a>H5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca260faf43232fc57a22e280e8912d6689"></a>A6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca0eb7e951c71ad8f7ea59d513e8d57747"></a>B6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae138d2e0243a8b4dcca22738eebc2197"></a>C6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab6e74cb404ad3a7370b6cbb05f004fcb"></a>D6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca22c7951dba1a1943224d259176412bfd"></a>E6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa1e9d714a0238434a819235d4832f7d2"></a>F6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6ab0f7aca08fd2ba5505168472501d98"></a>G6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caaa1e5185cf98f81e2e8a710f907c3174"></a>H6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca7ae46613d850fc0cb3d82eb0bb8811c6"></a>A7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca561ae7a12dd8bf549f1b7e647354297e"></a>B7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca4f858b829392e960b43c57a9731c98ac"></a>C7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa"></a>D7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca40ca2674103ced2895998d0383ac50e5"></a>E7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6f111feaebfe5971b1243256d6417dc7"></a>F7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae236ad64088ffc77d9e098628d5ba342"></a>G7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab5528db6787796e749fa3f4af05bc239"></a>H7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf3ba956cfc94b23b44487413b27c646a"></a>A8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca36820f60b2f0bee85a682e3f0b6e0fea"></a>B8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6a72e133ec9df7aadaeef87557e5cbb0"></a>C8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1"></a>D8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca1eacedb7bc191a326eafc02f96c93a6f"></a>E8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cacb02fa2cede46dab94694927da16433d"></a>F8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa1c865ccd52132fb116c4587969e6ad8"></a>G8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cade042a52f63647c9e92085a07bb9fd66"></a>H8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca8920a90700927bb9d204cd229b8c08f8"></a>NO_SQ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca50ad28561f0aac3c76dd95dd97fffe74"></a>UCIMODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf8753b09d02a203105f442af32e63260"></a>XBOARDMODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79"></a>CONSOLEMODE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00072">72</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
@@ -1304,13 +1253,77 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store boolean values. </p>
+<p>Enum to store the squares. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1e095cc966dbecf6a0d8aad75348d1a"></a>FALSE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6ff26890857c886c86453f0c8078bf95"></a>A1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ead90c5e7444630b8d170b08d0853aae21"></a>B1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae54c31a855b907f263d49edcdbe677bd"></a>C1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea29b8ecb29049f38cbf752d95f479bff7"></a>D1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab1710e6a49014ba389d57c8753c530f4"></a>E1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea5afea46882b06768ac8563d462999735"></a>F1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaaec6d2231567cdb9063f093d8effa224"></a>G1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea7ec6526640e5add74fe4b322e6343120"></a>H1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea47329f455692c2a8284d7594405f16d4"></a>A2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9bfbe74b27169e5bd5bd5dc020fdd00b"></a>B2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea5e602f1d68586231698bda7be6af7d2e"></a>C2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea86c69dc8849d17673b52b9a8d94d8b9f"></a>D2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eace9a5783f96994d28bc6ec5c9ece8c80"></a>E2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa3c13a70de6599f4470373ec46d4f6bf"></a>F2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaedce8067580fa0c4c235f8534f25a7b3"></a>G2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eabc856fd5d1be355fd3d34b860c506cd0"></a>H2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea47dbfcefc8fabadcd82806b21de14bfc"></a>A3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea008e5845e069ecd71e49f3d18ec21130"></a>B3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eada966660d95922946f59862d9ce54b1c"></a>C3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eade8ef7573c5fa770f07ac7616cbf5d34"></a>D3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea460eae7ccdb66a96136eb0afb98ba51b"></a>E3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea10a5417c8e696606af65ec28c5fb2495"></a>F3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea99381344bd0c2206ca3bcf98254783f0"></a>G3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab5f7333471179f24ed9ce81659847cc7"></a>H3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eada06582608e19a3f2438f54eeb0bcad5"></a>A4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6e242c85f0b91e8879200ec3004a4cab"></a>B4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea24727389909cb6406ed9483df7810c78"></a>C4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea12761dd9f3b74590b720d87d6ca9fbcf"></a>D4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea21d812cf3e9fd32ae1d834555c5d0baa"></a>E4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea8d311dd8454951b86e27873c49ff1ec5"></a>F4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf0083cb5d419863c9fa614b3e5a3213b"></a>G4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea2b19eb4f28582dc345e707197160f485"></a>H4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaacdd5acf9dd0376a4073a1f27d8df74e"></a>A5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf238f32976f4a2c27a517bd1ad47be36"></a>B5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea26c0a10a3dc0a69747539541f4a82172"></a>C5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9bfc9615ce2836fe43fe37e0eda2a68a"></a>D5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6debb3cd347b3a1a2a85500ced6e7c10"></a>E5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea265fb264db0c419e6cb73bce564cd517"></a>F5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea33e4e589075c868910acfa95b14efb5f"></a>G5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea555abd1b0d375a8ae8c77b90afb6695c"></a>H5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea260faf43232fc57a22e280e8912d6689"></a>A6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea0eb7e951c71ad8f7ea59d513e8d57747"></a>B6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae138d2e0243a8b4dcca22738eebc2197"></a>C6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab6e74cb404ad3a7370b6cbb05f004fcb"></a>D6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea22c7951dba1a1943224d259176412bfd"></a>E6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1e9d714a0238434a819235d4832f7d2"></a>F6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6ab0f7aca08fd2ba5505168472501d98"></a>G6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaaa1e5185cf98f81e2e8a710f907c3174"></a>H6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea7ae46613d850fc0cb3d82eb0bb8811c6"></a>A7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea561ae7a12dd8bf549f1b7e647354297e"></a>B7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea4f858b829392e960b43c57a9731c98ac"></a>C7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa"></a>D7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea40ca2674103ced2895998d0383ac50e5"></a>E7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6f111feaebfe5971b1243256d6417dc7"></a>F7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae236ad64088ffc77d9e098628d5ba342"></a>G7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab5528db6787796e749fa3f4af05bc239"></a>H7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf3ba956cfc94b23b44487413b27c646a"></a>A8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea36820f60b2f0bee85a682e3f0b6e0fea"></a>B8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6a72e133ec9df7aadaeef87557e5cbb0"></a>C8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1"></a>D8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea1eacedb7bc191a326eafc02f96c93a6f"></a>E8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eacb02fa2cede46dab94694927da16433d"></a>F8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1c865ccd52132fb116c4587969e6ad8"></a>G8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eade042a52f63647c9e92085a07bb9fd66"></a>H8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea8920a90700927bb9d204cd229b8c08f8"></a>NO_SQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00087">87</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00078">78</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1326,15 +1339,37 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store the castling permissions. </p>
+<p>Enum to store boolean values. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635ac2f915c8e28362ff0423ae01d4b5c638"></a>WKCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a90ed269227fd51007dd61578124378a2"></a>WQCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635adca5d258ee038af989898b86acb9476d"></a>BKCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a"></a>FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 <p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00093">93</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a0411cd49bb5b71852cecd93bcbf0ca2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0411cd49bb5b71852cecd93bcbf0ca2d">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum to store the castling permissions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2dac2f915c8e28362ff0423ae01d4b5c638"></a>WKCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2da90ed269227fd51007dd61578124378a2"></a>WQCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2dadca5d258ee038af989898b86acb9476d"></a>BKCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00099">99</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1408,6 +1443,45 @@ Variables</h2></td></tr>
 <p>Clear the PV table. </p>
 
 <p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00060">60</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="ac5fa6c8e94b5322c3df417a6c46f1752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fa6c8e94b5322c3df417a6c46f1752">&#9670;&nbsp;</a></span>Console_Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_Loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main loop to handle console mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00271">271</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
 
 </div>
 </div>
@@ -2441,8 +2515,8 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a81943bfe8fafe71d2216ee5e36f41713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81943bfe8fafe71d2216ee5e36f41713">&#9670;&nbsp;</a></span>Uci_Loop()</h2>
+<a id="aea5d40969d72cd4ed3145580786a56a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5d40969d72cd4ed3145580786a56a2">&#9670;&nbsp;</a></span>Uci_Loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -2450,15 +2524,33 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname">void Uci_Loop </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Main loop to handle UCI protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="uci_8c_source.html#l00130">130</a> of file <a class="el" href="uci_8c_source.html">uci.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="uci_8c_source.html#l00132">132</a> of file <a class="el" href="uci_8c_source.html">uci.c</a>.</p>
 
 </div>
 </div>
@@ -2487,6 +2579,45 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00108">108</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+
+</div>
+</div>
+<a id="a7513485aff2d4a3470ede9595f97beee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7513485aff2d4a3470ede9595f97beee">&#9670;&nbsp;</a></span>XBoard_Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XBoard_Loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Main loop to handle XBoard protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00115">115</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
 
 </div>
 </div>

@@ -95,9 +95,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a166e7492e73a1db9b8a74d09e1817360"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uci_8c.html#a166e7492e73a1db9b8a74d09e1817360">ParsePosition</a> (char *lineIn, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a166e7492e73a1db9b8a74d09e1817360"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the position.  <a href="uci_8c.html#a166e7492e73a1db9b8a74d09e1817360">More...</a><br /></td></tr>
 <tr class="separator:a166e7492e73a1db9b8a74d09e1817360"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81943bfe8fafe71d2216ee5e36f41713"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uci_8c.html#a81943bfe8fafe71d2216ee5e36f41713">Uci_Loop</a> ()</td></tr>
-<tr class="memdesc:a81943bfe8fafe71d2216ee5e36f41713"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle UCI protocol.  <a href="uci_8c.html#a81943bfe8fafe71d2216ee5e36f41713">More...</a><br /></td></tr>
-<tr class="separator:a81943bfe8fafe71d2216ee5e36f41713"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5d40969d72cd4ed3145580786a56a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="uci_8c.html#aea5d40969d72cd4ed3145580786a56a2">Uci_Loop</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:aea5d40969d72cd4ed3145580786a56a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle UCI protocol.  <a href="uci_8c.html#aea5d40969d72cd4ed3145580786a56a2">More...</a><br /></td></tr>
+<tr class="separator:aea5d40969d72cd4ed3145580786a56a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains functions to handle UCI protocol. </p>
@@ -210,8 +210,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a81943bfe8fafe71d2216ee5e36f41713"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a81943bfe8fafe71d2216ee5e36f41713">&#9670;&nbsp;</a></span>Uci_Loop()</h2>
+<a id="aea5d40969d72cd4ed3145580786a56a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5d40969d72cd4ed3145580786a56a2">&#9670;&nbsp;</a></span>Uci_Loop()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -219,15 +219,33 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void Uci_Loop </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype"><a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *&#160;</td>
+          <td class="paramname"><em>info</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Main loop to handle UCI protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
 
-<p class="definition">Definition at line <a class="el" href="uci_8c_source.html#l00130">130</a> of file <a class="el" href="uci_8c_source.html">uci.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="uci_8c_source.html#l00132">132</a> of file <a class="el" href="uci_8c_source.html">uci.c</a>.</p>
 
 </div>
 </div>

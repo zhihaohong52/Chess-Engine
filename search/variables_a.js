@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['nodes_411',['nodes',['../structS__SEARCHINFO.html#a5ccb3e81ca52a3fc4c47aa3e090a28e1',1,'S_SEARCHINFO']]],
-  ['numdir_412',['NumDir',['../movegen_8c.html#a5b2cd45fa3a5dba79ecef57e855a1ea8',1,'movegen.c']]],
-  ['numentries_413',['numEntries',['../structS__PVTABLE.html#acc1bc9eefe3be54cf98c7a885e65b3b3',1,'S_PVTABLE']]]
+  ['majpce_422',['majPce',['../structS__BOARD.html#a37272554805560fa339dce1d7bdf5293',1,'S_BOARD']]],
+  ['material_423',['material',['../structS__BOARD.html#addd30f12f611b1ea4ef4ab721051ea86',1,'S_BOARD']]],
+  ['minpce_424',['minPce',['../structS__BOARD.html#ae445f8a83769ad0b2265fc7b0fa1d1f3',1,'S_BOARD']]],
+  ['mirror64_425',['Mirror64',['../evaluate_8c.html#a765c78222b6fe7a23c518003716463b0',1,'evaluate.c']]],
+  ['move_426',['move',['../structS__MOVE.html#adf70f75da2c5964527059686218b1c39',1,'S_MOVE::move()'],['../structS__PVENTRY.html#ab188f03fbc3d432cb9e0be6e7f41709a',1,'S_PVENTRY::move()'],['../structS__UNDO.html#a2af35fd122dddb514c8ce0e62536aa7d',1,'S_UNDO::move()']]],
+  ['moves_427',['moves',['../structS__MOVELIST.html#a7b3e25354c7c5058348231e77e25f8af',1,'S_MOVELIST']]],
+  ['movestogo_428',['movestogo',['../structS__SEARCHINFO.html#a2be8cbea08a0909eb5e09732ed046140',1,'S_SEARCHINFO']]]
 ];

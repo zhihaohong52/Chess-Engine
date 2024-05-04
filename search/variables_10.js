@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['victimscore_457',['VictimScore',['../movegen_8c.html#a1b0565fb6ffb24a9635d0fe9405a44cb',1,'movegen.c']]]
+  ['timeset_475',['timeset',['../structS__SEARCHINFO.html#a2187179aef950847fa745d80dd831254',1,'S_SEARCHINFO']]]
 ];

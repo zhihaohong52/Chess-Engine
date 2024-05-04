@@ -74,20 +74,64 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#include &quot;stdio.h&quot;</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#include &quot;stdlib.h&quot;</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="defs_8h.html">defs.h</a>&quot;</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="vice_8c.html#af1a88e288a3cdadff3b391b6fc60bb18">   44</a></span>&#160;<span class="preprocessor">#define WAC1 &quot;r1b1k2r/ppppnppp/2n2q2/2b5/3NP3/2P1B3/PP3PPP/RN1QKB1R w KQkq - 0 1&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="vice_8c.html#ac40d7184909dc46f587585a74e160278">   45</a></span>&#160;<span class="preprocessor">#define PERFT &quot;r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1&quot;</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   52</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <a class="code" href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a>();</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="defs_8h.html#a81943bfe8fafe71d2216ee5e36f41713">Uci_Loop</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="preprocessor">#include &quot;string.h&quot;</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="vice_8c.html#af1a88e288a3cdadff3b391b6fc60bb18">   45</a></span>&#160;<span class="preprocessor">#define WAC1 &quot;r1b1k2r/ppppnppp/2n2q2/2b5/3NP3/2P1B3/PP3PPP/RN1QKB1R w KQkq - 0 1&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="vice_8c.html#ac40d7184909dc46f587585a74e160278">   46</a></span>&#160;<span class="preprocessor">#define PERFT &quot;r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - 0 1&quot;</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">   53</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a>(){</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <a class="code" href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    <a class="code" href="structS__BOARD.html">S_BOARD</a> pos[1];</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <a class="code" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> info[1];</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    <a class="code" href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">InitPvTable</a>(pos-&gt;<a class="code" href="structS__BOARD.html#ad8a5234df06fe17e0c5c8fe316c0a966">PvTable</a>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    printf(<span class="stringliteral">&quot;Welcome to Vice! Type &#39;vice&#39; for console mode...\n&quot;</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordtype">char</span> line[256];</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keywordflow">while</span> (<a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        memset(&amp;line[0], 0, <span class="keyword">sizeof</span>(line));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        fflush(stdout);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> (!fgets(line, 256, stdin))</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">if</span> (line[0] == <span class="charliteral">&#39;\n&#39;</span>)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">if</span> (!strncmp(line, <span class="stringliteral">&quot;uci&quot;</span>,3)) {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <a class="code" href="defs_8h.html#aea5d40969d72cd4ed3145580786a56a2">Uci_Loop</a>(pos, info);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span>(info-&gt;<a class="code" href="structS__SEARCHINFO.html#a8728790e506f2422ba67e323bc24d6ae">quit</a> == <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(line, <span class="stringliteral">&quot;xboard&quot;</span>,6))  {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <a class="code" href="defs_8h.html#a7513485aff2d4a3470ede9595f97beee">XBoard_Loop</a>(pos, info);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">if</span>(info-&gt;<a class="code" href="structS__SEARCHINFO.html#a8728790e506f2422ba67e323bc24d6ae">quit</a> == <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!strncmp(line, <span class="stringliteral">&quot;vice&quot;</span>,4))    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <a class="code" href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a>(pos, info);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">if</span>(info-&gt;<a class="code" href="structS__SEARCHINFO.html#a8728790e506f2422ba67e323bc24d6ae">quit</a> == <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        } <span class="keywordflow">else</span> <span class="keywordflow">if</span>(!strncmp(line, <span class="stringliteral">&quot;quit&quot;</span>,4)) {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    free(pos-&gt;<a class="code" href="structS__BOARD.html#ad8a5234df06fe17e0c5c8fe316c0a966">PvTable</a>-&gt;<a class="code" href="structS__PVTABLE.html#a7fd10e5cc4001e4c0038cf6f3fe2d37f">pTable</a>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 <div class="ttc" id="adefs_8h_html"><div class="ttname"><a href="defs_8h.html">defs.h</a></div><div class="ttdoc">Contains definitions for the game.</div></div>
-<div class="ttc" id="adefs_8h_html_a81943bfe8fafe71d2216ee5e36f41713"><div class="ttname"><a href="defs_8h.html#a81943bfe8fafe71d2216ee5e36f41713">Uci_Loop</a></div><div class="ttdeci">void Uci_Loop()</div><div class="ttdoc">Main loop to handle UCI protocol.</div><div class="ttdef"><b>Definition:</b> <a href="uci_8c_source.html#l00130">uci.c:130</a></div></div>
+<div class="ttc" id="adefs_8h_html_a47e25a6ad38b1244a38700f14da54e96"><div class="ttname"><a href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">InitPvTable</a></div><div class="ttdeci">void InitPvTable(S_PVTABLE *table)</div><div class="ttdoc">Initialize the PV table.</div><div class="ttdef"><b>Definition:</b> <a href="pvtable_8c_source.html#l00076">pvtable.c:76</a></div></div>
+<div class="ttc" id="adefs_8h_html_a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839"><div class="ttname"><a href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a></div><div class="ttdeci">@ TRUE</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00093">defs.h:93</a></div></div>
+<div class="ttc" id="adefs_8h_html_a7513485aff2d4a3470ede9595f97beee"><div class="ttname"><a href="defs_8h.html#a7513485aff2d4a3470ede9595f97beee">XBoard_Loop</a></div><div class="ttdeci">void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info)</div><div class="ttdoc">Main loop to handle XBoard protocol.</div><div class="ttdef"><b>Definition:</b> <a href="xboard_8c_source.html#l00115">xboard.c:115</a></div></div>
 <div class="ttc" id="adefs_8h_html_a89b8e68174211698218707504bb03c1f"><div class="ttname"><a href="defs_8h.html#a89b8e68174211698218707504bb03c1f">AllInit</a></div><div class="ttdeci">void AllInit()</div><div class="ttdoc">Initializes the board.</div><div class="ttdef"><b>Definition:</b> <a href="init_8c_source.html#l00171">init.c:171</a></div></div>
-<div class="ttc" id="avice_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00052">vice.c:52</a></div></div>
+<div class="ttc" id="adefs_8h_html_ac5fa6c8e94b5322c3df417a6c46f1752"><div class="ttname"><a href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a></div><div class="ttdeci">void Console_Loop(S_BOARD *pos, S_SEARCHINFO *info)</div><div class="ttdoc">Main loop to handle console mode.</div><div class="ttdef"><b>Definition:</b> <a href="xboard_8c_source.html#l00271">xboard.c:271</a></div></div>
+<div class="ttc" id="adefs_8h_html_aea5d40969d72cd4ed3145580786a56a2"><div class="ttname"><a href="defs_8h.html#aea5d40969d72cd4ed3145580786a56a2">Uci_Loop</a></div><div class="ttdeci">void Uci_Loop(S_BOARD *pos, S_SEARCHINFO *info)</div><div class="ttdoc">Main loop to handle UCI protocol.</div><div class="ttdef"><b>Definition:</b> <a href="uci_8c_source.html#l00132">uci.c:132</a></div></div>
+<div class="ttc" id="astructS__BOARD_html"><div class="ttname"><a href="structS__BOARD.html">S_BOARD</a></div><div class="ttdoc">Structure to store the board.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00155">defs.h:155</a></div></div>
+<div class="ttc" id="astructS__BOARD_html_ad8a5234df06fe17e0c5c8fe316c0a966"><div class="ttname"><a href="structS__BOARD.html#ad8a5234df06fe17e0c5c8fe316c0a966">S_BOARD::PvTable</a></div><div class="ttdeci">S_PVTABLE PvTable[1]</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00184">defs.h:184</a></div></div>
+<div class="ttc" id="astructS__PVTABLE_html_a7fd10e5cc4001e4c0038cf6f3fe2d37f"><div class="ttname"><a href="structS__PVTABLE.html#a7fd10e5cc4001e4c0038cf6f3fe2d37f">S_PVTABLE::pTable</a></div><div class="ttdeci">S_PVENTRY * pTable</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00133">defs.h:133</a></div></div>
+<div class="ttc" id="astructS__SEARCHINFO_html"><div class="ttname"><a href="structS__SEARCHINFO.html">S_SEARCHINFO</a></div><div class="ttdoc">Structure to store the search information.</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00197">defs.h:197</a></div></div>
+<div class="ttc" id="astructS__SEARCHINFO_html_a8728790e506f2422ba67e323bc24d6ae"><div class="ttname"><a href="structS__SEARCHINFO.html#a8728790e506f2422ba67e323bc24d6ae">S_SEARCHINFO::quit</a></div><div class="ttdeci">int quit</div><div class="ttdef"><b>Definition:</b> <a href="defs_8h_source.html#l00209">defs.h:209</a></div></div>
+<div class="ttc" id="avice_8c_html_ae66f6b31b5ad750f1fe042a706a4e3d4"><div class="ttname"><a href="vice_8c.html#ae66f6b31b5ad750f1fe042a706a4e3d4">main</a></div><div class="ttdeci">int main()</div><div class="ttdoc">Main function.</div><div class="ttdef"><b>Definition:</b> <a href="vice_8c_source.html#l00053">vice.c:53</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

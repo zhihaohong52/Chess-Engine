@@ -1,10 +1,8 @@
 var searchData=
 [
-  ['majpce_404',['majPce',['../structS__BOARD.html#a37272554805560fa339dce1d7bdf5293',1,'S_BOARD']]],
-  ['material_405',['material',['../structS__BOARD.html#addd30f12f611b1ea4ef4ab721051ea86',1,'S_BOARD']]],
-  ['minpce_406',['minPce',['../structS__BOARD.html#ae445f8a83769ad0b2265fc7b0fa1d1f3',1,'S_BOARD']]],
-  ['mirror64_407',['Mirror64',['../evaluate_8c.html#a765c78222b6fe7a23c518003716463b0',1,'evaluate.c']]],
-  ['move_408',['move',['../structS__MOVE.html#adf70f75da2c5964527059686218b1c39',1,'S_MOVE::move()'],['../structS__PVENTRY.html#ab188f03fbc3d432cb9e0be6e7f41709a',1,'S_PVENTRY::move()'],['../structS__UNDO.html#a2af35fd122dddb514c8ce0e62536aa7d',1,'S_UNDO::move()']]],
-  ['moves_409',['moves',['../structS__MOVELIST.html#a7b3e25354c7c5058348231e77e25f8af',1,'S_MOVELIST']]],
-  ['movestogo_410',['movestogo',['../structS__SEARCHINFO.html#a2be8cbea08a0909eb5e09732ed046140',1,'S_SEARCHINFO']]]
+  ['leafnodes_417',['leafNodes',['../perft_8c.html#ad24c58317cf924b00d49ef408dbc5825',1,'perft.c']]],
+  ['loopnonslideindex_418',['LoopNonSlideIndex',['../movegen_8c.html#a8b76d903ac6bea68521020b6ae9c2c08',1,'movegen.c']]],
+  ['loopnonslidepce_419',['LoopNonSlidePce',['../movegen_8c.html#aa241d1d0c35dbaeaec3f39e901f39a54',1,'movegen.c']]],
+  ['loopslideindex_420',['LoopSlideIndex',['../movegen_8c.html#af3a74ec2a7f0f48a812764de59ac887d',1,'movegen.c']]],
+  ['loopslidepce_421',['LoopSlidePce',['../movegen_8c.html#aaad861bd80c2de89515b64fc4dda1d71',1,'movegen.c']]]
 ];
