@@ -214,12 +214,18 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 
     info->nodes++;
 
-    if(IsRepetition(pos) || pos->fiftyMove >= 100) {
+    if ((IsRepetition(pos) || pos->fiftyMove >= 100) && pos->ply) {
         return 0;
     }
 
     if (pos->ply > MAXDEPTH - 1) {
         return EvalPosition(pos);
+    }
+
+    int InCheck = SqAttacked(pos->KingSq[pos->side], pos->side^1, pos);
+
+    if (InCheck == TRUE) {
+        depth++;
     }
 
     S_MOVELIST list[1];
@@ -280,7 +286,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
     }
 
     if (Legal == 0) {
-        if (SqAttacked(pos->KingSq[pos->side], pos->side^1, pos)) {
+        if (InCheck) {
             return -MATE + pos->ply;
         } else {
             return 0;
