@@ -2,7 +2,7 @@
  * @file board.c
  * @author zhihahong52
  * @brief Contains functions to validate the board
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024

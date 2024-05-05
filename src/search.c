@@ -2,7 +2,7 @@
  * @file search.c
  * @author zhihaohong52
  * @brief This file contains functions to search the board
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-01
  *
  * @copyright Copyright (c) 2024
@@ -119,81 +119,74 @@ static void ClearForSearch(S_BOARD *pos, S_SEARCHINFO *info) {
  * @param info Pointer to the search info
  * @return int
  */
-static int Quiessence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info) {
+static int Quiescence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info) {
 
-    ASSERT(CheckBoard(pos));
+	ASSERT(CheckBoard(pos));
+	ASSERT(beta>alpha);
+	if(( info->nodes & 2047 ) == 0) {
+		CheckUp(info);
+	}
 
-    if ((info->nodes & 2047) == 0) {
-        CheckUp(info);
-    }
+	info->nodes++;
 
-    info->nodes++;
+	if(IsRepetition(pos) || pos->fiftyMove >= 100) {
+		return 0;
+	}
 
-    if (IsRepetition(pos) || pos->fiftyMove >= 100) {
-        return 0;
-    }
+	if(pos->ply > MAXDEPTH - 1) {
+		return EvalPosition(pos);
+	}
 
-    if (pos->ply > MAXDEPTH - 1) {
-        return EvalPosition(pos);
-    }
+	int Score = EvalPosition(pos);
 
-    int Score = EvalPosition(pos);
+	ASSERT(Score>-INFINITE && Score<INFINITE);
 
-    if (Score >= beta) {
-        return beta;
-    }
+	if(Score >= beta) {
+		return beta;
+	}
 
-    if (Score > alpha) {
-        alpha = Score;
-    }
+	if(Score > alpha) {
+		alpha = Score;
+	}
 
-    S_MOVELIST list[1];
-    GenerateAllCaps(pos, list);
+	S_MOVELIST list[1];
+    GenerateAllCaps(pos,list);
 
     int MoveNum = 0;
-    int Legal = 0;
-    int OldAlpha = alpha;
-    int BestMove = NOMOVE;
-    Score = -INFINITE;
-    int PvMove = ProbePvMove(pos);
+	int Legal = 0;
+	Score = -INFINITE;
 
-    for(MoveNum = 0; MoveNum < list->count; ++MoveNum) {
+	for(MoveNum = 0; MoveNum < list->count; ++MoveNum) {
 
-        PickNextMove(MoveNum, list);
+		PickNextMove(MoveNum, list);
 
-        if (!MakeMove(pos, list->moves[MoveNum].move)) {
+        if ( !MakeMove(pos,list->moves[MoveNum].move))  {
             continue;
         }
 
-        Legal++;
-        Score = -Quiessence(-beta, -alpha, pos, info);
+		Legal++;
+		Score = -Quiescence( -beta, -alpha, pos, info);
         TakeMove(pos);
 
-        if (info->stopped == TRUE) {
-            return 0;
-        }
+		if(info->stopped == TRUE) {
+			return 0;
+		}
 
-        if (Score > alpha) {
-            if (Score >= beta) {
-                if (Legal == 1) {
-                    info->fhf++;
-                }
-                info->fh++;
-
-                return beta;
-            }
-            alpha = Score;
-            BestMove = list->moves[MoveNum].move;
-        }
+		if(Score > alpha) {
+			if(Score >= beta) {
+				if(Legal==1) {
+					info->fhf++;
+				}
+				info->fh++;
+				return beta;
+			}
+			alpha = Score;
+		}
     }
 
-    if (alpha != OldAlpha) {
-        StoreHashEntry(pos, BestMove, alpha, HFEXACT, 0);
-    } else {
-        StoreHashEntry(pos, BestMove, alpha, HFALPHA, 0);
-    }
+	ASSERT(alpha >= OldAlpha);
 
-    return alpha;
+	return alpha;
 }
 
 /**
@@ -212,7 +205,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
     ASSERT(CheckBoard(pos));
 
     if (depth <= 0) {
-        return Quiessence(alpha, beta, pos, info);
+        return Quiescence(alpha, beta, pos, info);
     }
 
     if ((info->nodes & 2047) == 0) {

@@ -2,7 +2,7 @@
  * @file attack.c
  * @author your name (you@domain.com)
  * @brief Contains functions to determine if a square is attacked by a piece of a certain color
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024

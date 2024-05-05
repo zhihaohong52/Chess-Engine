@@ -2,7 +2,7 @@
  * @file perft.c
  * @author zhihaohong52
  * @brief Contains functions to test the move generation
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-01
  *
  * @copyright Copyright (c) 2024

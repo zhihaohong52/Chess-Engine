@@ -2,7 +2,7 @@
  * @file xboard.c
  * @author zhihaohong52
  * @brief This file contains functions to communicate with the XBoard/WinBoard protocol
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-05
  *
  * @copyright Copyright (c) 2024

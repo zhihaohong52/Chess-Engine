@@ -5,7 +5,7 @@ CC := gcc
 CFLAGS :=
 
 # Define the target executable
-TARGET := vice
+TARGET := pace
 
 # Directory for object files
 OBJDIR := bin

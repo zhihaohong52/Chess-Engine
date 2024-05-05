@@ -2,7 +2,7 @@
  * @file io.c
  * @author zhihaohong52
  * @brief Contains functions to print the board and moves
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024

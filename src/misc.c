@@ -2,7 +2,7 @@
  * @file misc.c
  * @author zhihaohong52
  * @brief This file contains miscellaneous functions
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-02
  *
  * @copyright Copyright (c) 2024

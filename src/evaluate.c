@@ -2,7 +2,7 @@
  * @file evaluate.c
  * @author zhihaohong52
  * @brief This file contains functions to evaluate the position
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-02
  *
  * @copyright Copyright (c) 2024

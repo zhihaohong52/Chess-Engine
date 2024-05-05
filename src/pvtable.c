@@ -2,7 +2,7 @@
  * @file pvtable.c
  * @author zhihaohong52
  * @brief This file contains functions to store the hash table/ principal variation table (PV Table)
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-02
  *
  * @copyright Copyright (c) 2024
@@ -86,7 +86,7 @@ void InitHashTable(S_HASHTABLE *table, const int MB) {
         InitHashTable(table,MB/2);
     } else {
         ClearHashTable(table);
-        printf("PV Table init complete with %d entries\n",table->numEntries);
+        printf("HashTable init complete with %d entries\n",table->numEntries);
     }
 }
 

@@ -2,7 +2,7 @@
  * @file uci.c
  * @author zhihaohong52
  * @brief This file contains functions to handle UCI protocol
- * @version 0.1
+ * @version 0.2
  * @date 2024-05-03
  *
  * @copyright Copyright (c) 2024

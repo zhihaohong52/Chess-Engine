@@ -1,8 +1,8 @@
 /**
- * @file vice.c
+ * @file main.c
  * @author zhihaohong52
  * @brief Main file to run the chess engine
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024
@@ -34,7 +34,7 @@ int main(){
 	setbuf(stdin, NULL);
 	setbuf(stdout, NULL);
 
-    printf("Welcome to Vice! Type 'vice' for console mode...\n");
+    printf("Welcome to Pace! Type 'pace' for console mode...\n");
 
     char line[256];
     while (TRUE) {

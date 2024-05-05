@@ -1,11 +1,16 @@
 /**
- @mainpage Project Documentation
+ * @mainpage Project Documentation
  *
- * Welcome to documentation for Vice, a chess engine written in C.
+ * Welcome to documentation for Pace, a chess engine written in C.
  *
  * @section sec_intro Introduction
  *
- * Vice is a chess engine written in C. The engine is inspired by the series created by Bluefever Software.
+ * Pace is a chess engine written in C. The engine is inspired by the series created by Bluefever Software.
+ * Pace stands for Predictive Alpha-Beta Chess engine.
+ *
+ * @section sec_description sec_description
+ * Pace uses alpha-beta search with quiescence (megamax) to search for optimal moves.
+ * Pace supports both UCI and Xboard/winboard protocols. It also features a console mode.
  *
  * @section sec_usage Usage
  *

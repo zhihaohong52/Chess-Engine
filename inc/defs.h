@@ -2,7 +2,7 @@
  * @file defs.h
  * @author zhihaohong52
  * @brief Contains definitions for the game
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024
@@ -356,13 +356,16 @@ extern int FileRankValid(const int fr);
 extern int PieceValidEmpty(const int pce);
 extern int PieceValid(const int pce);
 extern void MirrorEvalTest(S_BOARD *pos);
+extern int SqIs120(const int sq);
+extern int PceValidEmptyOffbrd(const int pce);
+extern int MoveListOk(const S_MOVELIST *list,  const S_BOARD *pos);
 extern void DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info);
 
 // movegen.c
 extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
 extern void GenerateAllCaps(const S_BOARD *pos, S_MOVELIST *list);
 extern int MoveExists(S_BOARD *pos, const int move);
-extern int InitMvvLva();
+extern void InitMvvLva();
 
 // makemove.c
 extern int MakeMove(S_BOARD *pos, int move);

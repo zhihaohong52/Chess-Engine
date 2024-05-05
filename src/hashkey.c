@@ -2,7 +2,7 @@
  * @file hashkey.c
  * @author zhihaohong52
  * @brief Contains functions to generate a unique key for a position
- * @version 0.1
+ * @version 0.2
  * @date 2024-04-29
  *
  * @copyright Copyright (c) 2024
