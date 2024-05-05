@@ -23,7 +23,7 @@ int GetPvLine(const int depth, S_BOARD *pos) {
 
     ASSERT(depth < MAXDEPTH);
 
-    int move = ProbePvTable(pos);
+    int move = ProbePvMove(pos);
     int count = 0;
 
     while (move != NOMOVE && count < depth) {
@@ -36,7 +36,7 @@ int GetPvLine(const int depth, S_BOARD *pos) {
         } else {
             break;
         }
-        move = ProbePvTable(pos);
+        move = ProbePvMove(pos);
     }
 
     while(pos->ply > 0) {
@@ -48,71 +48,153 @@ int GetPvLine(const int depth, S_BOARD *pos) {
 }
 
 /**
- * @brief Initilize the PV table to 2MB
+ * @brief Hash table size
  *
  */
-const int PvSize = 0x100000 * 2;
+const int HashSize = 0x100000 * 16;
 
 /**
- * @brief Clear the PV table
+ * @brief Clear the hash table
  *
  */
-void ClearPVTable(S_PVTABLE *table) {
+void ClearHashTable(S_HASHTABLE *table) {
 
-    S_PVENTRY *pvEntry;
+    S_HASHENTRY *tableEntry;
 
-    for(pvEntry = table->pTable; pvEntry < table->pTable + table->numEntries; pvEntry++) {
-        pvEntry->posKey = 0ULL;
-        pvEntry->move = NOMOVE;
+    for(tableEntry = table->pTable; tableEntry < table->pTable + table->numEntries; tableEntry++) {
+        tableEntry->posKey = 0ULL;
+        tableEntry->move = NOMOVE;
+        tableEntry->depth = 0;
+        tableEntry->score = 0;
+        tableEntry->flags = 0;
     }
-
+    table->newWrite = 0;
 }
 
 /**
- * @brief Initialize the PV table
+ * @brief Initialize the hash table
  *
- * @param table Pointer to the PV table
+ * @param table Pointer to the hash table
  */
-void InitPvTable(S_PVTABLE *table) {
+void InitHashTable(S_HASHTABLE *table) {
 
-    table->numEntries = PvSize / sizeof(S_PVENTRY);
+    table->numEntries = HashSize / sizeof(S_HASHENTRY);
     table->numEntries -= 2;
     free(table->pTable);
-    table->pTable = (S_PVENTRY *)malloc(table->numEntries * sizeof(S_PVENTRY));
-    ClearPVTable(table);
+    table->pTable = (S_HASHENTRY *)malloc(table->numEntries * sizeof(S_HASHENTRY));
+    ClearHashTable(table);
     printf("PV Table init complete with %d entries\n",table->numEntries);
 
 }
 
 /**
- * @brief Function to store the principal variation move
+ * @brief Function to probe the hash table
  *
  * @param pos Pointer to the board
- * @param move The move to be stored
+ * @param move Pointer to the move
+ * @param score Pointer to the score
+ * @param alpha Pointer to the alpha
+ * @param beta Pointer to the beta
+ * @param depth Pointer to the depth
+ * @return int The move from the hash table
  */
-void StorePvMove(const S_BOARD *pos, const int move) {
+int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int depth) {
 
-    int index = pos->posKey % pos->PvTable->numEntries;
-    ASSERT(index >= 0 && index <= pos->PvTable->numEntries - 1);
+	int index = pos->posKey % pos->HashTable->numEntries;
 
-    pos->PvTable->pTable[index].move = move;
-    pos->PvTable->pTable[index].posKey = pos->posKey;
+	ASSERT(index >= 0 && index <= pos->HashTable->numEntries - 1);
+    ASSERT(depth>=1&&depth<MAXDEPTH);
+    ASSERT(alpha<beta);
+    ASSERT(alpha>=-INFINITE&&alpha<=INFINITE);
+    ASSERT(beta>=-INFINITE&&beta<=INFINITE);
+    ASSERT(pos->ply>=0&&pos->ply<MAXDEPTH);
+
+	if( pos->HashTable->pTable[index].posKey == pos->posKey ) {
+		*move = pos->HashTable->pTable[index].move;
+		if(pos->HashTable->pTable[index].depth >= depth){
+			pos->HashTable->hit++;
+
+			ASSERT(pos->HashTable->pTable[index].depth>=1&&pos->HashTable->pTable[index].depth<MAXDEPTH);
+            ASSERT(pos->HashTable->pTable[index].flags>=HFALPHA&&pos->HashTable->pTable[index].flags<=HFEXACT);
+
+			*score = pos->HashTable->pTable[index].score;
+			if(*score > ISMATE) *score -= pos->ply;
+            else if(*score < -ISMATE) *score += pos->ply;
+
+			switch(pos->HashTable->pTable[index].flags) {
+
+                ASSERT(*score>=-INFINITE&&*score<=INFINITE);
+
+                case HFALPHA: if(*score<=alpha) {
+                    *score=alpha;
+                    return TRUE;
+                    }
+                    break;
+                case HFBETA: if(*score>=beta) {
+                    *score=beta;
+                    return TRUE;
+                    }
+                    break;
+                case HFEXACT:
+                    return TRUE;
+                    break;
+                default: ASSERT(FALSE); break;
+            }
+		}
+	}
+
+	return FALSE;
 }
 
 /**
- * @brief Function to probe the PV table
+ * @brief Function to store the hash entry
+ *
+ * @param pos Pointer to the board
+ * @param move The move to be stored
+ * @param score The score of the move
+ * @param flags The flags of the move
+ * @param depth The depth of the search
+ */
+void StoreHashEntry(S_BOARD *pos, const int move, int score, const int flags, const int depth) {
+
+	int index = pos->posKey % pos->HashTable->numEntries;
+
+	ASSERT(index >= 0 && index <= pos->HashTable->numEntries - 1);
+	ASSERT(depth>=1&&depth<MAXDEPTH);
+    ASSERT(flags>=HFALPHA&&flags<=HFEXACT);
+    ASSERT(score>=-INFINITE&&score<=INFINITE);
+    ASSERT(pos->ply>=0&&pos->ply<MAXDEPTH);
+
+	if( pos->HashTable->pTable[index].posKey == 0) {
+		pos->HashTable->newWrite++;
+	} else {
+		pos->HashTable->overWrite++;
+	}
+
+	if(score > ISMATE) score += pos->ply;
+    else if(score < -ISMATE) score -= pos->ply;
+
+	pos->HashTable->pTable[index].move = move;
+    pos->HashTable->pTable[index].posKey = pos->posKey;
+	pos->HashTable->pTable[index].flags = flags;
+	pos->HashTable->pTable[index].score = score;
+	pos->HashTable->pTable[index].depth = depth;
+}
+
+/**
+ * @brief Function to probe the principal variation table
  *
  * @param pos Pointer to the board
  * @return int The move from the PV table
  */
-int ProbePvTable(const S_BOARD *pos) {
+int ProbePvMove(const S_BOARD *pos) {
 
-    int index = pos->posKey % pos->PvTable->numEntries;
-    ASSERT(index >= 0 && index <= pos->PvTable->numEntries - 1);
+	int index = pos->posKey % pos->HashTable->numEntries;
+	ASSERT(index >= 0 && index <= pos->HashTable->numEntries - 1);
 
-    if(pos->PvTable->pTable[index].posKey == pos->posKey) {
-        return pos->PvTable->pTable[index].move;
-    }
+	if( pos->HashTable->pTable[index].posKey == pos->posKey ) {
+	    return pos->HashTable->pTable[index].move;
+	}
 
-    return NOMOVE;
+	return NOMOVE;
 }

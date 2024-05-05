@@ -52,7 +52,7 @@ int SqAttacked(const int sq, const int side, const S_BOARD *pos) {
     ASSERT(CheckBoard(pos));
 
     // pawns
-    if(side == WHITE) {
+    if (side == WHITE) {
         if(pos->pieces[sq - 11] == wP || pos->pieces[sq - 9] == wP) {
             return TRUE;
         }
@@ -65,7 +65,7 @@ int SqAttacked(const int sq, const int side, const S_BOARD *pos) {
     // knights
     for (index = 0; index < 8; ++index) {
         pce = pos->pieces[sq + KnDir[index]];
-        if (IsKn(pce) && PieceCol[pce] == side) {
+        if (pce != OFFBOARD && IsKn(pce) && PieceCol[pce] == side) {
             return TRUE;
         }
     }
@@ -107,7 +107,7 @@ int SqAttacked(const int sq, const int side, const S_BOARD *pos) {
     // kings
     for (index = 0; index < 8; ++index) {
         pce = pos->pieces[sq + KiDir[index]];
-        if (IsKi(pce) && PieceCol[pce] == side) {
+        if (pce != OFFBOARD && (pce) && PieceCol[pce] == side) {
             return TRUE;
         }
     }

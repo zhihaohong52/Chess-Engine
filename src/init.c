@@ -73,6 +73,111 @@ int FilesBrd[BRD_SQ_NUM];
 int RanksBrd[BRD_SQ_NUM];
 
 /**
+ * @brief File bit masks
+ *
+ */
+U64 FileBBMask[8];
+
+/**
+ * @brief Rank bit masks
+ *
+ */
+U64 RankBBMask[8];
+
+/**
+ * @brief Black passed pawn masks
+ *
+ */
+U64 BlackPassedMask[64];
+
+/**
+ * @brief White passed pawn masks
+ *
+ */
+U64 WhitePassedMask[64];
+
+/**
+ * @brief Isolated pawn masks
+ *
+ */
+U64 IsolatedMask[64];
+
+/**
+ * @brief Initializes the bitmasks for pawns
+ *
+ */
+void InitEvalMasks() {
+
+    int sq, tsq, r, f;
+
+    for(sq = 0; sq < 8; ++sq) {
+        FileBBMask[sq] = 0ULL;
+        RankBBMask[sq] = 0ULL;
+    }
+
+    for(r = RANK_8; r >= RANK_1; r--) {
+        for(f = FILE_A; f <= FILE_H; f++) {
+            sq = r * 8 + f;
+            FileBBMask[f] |= (1ULL << sq);
+            RankBBMask[r] |= (1ULL << sq);
+        }
+    }
+
+    for(sq = 0; sq < 64; ++sq) {
+        WhitePassedMask[sq] = 0ULL;
+        BlackPassedMask[sq] = 0ULL;
+        IsolatedMask[sq] = 0ULL;
+    }
+
+    for(sq = 0; sq < 64; ++sq) {
+        tsq = sq + 8;
+
+        while(tsq < 64) {
+            WhitePassedMask[sq] |= (1ULL << tsq);
+            tsq += 8;
+        }
+
+        tsq = sq - 8;
+        while(tsq >= 0) {
+            BlackPassedMask[sq] |= (1ULL << tsq);
+            tsq -= 8;
+        }
+
+        if(FilesBrd[SQ120(sq)] > FILE_A) {
+            IsolatedMask[sq] |= FileBBMask[FilesBrd[SQ120(sq)] - 1];
+
+            tsq = sq + 7;
+            while(tsq < 64) {
+                WhitePassedMask[sq] |= (1ULL << tsq);
+                tsq += 8;
+            }
+
+            tsq = sq - 9;
+            while(tsq >= 0) {
+                BlackPassedMask[sq] |= (1ULL << tsq);
+                tsq -= 8;
+            }
+        }
+
+        if(FilesBrd[SQ120(sq)] < FILE_H) {
+            IsolatedMask[sq] |= FileBBMask[FilesBrd[SQ120(sq)] + 1];
+
+            tsq = sq + 9;
+            while(tsq < 64) {
+                WhitePassedMask[sq] |= (1ULL << tsq);
+                tsq += 8;
+            }
+
+            tsq = sq - 7;
+            while(tsq >= 0) {
+                BlackPassedMask[sq] |= (1ULL << tsq);
+                tsq -= 8;
+            }
+        }
+    }
+}
+
+/**
  * @brief Initializes the files and ranks
  *
  */
@@ -173,5 +278,6 @@ void AllInit(){
     InitBitMasks();
     InitHashKeys();
     InitFilesRanksBrd();
+    InitEvalMasks();
     InitMvvLva();
 }

@@ -12,7 +12,6 @@
 #include "stdio.h"
 #include "defs.h"
 
-#define INFINITE 30000
 #define MATE 29000
 
 /**
@@ -96,7 +95,9 @@ static void ClearForSearch(S_BOARD *pos, S_SEARCHINFO *info) {
         }
     }
 
-    ClearPVTable(pos->PvTable);
+    pos->HashTable->overWrite = 0;
+    pos->HashTable->hit = 0;
+    pos->HashTable->cut = 0;
     pos->ply = 0;
 
     info->stopped = 0;
@@ -150,7 +151,7 @@ static int Quiessence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info) {
     int OldAlpha = alpha;
     int BestMove = NOMOVE;
     Score = -INFINITE;
-    int PvMove = ProbePvTable(pos);
+    int PvMove = ProbePvMove(pos);
 
     for(MoveNum = 0; MoveNum < list->count; ++MoveNum) {
 
@@ -183,7 +184,9 @@ static int Quiessence(int alpha, int beta, S_BOARD *pos, S_SEARCHINFO *info) {
     }
 
     if (alpha != OldAlpha) {
-        StorePvMove(pos, BestMove);
+        StoreHashEntry(pos, BestMove, alpha, HFEXACT, 0);
+    } else {
+        StoreHashEntry(pos, BestMove, alpha, HFALPHA, 0);
     }
 
     return alpha;
@@ -228,6 +231,26 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
         depth++;
     }
 
+    int Score = -INFINITE;
+    int PvMove = NOMOVE;
+
+    if (ProbeHashEntry(pos, &PvMove, &Score, alpha, beta, depth) == TRUE) {
+        pos->HashTable->cut++;
+        return Score;
+    }
+
+    if (DoNull && !InCheck && pos->ply && (pos->bigPce[pos->side] > 0) && depth >= 4) {
+        MakeNullMove(pos);
+        Score = -AlphaBeta(-beta, -beta + 1, depth - 4, pos, info, FALSE);
+        TakeNullMove(pos);
+        if (info->stopped == TRUE) {
+            return 0;
+        }
+        if (Score >= beta) {
+            return beta;
+        }
+    }
+
     S_MOVELIST list[1];
     GenerateAllMoves(pos, list);
 
@@ -235,8 +258,10 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
     int Legal = 0;
     int OldAlpha = alpha;
     int BestMove = NOMOVE;
-    int Score = -INFINITE;
-    int PvMove = ProbePvTable(pos);
+
+    int BestScore = -INFINITE;
+
+    Score = -INFINITE;
 
     if (PvMove != NOMOVE) {
         for (MoveNum = 0; MoveNum < list->count; ++MoveNum) {
@@ -263,24 +288,30 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
             return 0;
         }
 
-        if (Score > alpha) {
-            if (Score >= beta) {
-                if (Legal == 1) {
-                    info->fhf++;
-                }
-                info->fh++;
-
-                if(!(list->moves[MoveNum].move & MFLAGCAP)) {
-                    pos->searchKillers[1][pos->ply] = pos->searchKillers[0][pos->ply];
-                    pos->searchKillers[0][pos->ply] = list->moves[MoveNum].move;
-                }
-
-                return beta;
-            }
-            alpha = Score;
+        if(Score > BestScore) {
+            BestScore = Score;
             BestMove = list->moves[MoveNum].move;
-            if(!(list->moves[MoveNum].move & MFLAGCAP)) {
-                pos->searchHistory[pos->pieces[FROMSQ(BestMove)]][TOSQ(BestMove)] += depth;
+            if (Score > alpha) {
+                if (Score >= beta) {
+                    if (Legal == 1) {
+                        info->fhf++;
+                    }
+                    info->fh++;
+
+                    if(!(list->moves[MoveNum].move & MFLAGCAP)) {
+                        pos->searchKillers[1][pos->ply] = pos->searchKillers[0][pos->ply];
+                        pos->searchKillers[0][pos->ply] = list->moves[MoveNum].move;
+                    }
+
+                    StoreHashEntry(pos, BestMove, beta, HFBETA, depth);
+
+                    return beta;
+                }
+                alpha = Score;
+                BestMove = list->moves[MoveNum].move;
+                if(!(list->moves[MoveNum].move & MFLAGCAP)) {
+                    pos->searchHistory[pos->pieces[FROMSQ(BestMove)]][TOSQ(BestMove)] += depth;
+                }
             }
         }
     }
@@ -294,7 +325,9 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
     }
 
     if (alpha != OldAlpha) {
-        StorePvMove(pos, BestMove);
+        StoreHashEntry(pos, BestMove, BestScore, HFEXACT, depth);
+    } else {
+        StoreHashEntry(pos, BestMove, alpha, HFALPHA, depth);
     }
 
     return alpha;

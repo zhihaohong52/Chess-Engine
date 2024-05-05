@@ -41,6 +41,9 @@ typedef unsigned long long U64;
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1"
 
+#define INFINITE 30000
+#define ISMATE (INFINITE - MAXDEPTH)
+
 /**
  * @brief Enum to store the pieces
  *
@@ -117,22 +120,36 @@ typedef struct {
 } S_MOVELIST;
 
 /**
- * @brief Structure to store the principal variation entry
- * @details The principal variation entry stores the position key of the best move and the best move
+ * @brief Flags for the hash entry
+ *
+ */
+enum { HFNONE, HFALPHA, HFBETA, HFEXACT };
+
+/**
+ * @brief Structure to store the hash entry
+ * @details The hash entry stores the position key, the move, the score, the depth and the flags
+ *
  */
 typedef struct {
     U64 posKey;
     int move;
-} S_PVENTRY;
+    int score;
+    int depth;
+    int flags;
+} S_HASHENTRY;
 
 /**
  * @brief Structure to store the principal variation table
  * @details The principal variation table stores the table and the number of entries
  */
 typedef struct {
-    S_PVENTRY *pTable;
+    S_HASHENTRY *pTable;
     int numEntries;
-} S_PVTABLE;
+    int newWrite;
+    int overWrite;
+    int hit;
+    int cut;
+} S_HASHTABLE;
 
 /**
  * @brief Structure to store the history of the game
@@ -181,7 +198,7 @@ typedef struct {
     int pList[13][10];
 
     // Principal variation table
-    S_PVTABLE PvTable[1];
+    S_HASHTABLE HashTable[1];
     int PvArray[MAXDEPTH];
 
     // Search history
@@ -258,6 +275,8 @@ typedef struct {
 #define IsKn(p) (PieceKnight[(p)])
 #define IsKi(p) (PieceKing[(p)])
 
+#define MIRROR64(sq) (Mirror64[(sq)])
+
 /* GLOBALS */
 
 extern int Sq120ToSq64[BRD_SQ_NUM];
@@ -288,6 +307,15 @@ extern int PieceRookQueen[13];
 extern int PieceBishopQueen[13];
 extern int PieceSlides[13];
 
+extern int Mirror64[64];
+
+extern U64 FileBBMask[8];
+extern U64 RankBBMask[8];
+
+extern U64 BlackPassedMask[64];
+extern U64 WhitePassedMask[64];
+extern U64 IsolatedMask[64];
+
 /* FUNCTIONS */
 
 // init.c
@@ -309,6 +337,7 @@ extern int ParseFen(char *fen, S_BOARD *pos);
 extern void PrintBoard(const S_BOARD *pos);
 extern void UpdateListMaterial(S_BOARD *pos);
 extern int CheckBoard(const S_BOARD *pos);
+extern void MirrorBoard(S_BOARD *pos);
 
 // attack.c
 extern int SqAttacked(const int sq, const int side, const S_BOARD *pos);
@@ -325,6 +354,7 @@ extern int SideValid(const int side);
 extern int FileRankValid(const int fr);
 extern int PieceValidEmpty(const int pce);
 extern int PieceValid(const int pce);
+extern void MirrorEvalTest(S_BOARD *pos);
 
 // movegen.c
 extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
@@ -335,6 +365,8 @@ extern int InitMvvLva();
 // makemove.c
 extern int MakeMove(S_BOARD *pos, int move);
 extern void TakeMove(S_BOARD *pos);
+extern void MakeNullMove(S_BOARD *pos);
+extern void TakeNullMove(S_BOARD *pos);
 
 // perft.c
 extern void PerftTest(int depth, S_BOARD *pos);
@@ -347,11 +379,12 @@ extern int GetTimeMs();
 void ReadInput(S_SEARCHINFO *info);
 
 // pvtable.c
-extern void InitPvTable(S_PVTABLE *table);
-extern void ClearPVTable(S_PVTABLE *table);
-extern void StorePvMove(const S_BOARD *pos, const int move);
-extern int ProbePvTable(const S_BOARD *pos);
+extern void InitHashTable(S_HASHTABLE *table);
+extern void StoreHashEntry(S_BOARD *pos, const int move, int score, const int flags, const int depth);
+extern int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int depth);
+extern int ProbePvMove(const S_BOARD *pos);
 extern int GetPvLine(const int depth, S_BOARD *pos);
+extern void ClearHashTable(S_HASHTABLE *table);
 
 // evaluate.c
 extern int EvalPosition(const S_BOARD *pos);
