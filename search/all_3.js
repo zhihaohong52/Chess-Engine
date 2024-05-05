@@ -9,8 +9,9 @@ var searchData=
   ['d7_68',['D7',['../defs_8h.html#a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa',1,'defs.h']]],
   ['d8_69',['D8',['../defs_8h.html#a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1',1,'defs.h']]],
   ['data_2ec_70',['data.c',['../data_8c.html',1,'']]],
-  ['defs_2eh_71',['defs.h',['../defs_8h.html',1,'']]],
-  ['depth_72',['depth',['../structS__HASHENTRY.html#aacd834905e4ae0ab341448b06940fa32',1,'S_HASHENTRY::depth()'],['../structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO::depth()']]],
-  ['depthset_73',['depthset',['../structS__SEARCHINFO.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]],
-  ['drawmaterial_74',['DrawMaterial',['../xboard_8c.html#af23ec99e21481a26747819f0f5412203',1,'xboard.c']]]
+  ['debuganalysistest_71',['DebugAnalysisTest',['../defs_8h.html#a0f0218d085cfcb232bc24c7142c5d434',1,'DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info):&#160;validate.c'],['../validate_8c.html#a0f0218d085cfcb232bc24c7142c5d434',1,'DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info):&#160;validate.c']]],
+  ['defs_2eh_72',['defs.h',['../defs_8h.html',1,'']]],
+  ['depth_73',['depth',['../structS__HASHENTRY.html#aacd834905e4ae0ab341448b06940fa32',1,'S_HASHENTRY::depth()'],['../structS__SEARCHINFO.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO::depth()']]],
+  ['depthset_74',['depthset',['../structS__SEARCHINFO.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]],
+  ['drawmaterial_75',['DrawMaterial',['../xboard_8c.html#af23ec99e21481a26747819f0f5412203',1,'xboard.c']]]
 ];
