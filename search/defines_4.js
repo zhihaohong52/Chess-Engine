@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['hash_5fca_596',['HASH_CA',['../makemove_8c.html#aa91601393e3452a456a1e0f56d7c9e37',1,'makemove.c']]],
-  ['hash_5fep_597',['HASH_EP',['../makemove_8c.html#a2cc442b6e004cce3e06071a89d134e19',1,'makemove.c']]],
-  ['hash_5fpce_598',['HASH_PCE',['../makemove_8c.html#aa526c99ca3c1bb79449681ceda03c961',1,'makemove.c']]],
-  ['hash_5fside_599',['HASH_SIDE',['../makemove_8c.html#aa57ffe7698ca37bc9fca03e65b0278b2',1,'makemove.c']]]
+  ['fr2sq_657',['FR2SQ',['../defs_8h.html#a02b67a393d8796296fb1eb602a9a7503',1,'defs.h']]],
+  ['fromsq_658',['FROMSQ',['../defs_8h.html#aafb5e7106c9610b1e228bbc92dcd9289',1,'defs.h']]]
 ];

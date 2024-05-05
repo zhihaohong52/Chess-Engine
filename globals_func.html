@@ -80,9 +80,9 @@ $(function() {
 <li>checkresult()
 : <a class="el" href="xboard_8c.html#a8c886966aac9ba144ae2c75e0c3b8bc3">xboard.c</a>
 </li>
-<li>ClearPVTable()
-: <a class="el" href="defs_8h.html#a556b9334758c28b314b954be088eff0f">defs.h</a>
-, <a class="el" href="pvtable_8c.html#a556b9334758c28b314b954be088eff0f">pvtable.c</a>
+<li>ClearHashTable()
+: <a class="el" href="defs_8h.html#ad72a51d700e38aa1611d5162fc79627e">defs.h</a>
+, <a class="el" href="pvtable_8c.html#ad72a51d700e38aa1611d5162fc79627e">pvtable.c</a>
 </li>
 <li>Console_Loop()
 : <a class="el" href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">defs.h</a>
@@ -146,19 +146,22 @@ $(function() {
 <li>InitBitMasks()
 : <a class="el" href="init_8c.html#ac0387d23777cecdf42436f1b7c4caca4">init.c</a>
 </li>
+<li>InitEvalMasks()
+: <a class="el" href="init_8c.html#a332fa6e54968b97a1ab0866bf33f06ae">init.c</a>
+</li>
 <li>InitFilesRanksBrd()
 : <a class="el" href="init_8c.html#a2ab0ede12a888c48c25518a320f81eb5">init.c</a>
 </li>
 <li>InitHashKeys()
 : <a class="el" href="init_8c.html#a41747890857ffd1c46135de14f15d585">init.c</a>
 </li>
+<li>InitHashTable()
+: <a class="el" href="defs_8h.html#a33b7e7e4f424890a5a231067922cc899">defs.h</a>
+, <a class="el" href="pvtable_8c.html#a33b7e7e4f424890a5a231067922cc899">pvtable.c</a>
+</li>
 <li>InitMvvLva()
 : <a class="el" href="defs_8h.html#a43459d3ba36083fef55ef24e6ac097f2">defs.h</a>
 , <a class="el" href="movegen_8c.html#a43459d3ba36083fef55ef24e6ac097f2">movegen.c</a>
-</li>
-<li>InitPvTable()
-: <a class="el" href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">defs.h</a>
-, <a class="el" href="pvtable_8c.html#a47e25a6ad38b1244a38700f14da54e96">pvtable.c</a>
 </li>
 <li>InitSq120To64()
 : <a class="el" href="init_8c.html#a7c8c22947c9b02d839a41dd30f3a6ce2">init.c</a>
@@ -176,6 +179,21 @@ $(function() {
 <li>MakeMove()
 : <a class="el" href="defs_8h.html#a9c3644fe98d2e1a3d9ac7f68e40937c2">defs.h</a>
 , <a class="el" href="makemove_8c.html#a9c3644fe98d2e1a3d9ac7f68e40937c2">makemove.c</a>
+</li>
+<li>MakeNullMove()
+: <a class="el" href="defs_8h.html#a7edb2500642248af2c132abd138751c2">defs.h</a>
+, <a class="el" href="makemove_8c.html#a7edb2500642248af2c132abd138751c2">makemove.c</a>
+</li>
+<li>MaterialDraw()
+: <a class="el" href="evaluate_8c.html#a4760fa9084929c36e4dcd5f21983515f">evaluate.c</a>
+</li>
+<li>MirrorBoard()
+: <a class="el" href="defs_8h.html#abd8d85368a8795ab3d37740a1142325e">defs.h</a>
+, <a class="el" href="board_8c.html#abd8d85368a8795ab3d37740a1142325e">board.c</a>
+</li>
+<li>MirrorEvalTest()
+: <a class="el" href="defs_8h.html#a537d79d41386bba7b689b7b56480e186">defs.h</a>
+, <a class="el" href="validate_8c.html#a537d79d41386bba7b689b7b56480e186">validate.c</a>
 </li>
 <li>MoveExists()
 : <a class="el" href="defs_8h.html#a9cef5ab5191a75c2b168711c50c756db">defs.h</a>
@@ -215,8 +233,8 @@ $(function() {
 , <a class="el" href="validate_8c.html#a8b3d78d3c18aa9e529b29ba2f3935159">validate.c</a>
 </li>
 <li>PopBit()
-: <a class="el" href="bitboard_8c.html#a47654d00ff74c382593b695ff7294b3d">bitboard.c</a>
-, <a class="el" href="defs_8h.html#a47654d00ff74c382593b695ff7294b3d">defs.h</a>
+: <a class="el" href="defs_8h.html#a47654d00ff74c382593b695ff7294b3d">defs.h</a>
+, <a class="el" href="bitboard_8c.html#a47654d00ff74c382593b695ff7294b3d">bitboard.c</a>
 </li>
 <li>PrintBitBoard()
 : <a class="el" href="defs_8h.html#a1f319d9671529414d18312032bb9e3d2">defs.h</a>
@@ -237,9 +255,13 @@ $(function() {
 : <a class="el" href="defs_8h.html#a011a99274a4b8aa5c4c692bb8085277c">defs.h</a>
 , <a class="el" href="io_8c.html#a011a99274a4b8aa5c4c692bb8085277c">io.c</a>
 </li>
-<li>ProbePvTable()
-: <a class="el" href="defs_8h.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">defs.h</a>
-, <a class="el" href="pvtable_8c.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">pvtable.c</a>
+<li>ProbeHashEntry()
+: <a class="el" href="defs_8h.html#a3448e3a94f686d3c806fd17577508770">defs.h</a>
+, <a class="el" href="pvtable_8c.html#a3448e3a94f686d3c806fd17577508770">pvtable.c</a>
+</li>
+<li>ProbePvMove()
+: <a class="el" href="defs_8h.html#a9021942d5e83b2876a7ab9798f777c51">defs.h</a>
+, <a class="el" href="pvtable_8c.html#a9021942d5e83b2876a7ab9798f777c51">pvtable.c</a>
 </li>
 <li>PrSq()
 : <a class="el" href="defs_8h.html#a61e4b9abb42c2322fc92ac9c67ea4b07">defs.h</a>
@@ -277,9 +299,9 @@ $(function() {
 : <a class="el" href="defs_8h.html#ad5a569564ef016ed02a4fef23d89d9c4">defs.h</a>
 , <a class="el" href="validate_8c.html#ad5a569564ef016ed02a4fef23d89d9c4">validate.c</a>
 </li>
-<li>StorePvMove()
-: <a class="el" href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">defs.h</a>
-, <a class="el" href="pvtable_8c.html#a37bd5789d5621c17f3ffe3e790cdd33b">pvtable.c</a>
+<li>StoreHashEntry()
+: <a class="el" href="defs_8h.html#a0f82a82e2c4a84554d647bc4fc7600e7">defs.h</a>
+, <a class="el" href="pvtable_8c.html#a0f82a82e2c4a84554d647bc4fc7600e7">pvtable.c</a>
 </li>
 </ul>
 
@@ -288,6 +310,10 @@ $(function() {
 <li>TakeMove()
 : <a class="el" href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">defs.h</a>
 , <a class="el" href="makemove_8c.html#ae8ebe63f27996af9d769245539d7a9fd">makemove.c</a>
+</li>
+<li>TakeNullMove()
+: <a class="el" href="defs_8h.html#a204aee6229d709429dcbb9d2e425e670">defs.h</a>
+, <a class="el" href="makemove_8c.html#a204aee6229d709429dcbb9d2e425e670">makemove.c</a>
 </li>
 <li>ThreeFoldRep()
 : <a class="el" href="xboard_8c.html#a2f93ccdc4f50377a20f987bee407940f">xboard.c</a>

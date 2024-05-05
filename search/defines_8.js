@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['perft_619',['PERFT',['../vice_8c.html#ac40d7184909dc46f587585a74e160278',1,'vice.c']]],
-  ['pop_620',['POP',['../defs_8h.html#ad830c7185d5e9db95ae3cf74d73d770e',1,'defs.h']]],
-  ['promoted_621',['PROMOTED',['../defs_8h.html#acc5ba8f9c6d2478135cd9b2db31a0751',1,'defs.h']]]
+  ['name_681',['NAME',['../defs_8h.html#a47f2e62c0dbebc787052c165afcada0e',1,'defs.h']]],
+  ['nomove_682',['NOMOVE',['../defs_8h.html#a5fb1e2c08e9bc21f6412285f5a74c02f',1,'defs.h']]]
 ];

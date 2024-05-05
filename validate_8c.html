@@ -76,6 +76,8 @@ $(function() {
 <p>Validates the board.  
 <a href="#details">More...</a></p>
 <div class="textblock"><code>#include &quot;<a class="el" href="defs_8h_source.html">defs.h</a>&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
+<code>#include &quot;string.h&quot;</code><br />
 </div>
 <p><a href="validate_8c_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -96,6 +98,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7f3c9068109d4c781b7e4011db8d5128"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="validate_8c.html#a7f3c9068109d4c781b7e4011db8d5128">PieceValid</a> (const int pce)</td></tr>
 <tr class="memdesc:a7f3c9068109d4c781b7e4011db8d5128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a piece is valid.  <a href="validate_8c.html#a7f3c9068109d4c781b7e4011db8d5128">More...</a><br /></td></tr>
 <tr class="separator:a7f3c9068109d4c781b7e4011db8d5128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537d79d41386bba7b689b7b56480e186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="validate_8c.html#a537d79d41386bba7b689b7b56480e186">MirrorEvalTest</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a537d79d41386bba7b689b7b56480e186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if mirror of board is correct.  <a href="validate_8c.html#a537d79d41386bba7b689b7b56480e186">More...</a><br /></td></tr>
+<tr class="separator:a537d79d41386bba7b689b7b56480e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Validates the board. </p>
@@ -131,7 +136,35 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the file is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00040">40</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00042">42</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="a537d79d41386bba7b689b7b56480e186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537d79d41386bba7b689b7b56480e186">&#9670;&nbsp;</a></span>MirrorEvalTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorEvalTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if mirror of board is correct. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00071">71</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -160,7 +193,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00060">60</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00062">62</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -189,7 +222,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid and not empty, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00050">50</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00052">52</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -218,7 +251,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the side is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00030">30</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00032">32</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -247,7 +280,7 @@ Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the square is on the board, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00020">20</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00022">22</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>

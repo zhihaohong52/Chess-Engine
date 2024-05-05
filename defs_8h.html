@@ -93,11 +93,11 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__MOVELIST.html">S_MOVELIST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store a list of moves.  <a href="structS__MOVELIST.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__PVENTRY.html">S_PVENTRY</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the principal variation entry.  <a href="structS__PVENTRY.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__HASHENTRY.html">S_HASHENTRY</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the hash entry.  <a href="structS__HASHENTRY.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a></td></tr>
-<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the principal variation table.  <a href="structS__PVTABLE.html#details">More...</a><br /></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the principal variation table.  <a href="structS__HASHTABLE.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structS__UNDO.html">S_UNDO</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the history of the game.  <a href="structS__UNDO.html#details">More...</a><br /></td></tr>
@@ -125,6 +125,10 @@ Macros</h2></td></tr>
 <tr class="separator:a0a852ddde438845110943cb3e2a0beea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580227094908aca72cf64f75d55c86df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a580227094908aca72cf64f75d55c86df">START_FEN</a>&#160;&#160;&#160;&quot;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&quot;</td></tr>
 <tr class="separator:a580227094908aca72cf64f75d55c86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84a29002ab81c719c0d07bb446296e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a>&#160;&#160;&#160;30000</td></tr>
+<tr class="separator:aa84a29002ab81c719c0d07bb446296e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf3a1db32af35bbaf63c15a9bc75cad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a8cf3a1db32af35bbaf63c15a9bc75cad">ISMATE</a>&#160;&#160;&#160;(<a class="el" href="defs_8h.html#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a> - <a class="el" href="defs_8h.html#a0a852ddde438845110943cb3e2a0beea">MAXDEPTH</a>)</td></tr>
+<tr class="separator:a8cf3a1db32af35bbaf63c15a9bc75cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb5e7106c9610b1e228bbc92dcd9289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aafb5e7106c9610b1e228bbc92dcd9289">FROMSQ</a>(m)&#160;&#160;&#160;((m) &amp; 0x7F)</td></tr>
 <tr class="separator:aafb5e7106c9610b1e228bbc92dcd9289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1376416d3a0e870a9a1241b3a54a3f9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a1376416d3a0e870a9a1241b3a54a3f9b">TOSQ</a>(m)&#160;&#160;&#160;(((m)&gt;&gt;7) &amp; 0x7F)</td></tr>
@@ -167,6 +171,8 @@ Macros</h2></td></tr>
 <tr class="separator:a11c5b1aa7f36ce1a2e5bc0a4f7d297f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82510c92fa4858abe56d5e3650a51f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#af82510c92fa4858abe56d5e3650a51f0">IsKi</a>(p)&#160;&#160;&#160;(<a class="el" href="data_8c.html#afd5ea146fc8ee62e9e97fe4ffc147bd9">PieceKing</a>[(p)])</td></tr>
 <tr class="separator:af82510c92fa4858abe56d5e3650a51f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd471263505af37f459a0c87f32d79e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a4cd471263505af37f459a0c87f32d79e">MIRROR64</a>(sq)&#160;&#160;&#160;(<a class="el" href="data_8c.html#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a>[(sq)])</td></tr>
+<tr class="separator:a4cd471263505af37f459a0c87f32d79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -339,6 +345,13 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the castling permissions.  <a href="defs_8h.html#a0411cd49bb5b71852cecd93bcbf0ca2d">More...</a><br /></td></tr>
 <tr class="separator:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed82baf7f470b522273a3e37c24c600"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="defs_8h.html#abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132">HFNONE</a>
+, <a class="el" href="defs_8h.html#abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91">HFALPHA</a>
+, <a class="el" href="defs_8h.html#abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc">HFBETA</a>
+, <a class="el" href="defs_8h.html#abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd">HFEXACT</a>
+ }</td></tr>
+<tr class="memdesc:abed82baf7f470b522273a3e37c24c600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags for the hash entry.  <a href="defs_8h.html#abed82baf7f470b522273a3e37c24c600">More...</a><br /></td></tr>
+<tr class="separator:abed82baf7f470b522273a3e37c24c600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
@@ -372,6 +385,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a94a8326712cd3ca77f7e99e5a7ce2663"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a94a8326712cd3ca77f7e99e5a7ce2663">CheckBoard</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a94a8326712cd3ca77f7e99e5a7ce2663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if board is valid.  <a href="defs_8h.html#a94a8326712cd3ca77f7e99e5a7ce2663">More...</a><br /></td></tr>
 <tr class="separator:a94a8326712cd3ca77f7e99e5a7ce2663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8d85368a8795ab3d37740a1142325e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#abd8d85368a8795ab3d37740a1142325e">MirrorBoard</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:abd8d85368a8795ab3d37740a1142325e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the board.  <a href="defs_8h.html#abd8d85368a8795ab3d37740a1142325e">More...</a><br /></td></tr>
+<tr class="separator:abd8d85368a8795ab3d37740a1142325e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e9a4c9edd9d5d825d83c415343da5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ab4e9a4c9edd9d5d825d83c415343da5f">SqAttacked</a> (const int sq, const int side, const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ab4e9a4c9edd9d5d825d83c415343da5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a square is attacked by a piece of a certain color.  <a href="defs_8h.html#ab4e9a4c9edd9d5d825d83c415343da5f">More...</a><br /></td></tr>
 <tr class="separator:ab4e9a4c9edd9d5d825d83c415343da5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -402,6 +418,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a7f3c9068109d4c781b7e4011db8d5128"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a7f3c9068109d4c781b7e4011db8d5128">PieceValid</a> (const int pce)</td></tr>
 <tr class="memdesc:a7f3c9068109d4c781b7e4011db8d5128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a piece is valid.  <a href="defs_8h.html#a7f3c9068109d4c781b7e4011db8d5128">More...</a><br /></td></tr>
 <tr class="separator:a7f3c9068109d4c781b7e4011db8d5128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537d79d41386bba7b689b7b56480e186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a537d79d41386bba7b689b7b56480e186">MirrorEvalTest</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a537d79d41386bba7b689b7b56480e186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if mirror of board is correct.  <a href="defs_8h.html#a537d79d41386bba7b689b7b56480e186">More...</a><br /></td></tr>
+<tr class="separator:a537d79d41386bba7b689b7b56480e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2be60666ed0e5f82fa409c250b4e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__MOVELIST.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:ae2be60666ed0e5f82fa409c250b4e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all moves.  <a href="defs_8h.html#ae2be60666ed0e5f82fa409c250b4e054">More...</a><br /></td></tr>
 <tr class="separator:ae2be60666ed0e5f82fa409c250b4e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -420,6 +439,12 @@ Functions</h2></td></tr>
 <tr class="memitem:ae8ebe63f27996af9d769245539d7a9fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ae8ebe63f27996af9d769245539d7a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take back a move.  <a href="defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd">More...</a><br /></td></tr>
 <tr class="separator:ae8ebe63f27996af9d769245539d7a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edb2500642248af2c132abd138751c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a7edb2500642248af2c132abd138751c2">MakeNullMove</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a7edb2500642248af2c132abd138751c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a null move.  <a href="defs_8h.html#a7edb2500642248af2c132abd138751c2">More...</a><br /></td></tr>
+<tr class="separator:a7edb2500642248af2c132abd138751c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a204aee6229d709429dcbb9d2e425e670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a204aee6229d709429dcbb9d2e425e670">TakeNullMove</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a204aee6229d709429dcbb9d2e425e670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take back a null move.  <a href="defs_8h.html#a204aee6229d709429dcbb9d2e425e670">More...</a><br /></td></tr>
+<tr class="separator:a204aee6229d709429dcbb9d2e425e670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1b6b13d186dab20a18cec1a6b041220b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">PerftTest</a> (int depth, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a1b6b13d186dab20a18cec1a6b041220b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for testing the move generation using perft.  <a href="defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b">More...</a><br /></td></tr>
 <tr class="separator:a1b6b13d186dab20a18cec1a6b041220b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -432,21 +457,24 @@ Functions</h2></td></tr>
 <tr class="memitem:ac35ec650650ae344bdc0985cd4ece431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ac35ec650650ae344bdc0985cd4ece431">ReadInput</a> (<a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
 <tr class="memdesc:ac35ec650650ae344bdc0985cd4ece431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input from the user <b>[http://home.arcor.de/dreamlike/chess/]</b>.  <a href="defs_8h.html#ac35ec650650ae344bdc0985cd4ece431">More...</a><br /></td></tr>
 <tr class="separator:ac35ec650650ae344bdc0985cd4ece431"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e25a6ad38b1244a38700f14da54e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">InitPvTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
-<tr class="memdesc:a47e25a6ad38b1244a38700f14da54e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the PV table.  <a href="defs_8h.html#a47e25a6ad38b1244a38700f14da54e96">More...</a><br /></td></tr>
-<tr class="separator:a47e25a6ad38b1244a38700f14da54e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556b9334758c28b314b954be088eff0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a556b9334758c28b314b954be088eff0f">ClearPVTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
-<tr class="memdesc:a556b9334758c28b314b954be088eff0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the PV table.  <a href="defs_8h.html#a556b9334758c28b314b954be088eff0f">More...</a><br /></td></tr>
-<tr class="separator:a556b9334758c28b314b954be088eff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move)</td></tr>
-<tr class="memdesc:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the principal variation move.  <a href="defs_8h.html#a37bd5789d5621c17f3ffe3e790cdd33b">More...</a><br /></td></tr>
-<tr class="separator:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">ProbePvTable</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
-<tr class="memdesc:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the PV table.  <a href="defs_8h.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">More...</a><br /></td></tr>
-<tr class="separator:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b7e7e4f424890a5a231067922cc899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a33b7e7e4f424890a5a231067922cc899">InitHashTable</a> (<a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *table)</td></tr>
+<tr class="memdesc:a33b7e7e4f424890a5a231067922cc899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the hash table.  <a href="defs_8h.html#a33b7e7e4f424890a5a231067922cc899">More...</a><br /></td></tr>
+<tr class="separator:a33b7e7e4f424890a5a231067922cc899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a0f82a82e2c4a84554d647bc4fc7600e7">StoreHashEntry</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move, int score, const int flags, const int depth)</td></tr>
+<tr class="memdesc:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the hash entry.  <a href="defs_8h.html#a0f82a82e2c4a84554d647bc4fc7600e7">More...</a><br /></td></tr>
+<tr class="separator:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3448e3a94f686d3c806fd17577508770"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a3448e3a94f686d3c806fd17577508770">ProbeHashEntry</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, int *move, int *score, int alpha, int beta, int depth)</td></tr>
+<tr class="memdesc:a3448e3a94f686d3c806fd17577508770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the hash table.  <a href="defs_8h.html#a3448e3a94f686d3c806fd17577508770">More...</a><br /></td></tr>
+<tr class="separator:a3448e3a94f686d3c806fd17577508770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9021942d5e83b2876a7ab9798f777c51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a9021942d5e83b2876a7ab9798f777c51">ProbePvMove</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a9021942d5e83b2876a7ab9798f777c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the principal variation table.  <a href="defs_8h.html#a9021942d5e83b2876a7ab9798f777c51">More...</a><br /></td></tr>
+<tr class="separator:a9021942d5e83b2876a7ab9798f777c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a> (const int depth, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pv Line object.  <a href="defs_8h.html#ac6648b94e86e3f2eab1d4f0f2f721a86">More...</a><br /></td></tr>
 <tr class="separator:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72a51d700e38aa1611d5162fc79627e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ad72a51d700e38aa1611d5162fc79627e">ClearHashTable</a> (<a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *table)</td></tr>
+<tr class="memdesc:ad72a51d700e38aa1611d5162fc79627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the hash table.  <a href="defs_8h.html#ad72a51d700e38aa1611d5162fc79627e">More...</a><br /></td></tr>
+<tr class="separator:ad72a51d700e38aa1611d5162fc79627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">EvalPosition</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the position.  <a href="defs_8h.html#a5c4dd2e784cf7f2333cf507e35d8d5fa">More...</a><br /></td></tr>
 <tr class="separator:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -534,6 +562,24 @@ Variables</h2></td></tr>
 <tr class="memitem:aa3d6307973cd43a6689b062e54c04602"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#aa3d6307973cd43a6689b062e54c04602">PieceSlides</a> [13]</td></tr>
 <tr class="memdesc:aa3d6307973cd43a6689b062e54c04602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrays for the sliding pieces.  <a href="defs_8h.html#aa3d6307973cd43a6689b062e54c04602">More...</a><br /></td></tr>
 <tr class="separator:aa3d6307973cd43a6689b062e54c04602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97c161274172b00c5281b2d2e2f2fa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a> [64]</td></tr>
+<tr class="memdesc:ad97c161274172b00c5281b2d2e2f2fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the 64 squares.  <a href="defs_8h.html#ad97c161274172b00c5281b2d2e2f2fa2">More...</a><br /></td></tr>
+<tr class="separator:ad97c161274172b00c5281b2d2e2f2fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff51b348649de8e285c1e20e365de5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#acff51b348649de8e285c1e20e365de5a">FileBBMask</a> [8]</td></tr>
+<tr class="memdesc:acff51b348649de8e285c1e20e365de5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">File bit masks.  <a href="defs_8h.html#acff51b348649de8e285c1e20e365de5a">More...</a><br /></td></tr>
+<tr class="separator:acff51b348649de8e285c1e20e365de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcee316fc31fdf5d99d4b8138173dba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#afcee316fc31fdf5d99d4b8138173dba9">RankBBMask</a> [8]</td></tr>
+<tr class="memdesc:afcee316fc31fdf5d99d4b8138173dba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank bit masks.  <a href="defs_8h.html#afcee316fc31fdf5d99d4b8138173dba9">More...</a><br /></td></tr>
+<tr class="separator:afcee316fc31fdf5d99d4b8138173dba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ab9d826e8ac2cc9af13b4706d3a9ca566">BlackPassedMask</a> [64]</td></tr>
+<tr class="memdesc:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Black passed pawn masks.  <a href="defs_8h.html#ab9d826e8ac2cc9af13b4706d3a9ca566">More...</a><br /></td></tr>
+<tr class="separator:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1265225d49dbbe5d814fee7892595a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#abc1265225d49dbbe5d814fee7892595a">WhitePassedMask</a> [64]</td></tr>
+<tr class="memdesc:abc1265225d49dbbe5d814fee7892595a"><td class="mdescLeft">&#160;</td><td class="mdescRight">White passed pawn masks.  <a href="defs_8h.html#abc1265225d49dbbe5d814fee7892595a">More...</a><br /></td></tr>
+<tr class="separator:abc1265225d49dbbe5d814fee7892595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a6a4f9f616d4d231b9eb9a94f20edd0d0">IsolatedMask</a> [64]</td></tr>
+<tr class="memdesc:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Isolated pawn masks.  <a href="defs_8h.html#a6a4f9f616d4d231b9eb9a94f20edd0d0">More...</a><br /></td></tr>
+<tr class="separator:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains definitions for the game. </p>
@@ -596,7 +642,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00234">234</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00251">251</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -626,7 +672,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00253">253</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00270">270</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -646,7 +692,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00252">252</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00269">269</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -676,7 +722,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00248">248</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00265">265</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -696,7 +742,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00232">232</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00249">249</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="aa84a29002ab81c719c0d07bb446296e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a29002ab81c719c0d07bb446296e0">&#9670;&nbsp;</a></span>INFINITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INFINITE&#160;&#160;&#160;30000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00044">44</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -716,7 +778,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00256">256</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00273">273</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -736,7 +798,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00259">259</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00276">276</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -756,7 +818,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00258">258</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00275">275</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a8cf3a1db32af35bbaf63c15a9bc75cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf3a1db32af35bbaf63c15a9bc75cad">&#9670;&nbsp;</a></span>ISMATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ISMATE&#160;&#160;&#160;(<a class="el" href="defs_8h.html#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a> - <a class="el" href="defs_8h.html#a0a852ddde438845110943cb3e2a0beea">MAXDEPTH</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00045">45</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -776,7 +854,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00257">257</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00274">274</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -840,7 +918,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00239">239</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00256">256</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -856,7 +934,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00241">241</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00258">258</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -872,7 +950,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00237">237</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00254">254</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -888,7 +966,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00242">242</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00259">259</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -904,7 +982,27 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00238">238</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00255">255</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cd471263505af37f459a0c87f32d79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd471263505af37f459a0c87f32d79e">&#9670;&nbsp;</a></span>MIRROR64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIRROR64</td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname">sq</td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="data_8c.html#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a>[(sq)])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00278">278</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -936,7 +1034,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00244">244</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00261">261</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -956,7 +1054,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00251">251</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00268">268</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -976,7 +1074,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00235">235</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00252">252</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1006,7 +1104,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00254">254</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00271">271</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1026,7 +1124,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00267">267</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1046,7 +1144,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00249">249</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00266">266</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1082,7 +1180,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00233">233</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1133,7 +1231,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"></a>bK&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00048">48</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00051">51</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1162,7 +1260,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a72766092149e349d9a71fdb7f8160e10"></a>FILE_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00054">54</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00057">57</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1191,7 +1289,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a5b3781d1b86380aa29e37948e85b0060"></a>RANK_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00060">60</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00063">63</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1214,7 +1312,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abc6126af1d45847bc59afa0aa3216b04a627abe5a430420baf29ebe1940a7f2fb"></a>BOTH&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00066">66</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00069">69</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1237,7 +1335,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79"></a>CONSOLEMODE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00072">72</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00075">75</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1323,7 +1421,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00078">78</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00081">81</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1345,7 +1443,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00093">93</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00096">96</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1369,7 +1467,31 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00099">99</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00102">102</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="abed82baf7f470b522273a3e37c24c600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed82baf7f470b522273a3e37c24c600">&#9670;&nbsp;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flags for the hash entry. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132"></a>HFNONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91"></a>HFALPHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc"></a>HFBETA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd"></a>HFEXACT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00126">126</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1391,7 +1513,7 @@ Variables</h2></td></tr>
 
 <p>Initializes the board. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00171">171</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00276">276</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -1424,23 +1546,23 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a556b9334758c28b314b954be088eff0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a556b9334758c28b314b954be088eff0f">&#9670;&nbsp;</a></span>ClearPVTable()</h2>
+<a id="ad72a51d700e38aa1611d5162fc79627e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72a51d700e38aa1611d5162fc79627e">&#9670;&nbsp;</a></span>ClearHashTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ClearPVTable </td>
+          <td class="memname">void ClearHashTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *&#160;</td>
           <td class="paramname"><em>table</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear the PV table. </p>
+<p>Clear the hash table. </p>
 
 <p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00060">60</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
@@ -1531,6 +1653,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Evaluate the position. </p>
+<p>The evaluation function calculates the score of the position based on the material and the position of the pieces</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
@@ -1539,7 +1662,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int Score of the position </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="evaluate_8c_source.html#l00118">118</a> of file <a class="el" href="evaluate_8c_source.html">evaluate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="evaluate_8c_source.html#l00192">192</a> of file <a class="el" href="evaluate_8c_source.html">evaluate.c</a>.</p>
 
 </div>
 </div>
@@ -1568,7 +1691,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the file is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00040">40</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00042">42</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -1741,6 +1864,34 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a33b7e7e4f424890a5a231067922cc899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b7e7e4f424890a5a231067922cc899">&#9670;&nbsp;</a></span>InitHashTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitHashTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *&#160;</td>
+          <td class="paramname"><em>table</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>Pointer to the hash table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00079">79</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
 <a id="a43459d3ba36083fef55ef24e6ac097f2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a43459d3ba36083fef55ef24e6ac097f2">&#9670;&nbsp;</a></span>InitMvvLva()</h2>
 
@@ -1760,34 +1911,6 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00083">83</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
-
-</div>
-</div>
-<a id="a47e25a6ad38b1244a38700f14da54e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e25a6ad38b1244a38700f14da54e96">&#9670;&nbsp;</a></span>InitPvTable()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void InitPvTable </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *&#160;</td>
-          <td class="paramname"><em>table</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Initialize the PV table. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">table</td><td>Pointer to the PV table </td></tr>
-  </table>
-  </dd>
-</dl>
-
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00076">76</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
@@ -1828,6 +1951,90 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int TRUE if move is made, FALSE if move leaves king in check </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00176">176</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
+<a id="a7edb2500642248af2c132abd138751c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edb2500642248af2c132abd138751c2">&#9670;&nbsp;</a></span>MakeNullMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MakeNullMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to make a null move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00355">355</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
+<a id="abd8d85368a8795ab3d37740a1142325e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8d85368a8795ab3d37740a1142325e">&#9670;&nbsp;</a></span>MirrorBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mirror the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00341">341</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+
+</div>
+</div>
+<a id="a537d79d41386bba7b689b7b56480e186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537d79d41386bba7b689b7b56480e186">&#9670;&nbsp;</a></span>MirrorEvalTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorEvalTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Test if mirror of board is correct. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00071">71</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -2015,7 +2222,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00060">60</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00062">62</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -2044,7 +2251,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid and not empty, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00050">50</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00052">52</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -2190,14 +2397,82 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a90f6f5e5e3e55ba3ac97274d78aa5f6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90f6f5e5e3e55ba3ac97274d78aa5f6f">&#9670;&nbsp;</a></span>ProbePvTable()</h2>
+<a id="a3448e3a94f686d3c806fd17577508770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3448e3a94f686d3c806fd17577508770">&#9670;&nbsp;</a></span>ProbeHashEntry()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ProbePvTable </td>
+          <td class="memname">int ProbeHashEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to probe the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>Pointer to the move </td></tr>
+    <tr><td class="paramname">score</td><td>Pointer to the score </td></tr>
+    <tr><td class="paramname">alpha</td><td>Pointer to the alpha </td></tr>
+    <tr><td class="paramname">beta</td><td>Pointer to the beta </td></tr>
+    <tr><td class="paramname">depth</td><td>Pointer to the depth </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the hash table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00101">101</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="a9021942d5e83b2876a7ab9798f777c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9021942d5e83b2876a7ab9798f777c51">&#9670;&nbsp;</a></span>ProbePvMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProbePvMove </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
           <td class="paramname"><em>pos</em></td><td>)</td>
@@ -2206,7 +2481,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to probe the PV table. </p>
+<p>Function to probe the principal variation table. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
@@ -2215,7 +2490,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int The move from the PV table </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00108">108</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00190">190</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
@@ -2339,7 +2614,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00309">309</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00342">342</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
 
 </div>
 </div>
@@ -2368,7 +2643,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the side is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00030">30</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00032">32</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -2444,27 +2719,45 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the square is on the board, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00020">20</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00022">22</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
-<a id="a37bd5789d5621c17f3ffe3e790cdd33b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37bd5789d5621c17f3ffe3e790cdd33b">&#9670;&nbsp;</a></span>StorePvMove()</h2>
+<a id="a0f82a82e2c4a84554d647bc4fc7600e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f82a82e2c4a84554d647bc4fc7600e7">&#9670;&nbsp;</a></span>StoreHashEntry()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void StorePvMove </td>
+          <td class="memname">void StoreHashEntry </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>move</em>&#160;</td>
+          <td class="paramname"><em>move</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -2474,16 +2767,19 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to store the principal variation move. </p>
+<p>Function to store the hash entry. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
     <tr><td class="paramname">move</td><td>The move to be stored </td></tr>
+    <tr><td class="paramname">score</td><td>The score of the move </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags of the move </td></tr>
+    <tr><td class="paramname">depth</td><td>The depth of the search </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00093">93</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00158">158</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
@@ -2512,6 +2808,34 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00286">286</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
+<a id="a204aee6229d709429dcbb9d2e425e670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204aee6229d709429dcbb9d2e425e670">&#9670;&nbsp;</a></span>TakeNullMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TakeNullMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to take back a null move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00385">385</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
 
 </div>
 </div>
@@ -2622,6 +2946,32 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab9d826e8ac2cc9af13b4706d3a9ca566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d826e8ac2cc9af13b4706d3a9ca566">&#9670;&nbsp;</a></span>BlackPassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> BlackPassedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Black passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00091">91</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="a6ca9e201015eea408b71908751d1bb17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ca9e201015eea408b71908751d1bb17">&#9670;&nbsp;</a></span>CastleKeys</h2>
 
@@ -2674,6 +3024,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acff51b348649de8e285c1e20e365de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff51b348649de8e285c1e20e365de5a">&#9670;&nbsp;</a></span>FileBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> FileBBMask[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00079">79</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="aec8c302ff6e888d089e0333928884e5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec8c302ff6e888d089e0333928884e5d">&#9670;&nbsp;</a></span>FileChar</h2>
 
@@ -2723,6 +3099,58 @@ Variables</h2></td></tr>
 <p>Board files. </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00067">67</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="a6a4f9f616d4d231b9eb9a94f20edd0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4f9f616d4d231b9eb9a94f20edd0d0">&#9670;&nbsp;</a></span>IsolatedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> IsolatedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Isolated pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00103">103</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="ad97c161274172b00c5281b2d2e2f2fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97c161274172b00c5281b2d2e2f2fa2">&#9670;&nbsp;</a></span>Mirror64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Mirror64[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mirror the 64 squares. </p>
+
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00108">108</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -3064,6 +3492,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afcee316fc31fdf5d99d4b8138173dba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcee316fc31fdf5d99d4b8138173dba9">&#9670;&nbsp;</a></span>RankBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> RankBBMask[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rank bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00085">85</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="afb69e9819628d0b8283f0fb21f3fe85c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb69e9819628d0b8283f0fb21f3fe85c">&#9670;&nbsp;</a></span>RankChar</h2>
 
@@ -3243,6 +3697,32 @@ Variables</h2></td></tr>
 <p>64 square to 120 square conversion </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00031">31</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="abc1265225d49dbbe5d814fee7892595a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1265225d49dbbe5d814fee7892595a">&#9670;&nbsp;</a></span>WhitePassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> WhitePassedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>White passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00097">97</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

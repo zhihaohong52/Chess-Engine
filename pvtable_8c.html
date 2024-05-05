@@ -86,24 +86,27 @@ Functions</h2></td></tr>
 <tr class="memitem:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a> (const int depth, <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pv Line object.  <a href="pvtable_8c.html#ac6648b94e86e3f2eab1d4f0f2f721a86">More...</a><br /></td></tr>
 <tr class="separator:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556b9334758c28b314b954be088eff0f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a556b9334758c28b314b954be088eff0f">ClearPVTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
-<tr class="memdesc:a556b9334758c28b314b954be088eff0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the PV table.  <a href="pvtable_8c.html#a556b9334758c28b314b954be088eff0f">More...</a><br /></td></tr>
-<tr class="separator:a556b9334758c28b314b954be088eff0f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47e25a6ad38b1244a38700f14da54e96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a47e25a6ad38b1244a38700f14da54e96">InitPvTable</a> (<a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *table)</td></tr>
-<tr class="memdesc:a47e25a6ad38b1244a38700f14da54e96"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the PV table.  <a href="pvtable_8c.html#a47e25a6ad38b1244a38700f14da54e96">More...</a><br /></td></tr>
-<tr class="separator:a47e25a6ad38b1244a38700f14da54e96"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a37bd5789d5621c17f3ffe3e790cdd33b">StorePvMove</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move)</td></tr>
-<tr class="memdesc:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the principal variation move.  <a href="pvtable_8c.html#a37bd5789d5621c17f3ffe3e790cdd33b">More...</a><br /></td></tr>
-<tr class="separator:a37bd5789d5621c17f3ffe3e790cdd33b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">ProbePvTable</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
-<tr class="memdesc:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the PV table.  <a href="pvtable_8c.html#a90f6f5e5e3e55ba3ac97274d78aa5f6f">More...</a><br /></td></tr>
-<tr class="separator:a90f6f5e5e3e55ba3ac97274d78aa5f6f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72a51d700e38aa1611d5162fc79627e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#ad72a51d700e38aa1611d5162fc79627e">ClearHashTable</a> (<a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *table)</td></tr>
+<tr class="memdesc:ad72a51d700e38aa1611d5162fc79627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the hash table.  <a href="pvtable_8c.html#ad72a51d700e38aa1611d5162fc79627e">More...</a><br /></td></tr>
+<tr class="separator:ad72a51d700e38aa1611d5162fc79627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a33b7e7e4f424890a5a231067922cc899"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a33b7e7e4f424890a5a231067922cc899">InitHashTable</a> (<a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *table)</td></tr>
+<tr class="memdesc:a33b7e7e4f424890a5a231067922cc899"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the hash table.  <a href="pvtable_8c.html#a33b7e7e4f424890a5a231067922cc899">More...</a><br /></td></tr>
+<tr class="separator:a33b7e7e4f424890a5a231067922cc899"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3448e3a94f686d3c806fd17577508770"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a3448e3a94f686d3c806fd17577508770">ProbeHashEntry</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, int *move, int *score, int alpha, int beta, int depth)</td></tr>
+<tr class="memdesc:a3448e3a94f686d3c806fd17577508770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the hash table.  <a href="pvtable_8c.html#a3448e3a94f686d3c806fd17577508770">More...</a><br /></td></tr>
+<tr class="separator:a3448e3a94f686d3c806fd17577508770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a0f82a82e2c4a84554d647bc4fc7600e7">StoreHashEntry</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, const int move, int score, const int flags, const int depth)</td></tr>
+<tr class="memdesc:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the hash entry.  <a href="pvtable_8c.html#a0f82a82e2c4a84554d647bc4fc7600e7">More...</a><br /></td></tr>
+<tr class="separator:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9021942d5e83b2876a7ab9798f777c51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a9021942d5e83b2876a7ab9798f777c51">ProbePvMove</a> (const <a class="el" href="structS__BOARD.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a9021942d5e83b2876a7ab9798f777c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the principal variation table.  <a href="pvtable_8c.html#a9021942d5e83b2876a7ab9798f777c51">More...</a><br /></td></tr>
+<tr class="separator:a9021942d5e83b2876a7ab9798f777c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:af8a790c967e44805938eaa289cca4b2c"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#af8a790c967e44805938eaa289cca4b2c">PvSize</a> = 0x100000 * 2</td></tr>
-<tr class="memdesc:af8a790c967e44805938eaa289cca4b2c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initilize the PV table to 2MB.  <a href="pvtable_8c.html#af8a790c967e44805938eaa289cca4b2c">More...</a><br /></td></tr>
-<tr class="separator:af8a790c967e44805938eaa289cca4b2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2f76382a3d880437151797399fe90568"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="pvtable_8c.html#a2f76382a3d880437151797399fe90568">HashSize</a> = 0x100000 * 16</td></tr>
+<tr class="memdesc:a2f76382a3d880437151797399fe90568"><td class="mdescLeft">&#160;</td><td class="mdescRight">Hash table size.  <a href="pvtable_8c.html#a2f76382a3d880437151797399fe90568">More...</a><br /></td></tr>
+<tr class="separator:a2f76382a3d880437151797399fe90568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>This file contains functions to store the hash table/ principal variation table (PV Table) </p>
@@ -114,23 +117,23 @@ Variables</h2></td></tr>
 
 <p class="definition">Definition in file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 </div><h2 class="groupheader">Function Documentation</h2>
-<a id="a556b9334758c28b314b954be088eff0f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a556b9334758c28b314b954be088eff0f">&#9670;&nbsp;</a></span>ClearPVTable()</h2>
+<a id="ad72a51d700e38aa1611d5162fc79627e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72a51d700e38aa1611d5162fc79627e">&#9670;&nbsp;</a></span>ClearHashTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void ClearPVTable </td>
+          <td class="memname">void ClearHashTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *&#160;</td>
           <td class="paramname"><em>table</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Clear the PV table. </p>
+<p>Clear the hash table. </p>
 
 <p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00060">60</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
@@ -176,80 +179,75 @@ Variables</h2></td></tr>
 
 </div>
 </div>
-<a id="a47e25a6ad38b1244a38700f14da54e96"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a47e25a6ad38b1244a38700f14da54e96">&#9670;&nbsp;</a></span>InitPvTable()</h2>
+<a id="a33b7e7e4f424890a5a231067922cc899"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a33b7e7e4f424890a5a231067922cc899">&#9670;&nbsp;</a></span>InitHashTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void InitPvTable </td>
+          <td class="memname">void InitHashTable </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="structS__PVTABLE.html">S_PVTABLE</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structS__HASHTABLE.html">S_HASHTABLE</a> *&#160;</td>
           <td class="paramname"><em>table</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initialize the PV table. </p>
+<p>Initialize the hash table. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">table</td><td>Pointer to the PV table </td></tr>
+    <tr><td class="paramname">table</td><td>Pointer to the hash table </td></tr>
   </table>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00076">76</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00079">79</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
-<a id="a90f6f5e5e3e55ba3ac97274d78aa5f6f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a90f6f5e5e3e55ba3ac97274d78aa5f6f">&#9670;&nbsp;</a></span>ProbePvTable()</h2>
+<a id="a3448e3a94f686d3c806fd17577508770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3448e3a94f686d3c806fd17577508770">&#9670;&nbsp;</a></span>ProbeHashEntry()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">int ProbePvTable </td>
+          <td class="memname">int ProbeHashEntry </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
-          <td class="paramname"><em>pos</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Function to probe the PV table. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
-  </table>
-  </dd>
-</dl>
-<dl class="section return"><dt>Returns</dt><dd>int The move from the PV table </dd></dl>
-
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00108">108</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
-
-</div>
-</div>
-<a id="a37bd5789d5621c17f3ffe3e790cdd33b"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37bd5789d5621c17f3ffe3e790cdd33b">&#9670;&nbsp;</a></span>StorePvMove()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void StorePvMove </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
           <td class="paramname"><em>pos</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const int&#160;</td>
-          <td class="paramname"><em>move</em>&#160;</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>move</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>alpha</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>beta</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -259,33 +257,127 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Function to store the principal variation move. </p>
+<p>Function to probe the hash table. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
-    <tr><td class="paramname">move</td><td>The move to be stored </td></tr>
+    <tr><td class="paramname">move</td><td>Pointer to the move </td></tr>
+    <tr><td class="paramname">score</td><td>Pointer to the score </td></tr>
+    <tr><td class="paramname">alpha</td><td>Pointer to the alpha </td></tr>
+    <tr><td class="paramname">beta</td><td>Pointer to the beta </td></tr>
+    <tr><td class="paramname">depth</td><td>Pointer to the depth </td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the hash table </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00093">93</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00101">101</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
-<h2 class="groupheader">Variable Documentation</h2>
-<a id="af8a790c967e44805938eaa289cca4b2c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af8a790c967e44805938eaa289cca4b2c">&#9670;&nbsp;</a></span>PvSize</h2>
+<a id="a9021942d5e83b2876a7ab9798f777c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9021942d5e83b2876a7ab9798f777c51">&#9670;&nbsp;</a></span>ProbePvMove()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int PvSize = 0x100000 * 2</td>
+          <td class="memname">int ProbePvMove </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Initilize the PV table to 2MB. </p>
+<p>Function to probe the principal variation table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the PV table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00190">190</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="a0f82a82e2c4a84554d647bc4fc7600e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f82a82e2c4a84554d647bc4fc7600e7">&#9670;&nbsp;</a></span>StoreHashEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StoreHashEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>pos</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>move</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>score</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>depth</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Function to store the hash entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>The move to be stored </td></tr>
+    <tr><td class="paramname">score</td><td>The score of the move </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags of the move </td></tr>
+    <tr><td class="paramname">depth</td><td>The depth of the search </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00158">158</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Variable Documentation</h2>
+<a id="a2f76382a3d880437151797399fe90568"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2f76382a3d880437151797399fe90568">&#9670;&nbsp;</a></span>HashSize</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int HashSize = 0x100000 * 16</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Hash table size. </p>
 
 <p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00054">54</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 

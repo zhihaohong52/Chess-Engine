@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['fr2sq_594',['FR2SQ',['../defs_8h.html#a02b67a393d8796296fb1eb602a9a7503',1,'defs.h']]],
-  ['fromsq_595',['FROMSQ',['../defs_8h.html#aafb5e7106c9610b1e228bbc92dcd9289',1,'defs.h']]]
+  ['endgame_5fmat_656',['ENDGAME_MAT',['../evaluate_8c.html#ae3877d9b411274529d07cdfd6c01fafd',1,'evaluate.c']]]
 ];

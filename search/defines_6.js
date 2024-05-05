@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['mate_606',['MATE',['../search_8c.html#a92076e18b8b8909efb14e068b531bce3',1,'search.c']]],
-  ['maxdepth_607',['MAXDEPTH',['../defs_8h.html#a0a852ddde438845110943cb3e2a0beea',1,'defs.h']]],
-  ['maxgamemoves_608',['MAXGAMEMOVES',['../defs_8h.html#a709e34a757803360843ea61cf13fed8d',1,'defs.h']]],
-  ['maxpositionmoves_609',['MAXPOSITIONMOVES',['../defs_8h.html#a6594ee282f657f54e6d0ab1679ac5b78',1,'defs.h']]],
-  ['mflagca_610',['MFLAGCA',['../defs_8h.html#a4d876f5346dd046837b59c2995b57580',1,'defs.h']]],
-  ['mflagcap_611',['MFLAGCAP',['../defs_8h.html#a0044dc09621fd6baa75cda62dff02eb2',1,'defs.h']]],
-  ['mflagep_612',['MFLAGEP',['../defs_8h.html#a789944362fbc21b843118a4fc941fcd1',1,'defs.h']]],
-  ['mflagprom_613',['MFLAGPROM',['../defs_8h.html#a41b1ecdfcc604968667fb35c26b8e279',1,'defs.h']]],
-  ['mflagps_614',['MFLAGPS',['../defs_8h.html#aa7bee56583f822f66a952ce8a900f218',1,'defs.h']]],
-  ['mirror64_615',['MIRROR64',['../evaluate_8c.html#a4cd471263505af37f459a0c87f32d79e',1,'evaluate.c']]],
-  ['move_616',['MOVE',['../movegen_8c.html#a7d3abb5d4d71b095e74cff5d1d2bcc27',1,'movegen.c']]]
+  ['infinite_663',['INFINITE',['../defs_8h.html#aa84a29002ab81c719c0d07bb446296e0',1,'defs.h']]],
+  ['inputbuffer_664',['INPUTBUFFER',['../uci_8c.html#a5c1a9c5f4c05f9013b1c352efb8789e6',1,'uci.c']]],
+  ['isbq_665',['IsBQ',['../defs_8h.html#a26a71187416f1b3e0e0f83163b0fa9f8',1,'defs.h']]],
+  ['iski_666',['IsKi',['../defs_8h.html#af82510c92fa4858abe56d5e3650a51f0',1,'defs.h']]],
+  ['iskn_667',['IsKn',['../defs_8h.html#a11c5b1aa7f36ce1a2e5bc0a4f7d297f5',1,'defs.h']]],
+  ['ismate_668',['ISMATE',['../defs_8h.html#a8cf3a1db32af35bbaf63c15a9bc75cad',1,'defs.h']]],
+  ['isrq_669',['IsRQ',['../defs_8h.html#abb60aeb63c691df1ccc4b765c38a1c52',1,'defs.h']]]
 ];
