@@ -228,6 +228,7 @@ typedef struct {
 
     float fh;
     float fhf;
+    int nullCut;
 
     int GAME_MODE;
     int POST_THINKING;
@@ -355,6 +356,7 @@ extern int FileRankValid(const int fr);
 extern int PieceValidEmpty(const int pce);
 extern int PieceValid(const int pce);
 extern void MirrorEvalTest(S_BOARD *pos);
+extern void DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info);
 
 // movegen.c
 extern void GenerateAllMoves(const S_BOARD *pos, S_MOVELIST *list);
@@ -379,7 +381,7 @@ extern int GetTimeMs();
 void ReadInput(S_SEARCHINFO *info);
 
 // pvtable.c
-extern void InitHashTable(S_HASHTABLE *table);
+void InitHashTable(S_HASHTABLE *table, const int MB);
 extern void StoreHashEntry(S_BOARD *pos, const int move, int score, const int flags, const int depth);
 extern int ProbeHashEntry(S_BOARD *pos, int *move, int *score, int alpha, int beta, int depth);
 extern int ProbePvMove(const S_BOARD *pos);

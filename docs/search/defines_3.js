@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['debug_0',['DEBUG',['../defs_8h.html#ad72dbcf6d0153db1b8d8a58001feed83',1,'defs.h']]]
+  ['endgame_5fmat_0',['ENDGAME_MAT',['../evaluate_8c.html#ae3877d9b411274529d07cdfd6c01fafd',1,'evaluate.c']]]
 ];

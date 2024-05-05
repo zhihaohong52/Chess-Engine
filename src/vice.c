@@ -7,34 +7,6 @@
  *
  * @copyright Copyright (c) 2024
  *
- * @mainpage Project Documentation
- *
- * Welcome to documentation for Vice, a chess engine written in C.
- *
- * @section sec_intro Introduction
- *
- * Vice is a chess engine written in C. The engine is inspired by the series created by Bluefever Software.
- *
- * @section sec_usage Usage
- *
- * To run the engine, simply compile the source code by running the following command:
- * @code
- * make
- * @endcode
- * Then, run the executable:\n
- * For Linux:
- * @code
- * ./vice
- * @endcode
- * For Windows:
- * @code
- * ./vice.exe
- * @endcode
- *
- * @section sec_dev Development
- *
- * The project is currently in development.
- *
  */
 
 #include "stdio.h"
@@ -56,7 +28,11 @@ int main(){
 
     S_BOARD pos[1];
     S_SEARCHINFO info[1];
-    InitHashTable(pos->HashTable);
+	info->quit = FALSE;
+	pos->HashTable->pTable = NULL;
+    InitHashTable(pos->HashTable, 64);
+	setbuf(stdin, NULL);
+	setbuf(stdout, NULL);
 
     printf("Welcome to Vice! Type 'vice' for console mode...\n");
 

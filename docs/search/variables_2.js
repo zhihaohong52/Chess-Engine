@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['enpas_0',['enPas',['../struct_s___u_n_d_o.html#a0ab58faf0b329a9edfa07eee661f2d6a',1,'S_UNDO::enPas'],['../struct_s___b_o_a_r_d.html#a40c058c192f1fa2efe7072add2bc47d0',1,'S_BOARD::enPas']]]
+  ['depth_0',['depth',['../struct_s___h_a_s_h_e_n_t_r_y.html#aacd834905e4ae0ab341448b06940fa32',1,'S_HASHENTRY::depth'],['../struct_s___s_e_a_r_c_h_i_n_f_o.html#a766f8cbd4a0d7d895a355e8a9b96e695',1,'S_SEARCHINFO::depth']]],
+  ['depthset_1',['depthset',['../struct_s___s_e_a_r_c_h_i_n_f_o.html#a6ed4dba536d920294bae37f8870e6d62',1,'S_SEARCHINFO']]]
 ];

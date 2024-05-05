@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['takemove_0',['TakeMove',['../defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c'],['../makemove_8c.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c']]]
+  ['readinput_0',['ReadInput',['../defs_8h.html#ac35ec650650ae344bdc0985cd4ece431',1,'ReadInput(S_SEARCHINFO *info):&#160;misc.c'],['../misc_8c.html#ac35ec650650ae344bdc0985cd4ece431',1,'ReadInput(S_SEARCHINFO *info):&#160;misc.c']]],
+  ['resetboard_1',['ResetBoard',['../defs_8h.html#ad85a9ad05108f03534b81f39c5a3f5c0',1,'ResetBoard(S_BOARD *pos):&#160;board.c'],['../board_8c.html#ad85a9ad05108f03534b81f39c5a3f5c0',1,'ResetBoard(S_BOARD *pos):&#160;board.c']]]
 ];

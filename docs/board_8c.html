@@ -25,7 +25,7 @@
   <td id="projectalign">
    <div id="projectname">Vice Chess Engine
    </div>
-   <div id="projectbrief">A chess enginer written in C</div>
+   <div id="projectbrief">A chess engine written in C</div>
   </td>
  </tr>
  </tbody>
@@ -101,11 +101,14 @@ Functions</h2></td></tr>
 <tr class="memdesc:ae1947aedff90dd90cd9ad0db1b884a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the FEN string.  <br /></td></tr>
 <tr class="separator:ae1947aedff90dd90cd9ad0db1b884a57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85a9ad05108f03534b81f39c5a3f5c0" id="r_ad85a9ad05108f03534b81f39c5a3f5c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85a9ad05108f03534b81f39c5a3f5c0">ResetBoard</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
-<tr class="memdesc:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the board.  <br /></td></tr>
+<tr class="memdesc:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the board.  <br /></td></tr>
 <tr class="separator:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5e19e1ebce3b579abec184a164e21801" id="r_a5e19e1ebce3b579abec184a164e21801"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5e19e1ebce3b579abec184a164e21801">PrintBoard</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a5e19e1ebce3b579abec184a164e21801"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the board.  <br /></td></tr>
 <tr class="separator:a5e19e1ebce3b579abec184a164e21801"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8d85368a8795ab3d37740a1142325e" id="r_abd8d85368a8795ab3d37740a1142325e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8d85368a8795ab3d37740a1142325e">MirrorBoard</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:abd8d85368a8795ab3d37740a1142325e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the board.  <br /></td></tr>
+<tr class="separator:abd8d85368a8795ab3d37740a1142325e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains functions to validate the board. </p>
@@ -141,6 +144,33 @@ Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int TRUE if board is valid, FALSE otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00021">21</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+
+</div>
+</div>
+<a id="abd8d85368a8795ab3d37740a1142325e" name="abd8d85368a8795ab3d37740a1142325e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8d85368a8795ab3d37740a1142325e">&#9670;&#160;</a></span>MirrorBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Mirror the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00341">341</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
 
 </div>
 </div>
@@ -200,7 +230,7 @@ Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00306">306</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00305">305</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
 
 </div>
 </div>
@@ -219,7 +249,7 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Print the board. </p>
+<p>Reset the board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>

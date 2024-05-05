@@ -21,6 +21,8 @@
  */
 int ThreeFoldRep(const S_BOARD *pos) {
 
+    ASSERT(CheckBoard(pos));
+
     int i = 0, r = 0;
     for(i = 0; i < pos->hisPly; ++i) {
         if(pos->history[i].posKey == pos->posKey) {
@@ -37,6 +39,8 @@ int ThreeFoldRep(const S_BOARD *pos) {
  * @return int TRUE if there is a draw, FALSE otherwise
  */
 int DrawMaterial(const S_BOARD *pos) {
+
+    ASSERT(CheckBoard(pos));
 
     if(pos->pceNum[wP]!=0 || pos->pceNum[bP]!=0) return FALSE;
     if(pos->pceNum[wQ]!=0 || pos->pceNum[bQ]!=0 || pos->pceNum[wR]!=0 || pos->pceNum[bR]!=0) return FALSE;
@@ -134,6 +138,7 @@ void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
     int move = NOMOVE;
     int i, score;
     char inBuf[80], command[80];
+    int MB;
 
     engineSide = BLACK;
     ParseFen(START_FEN, pos);
@@ -210,6 +215,15 @@ void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
             sscanf(inBuf, "time %d", &time);
             time *= 10;
             printf("DEBUG time:%d\n", time);
+            continue;
+        }
+
+        if (!strcmp(command, "memory")) {
+            sscanf(inBuf, "memory %d", &MB);
+            if (MB < 4) MB = 4;
+            if (MB > 2048) MB = 2048;
+            printf("Set hash to %d MB\n", MB);
+            InitHashTable(pos->HashTable, MB);
             continue;
         }
 
@@ -387,7 +401,7 @@ void Console_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
 			else printf("depth %d",depth);
 
 			if(movetime != 0) printf(" movetime %ds\n",movetime/1000);
-			else printf(" movetime not set\n");
+			else printf("movetime not set\n");
 
 			continue;
 		}

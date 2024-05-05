@@ -25,7 +25,7 @@
   <td id="projectalign">
    <div id="projectname">Vice Chess Engine
    </div>
-   <div id="projectbrief">A chess enginer written in C</div>
+   <div id="projectbrief">A chess engine written in C</div>
   </td>
  </tr>
  </tbody>
@@ -98,6 +98,9 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a332fa6e54968b97a1ab0866bf33f06ae" id="r_a332fa6e54968b97a1ab0866bf33f06ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a332fa6e54968b97a1ab0866bf33f06ae">InitEvalMasks</a> ()</td></tr>
+<tr class="memdesc:a332fa6e54968b97a1ab0866bf33f06ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the bitmasks for pawns.  <br /></td></tr>
+<tr class="separator:a332fa6e54968b97a1ab0866bf33f06ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2ab0ede12a888c48c25518a320f81eb5" id="r_a2ab0ede12a888c48c25518a320f81eb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ab0ede12a888c48c25518a320f81eb5">InitFilesRanksBrd</a> ()</td></tr>
 <tr class="memdesc:a2ab0ede12a888c48c25518a320f81eb5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes the files and ranks.  <br /></td></tr>
 <tr class="separator:a2ab0ede12a888c48c25518a320f81eb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -143,6 +146,21 @@ Variables</h2></td></tr>
 <tr class="memitem:a56d92454715247e664da00780f37724a" id="r_a56d92454715247e664da00780f37724a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56d92454715247e664da00780f37724a">RanksBrd</a> [<a class="el" href="defs_8h.html#a92bbcebd1f24130a0c0e62a08083aa61">BRD_SQ_NUM</a>]</td></tr>
 <tr class="memdesc:a56d92454715247e664da00780f37724a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Board ranks.  <br /></td></tr>
 <tr class="separator:a56d92454715247e664da00780f37724a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff51b348649de8e285c1e20e365de5a" id="r_acff51b348649de8e285c1e20e365de5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff51b348649de8e285c1e20e365de5a">FileBBMask</a> [8]</td></tr>
+<tr class="memdesc:acff51b348649de8e285c1e20e365de5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">File bit masks.  <br /></td></tr>
+<tr class="separator:acff51b348649de8e285c1e20e365de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcee316fc31fdf5d99d4b8138173dba9" id="r_afcee316fc31fdf5d99d4b8138173dba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcee316fc31fdf5d99d4b8138173dba9">RankBBMask</a> [8]</td></tr>
+<tr class="memdesc:afcee316fc31fdf5d99d4b8138173dba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank bit masks.  <br /></td></tr>
+<tr class="separator:afcee316fc31fdf5d99d4b8138173dba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d826e8ac2cc9af13b4706d3a9ca566" id="r_ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d826e8ac2cc9af13b4706d3a9ca566">BlackPassedMask</a> [64]</td></tr>
+<tr class="memdesc:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Black passed pawn masks.  <br /></td></tr>
+<tr class="separator:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1265225d49dbbe5d814fee7892595a" id="r_abc1265225d49dbbe5d814fee7892595a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1265225d49dbbe5d814fee7892595a">WhitePassedMask</a> [64]</td></tr>
+<tr class="memdesc:abc1265225d49dbbe5d814fee7892595a"><td class="mdescLeft">&#160;</td><td class="mdescRight">White passed pawn masks.  <br /></td></tr>
+<tr class="separator:abc1265225d49dbbe5d814fee7892595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4f9f616d4d231b9eb9a94f20edd0d0" id="r_a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a4f9f616d4d231b9eb9a94f20edd0d0">IsolatedMask</a> [64]</td></tr>
+<tr class="memdesc:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Isolated pawn masks.  <br /></td></tr>
+<tr class="separator:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Initializes the board. </p>
@@ -193,7 +211,7 @@ Variables</h2></td></tr>
 
 <p>Initializes the board. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00171">171</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00276">276</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -214,7 +232,28 @@ Variables</h2></td></tr>
 
 <p>Initializes the bit masks. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00123">123</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00228">228</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="a332fa6e54968b97a1ab0866bf33f06ae" name="a332fa6e54968b97a1ab0866bf33f06ae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a332fa6e54968b97a1ab0866bf33f06ae">&#9670;&#160;</a></span>InitEvalMasks()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitEvalMasks </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initializes the bitmasks for pawns. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00109">109</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -235,7 +274,7 @@ Variables</h2></td></tr>
 
 <p>Initializes the files and ranks. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00079">79</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00184">184</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -256,7 +295,7 @@ Variables</h2></td></tr>
 
 <p>Initializes the hash keys. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00105">105</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00210">210</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -277,11 +316,29 @@ Variables</h2></td></tr>
 
 <p>Initializes the 120 to 64 square conversion. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00142">142</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00247">247</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab9d826e8ac2cc9af13b4706d3a9ca566" name="ab9d826e8ac2cc9af13b4706d3a9ca566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d826e8ac2cc9af13b4706d3a9ca566">&#9670;&#160;</a></span>BlackPassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> BlackPassedMask[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Black passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00091">91</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="a6ca9e201015eea408b71908751d1bb17" name="a6ca9e201015eea408b71908751d1bb17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ca9e201015eea408b71908751d1bb17">&#9670;&#160;</a></span>CastleKeys</h2>
 
@@ -318,6 +375,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acff51b348649de8e285c1e20e365de5a" name="acff51b348649de8e285c1e20e365de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff51b348649de8e285c1e20e365de5a">&#9670;&#160;</a></span>FileBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> FileBBMask[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>File bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00079">79</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="ac16a2fd356966459ce481edcdde858d2" name="ac16a2fd356966459ce481edcdde858d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac16a2fd356966459ce481edcdde858d2">&#9670;&#160;</a></span>FilesBrd</h2>
 
@@ -336,6 +411,24 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a6a4f9f616d4d231b9eb9a94f20edd0d0" name="a6a4f9f616d4d231b9eb9a94f20edd0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4f9f616d4d231b9eb9a94f20edd0d0">&#9670;&#160;</a></span>IsolatedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> IsolatedMask[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Isolated pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00103">103</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="aa0066354e1f224b5fec18c8018c10283" name="aa0066354e1f224b5fec18c8018c10283"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa0066354e1f224b5fec18c8018c10283">&#9670;&#160;</a></span>PieceKeys</h2>
 
@@ -351,6 +444,24 @@ Variables</h2></td></tr>
 <p>Piece keys. </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00049">49</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="afcee316fc31fdf5d99d4b8138173dba9" name="afcee316fc31fdf5d99d4b8138173dba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcee316fc31fdf5d99d4b8138173dba9">&#9670;&#160;</a></span>RankBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> RankBBMask[8]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Rank bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00085">85</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -441,6 +552,24 @@ Variables</h2></td></tr>
 <p>64 square to 120 square conversion </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00031">31</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="abc1265225d49dbbe5d814fee7892595a" name="abc1265225d49dbbe5d814fee7892595a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1265225d49dbbe5d814fee7892595a">&#9670;&#160;</a></span>WhitePassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> WhitePassedMask[64]</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>White passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00097">97</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

@@ -25,7 +25,7 @@
   <td id="projectalign">
    <div id="projectname">Vice Chess Engine
    </div>
-   <div id="projectbrief">A chess enginer written in C</div>
+   <div id="projectbrief">A chess engine written in C</div>
   </td>
  </tr>
  </tbody>
@@ -89,8 +89,8 @@ $(function() {
 
 <p>Contains definitions for the game.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &lt;stdlib.h&gt;</code><br />
-<code>#include &lt;stdio.h&gt;</code><br />
+<div class="textblock"><code>#include &quot;stdlib.h&quot;</code><br />
+<code>#include &quot;stdio.h&quot;</code><br />
 </div>
 <p><a href="defs_8h_source.html">Go to the source code of this file.</a></p>
 <table class="memberdecls">
@@ -102,17 +102,24 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store a list of moves.  <a href="struct_s___m_o_v_e_l_i_s_t.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___h_a_s_h_e_n_t_r_y.html">S_HASHENTRY</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the hash entry.  <a href="struct_s___h_a_s_h_e_n_t_r_y.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___h_a_s_h_t_a_b_l_e.html">S_HASHTABLE</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the principal variation table.  <a href="struct_s___h_a_s_h_t_a_b_l_e.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___u_n_d_o.html">S_UNDO</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the history of the game.  <a href="struct_s___u_n_d_o.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the board.  <a href="struct_s___b_o_a_r_d.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Structure to store the search information.  <a href="struct_s___s_e_a_r_c_h_i_n_f_o.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="define-members" name="define-members"></a>
 Macros</h2></td></tr>
-<tr class="memitem:ad72dbcf6d0153db1b8d8a58001feed83" id="r_ad72dbcf6d0153db1b8d8a58001feed83"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72dbcf6d0153db1b8d8a58001feed83">DEBUG</a></td></tr>
-<tr class="separator:ad72dbcf6d0153db1b8d8a58001feed83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab07ffffd69593ea84909411235cb73af" id="r_ab07ffffd69593ea84909411235cb73af"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab07ffffd69593ea84909411235cb73af">ASSERT</a>(n)</td></tr>
 <tr class="separator:ab07ffffd69593ea84909411235cb73af"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47f2e62c0dbebc787052c165afcada0e" id="r_a47f2e62c0dbebc787052c165afcada0e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a47f2e62c0dbebc787052c165afcada0e">NAME</a>&#160;&#160;&#160;&quot;Vice 1.0&quot;</td></tr>
@@ -123,8 +130,14 @@ Macros</h2></td></tr>
 <tr class="separator:a709e34a757803360843ea61cf13fed8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6594ee282f657f54e6d0ab1679ac5b78" id="r_a6594ee282f657f54e6d0ab1679ac5b78"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6594ee282f657f54e6d0ab1679ac5b78">MAXPOSITIONMOVES</a>&#160;&#160;&#160;256</td></tr>
 <tr class="separator:a6594ee282f657f54e6d0ab1679ac5b78"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a852ddde438845110943cb3e2a0beea" id="r_a0a852ddde438845110943cb3e2a0beea"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0a852ddde438845110943cb3e2a0beea">MAXDEPTH</a>&#160;&#160;&#160;64</td></tr>
+<tr class="separator:a0a852ddde438845110943cb3e2a0beea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580227094908aca72cf64f75d55c86df" id="r_a580227094908aca72cf64f75d55c86df"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a580227094908aca72cf64f75d55c86df">START_FEN</a>&#160;&#160;&#160;&quot;rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1&quot;</td></tr>
 <tr class="separator:a580227094908aca72cf64f75d55c86df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84a29002ab81c719c0d07bb446296e0" id="r_aa84a29002ab81c719c0d07bb446296e0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a>&#160;&#160;&#160;30000</td></tr>
+<tr class="separator:aa84a29002ab81c719c0d07bb446296e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8cf3a1db32af35bbaf63c15a9bc75cad" id="r_a8cf3a1db32af35bbaf63c15a9bc75cad"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a8cf3a1db32af35bbaf63c15a9bc75cad">ISMATE</a>&#160;&#160;&#160;(<a class="el" href="#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a> - <a class="el" href="#a0a852ddde438845110943cb3e2a0beea">MAXDEPTH</a>)</td></tr>
+<tr class="separator:a8cf3a1db32af35bbaf63c15a9bc75cad"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aafb5e7106c9610b1e228bbc92dcd9289" id="r_aafb5e7106c9610b1e228bbc92dcd9289"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aafb5e7106c9610b1e228bbc92dcd9289">FROMSQ</a>(m)&#160;&#160;&#160;((m) &amp; 0x7F)</td></tr>
 <tr class="separator:aafb5e7106c9610b1e228bbc92dcd9289"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1376416d3a0e870a9a1241b3a54a3f9b" id="r_a1376416d3a0e870a9a1241b3a54a3f9b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1376416d3a0e870a9a1241b3a54a3f9b">TOSQ</a>(m)&#160;&#160;&#160;(((m)&gt;&gt;7) &amp; 0x7F)</td></tr>
@@ -143,6 +156,8 @@ Macros</h2></td></tr>
 <tr class="separator:a0044dc09621fd6baa75cda62dff02eb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41b1ecdfcc604968667fb35c26b8e279" id="r_a41b1ecdfcc604968667fb35c26b8e279"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a41b1ecdfcc604968667fb35c26b8e279">MFLAGPROM</a>&#160;&#160;&#160;0xF00000</td></tr>
 <tr class="separator:a41b1ecdfcc604968667fb35c26b8e279"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5fb1e2c08e9bc21f6412285f5a74c02f" id="r_a5fb1e2c08e9bc21f6412285f5a74c02f"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5fb1e2c08e9bc21f6412285f5a74c02f">NOMOVE</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:a5fb1e2c08e9bc21f6412285f5a74c02f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a02b67a393d8796296fb1eb602a9a7503" id="r_a02b67a393d8796296fb1eb602a9a7503"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02b67a393d8796296fb1eb602a9a7503">FR2SQ</a>(f,  r)&#160;&#160;&#160;( (21 + (f) ) + ( (r) * 10 ) )</td></tr>
 <tr class="separator:a02b67a393d8796296fb1eb602a9a7503"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a939be4b23f7ab95917d2ac75f606274d" id="r_a939be4b23f7ab95917d2ac75f606274d"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a939be4b23f7ab95917d2ac75f606274d">SQ64</a>(sq120)&#160;&#160;&#160;(<a class="el" href="#ad546b226fdbe6abacdfa282f3df497c8">Sq120ToSq64</a>[(sq120)])</td></tr>
@@ -165,6 +180,8 @@ Macros</h2></td></tr>
 <tr class="separator:a11c5b1aa7f36ce1a2e5bc0a4f7d297f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af82510c92fa4858abe56d5e3650a51f0" id="r_af82510c92fa4858abe56d5e3650a51f0"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af82510c92fa4858abe56d5e3650a51f0">IsKi</a>(p)&#160;&#160;&#160;(<a class="el" href="#afd5ea146fc8ee62e9e97fe4ffc147bd9">PieceKing</a>[(p)])</td></tr>
 <tr class="separator:af82510c92fa4858abe56d5e3650a51f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4cd471263505af37f459a0c87f32d79e" id="r_a4cd471263505af37f459a0c87f32d79e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4cd471263505af37f459a0c87f32d79e">MIRROR64</a>(sq)&#160;&#160;&#160;(<a class="el" href="#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a>[(sq)])</td></tr>
+<tr class="separator:a4cd471263505af37f459a0c87f32d79e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="typedef-members" name="typedef-members"></a>
 Typedefs</h2></td></tr>
@@ -232,105 +249,118 @@ Enumerations</h2></td></tr>
  }</td></tr>
 <tr class="memdesc:abc6126af1d45847bc59afa0aa3216b04"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the colors.  <a href="#abc6126af1d45847bc59afa0aa3216b04">More...</a><br /></td></tr>
 <tr class="separator:abc6126af1d45847bc59afa0aa3216b04"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c" id="r_adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6ff26890857c886c86453f0c8078bf95">A1</a> = 21
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cad90c5e7444630b8d170b08d0853aae21">B1</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cae54c31a855b907f263d49edcdbe677bd">C1</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca29b8ecb29049f38cbf752d95f479bff7">D1</a>
+<tr class="memitem:adc29c2ff13d900c2f185ee95427fb06c" id="r_adc29c2ff13d900c2f185ee95427fb06c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca50ad28561f0aac3c76dd95dd97fffe74">UCIMODE</a>
+, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caf8753b09d02a203105f442af32e63260">XBOARDMODE</a>
+, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79">CONSOLEMODE</a>
+ }</td></tr>
+<tr class="memdesc:adc29c2ff13d900c2f185ee95427fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store mode being used for the game.  <a href="#adc29c2ff13d900c2f185ee95427fb06c">More...</a><br /></td></tr>
+<tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a61dadd085c1777f559549e05962b2c9e" id="r_a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <br />
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6ff26890857c886c86453f0c8078bf95">A1</a> = 21
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ead90c5e7444630b8d170b08d0853aae21">B1</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eae54c31a855b907f263d49edcdbe677bd">C1</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea29b8ecb29049f38cbf752d95f479bff7">D1</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cab1710e6a49014ba389d57c8753c530f4">E1</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca5afea46882b06768ac8563d462999735">F1</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caaec6d2231567cdb9063f093d8effa224">G1</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca7ec6526640e5add74fe4b322e6343120">H1</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9eab1710e6a49014ba389d57c8753c530f4">E1</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea5afea46882b06768ac8563d462999735">F1</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaaec6d2231567cdb9063f093d8effa224">G1</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea7ec6526640e5add74fe4b322e6343120">H1</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca47329f455692c2a8284d7594405f16d4">A2</a> = 31
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca9bfbe74b27169e5bd5bd5dc020fdd00b">B2</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca5e602f1d68586231698bda7be6af7d2e">C2</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca86c69dc8849d17673b52b9a8d94d8b9f">D2</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea47329f455692c2a8284d7594405f16d4">A2</a> = 31
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea9bfbe74b27169e5bd5bd5dc020fdd00b">B2</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea5e602f1d68586231698bda7be6af7d2e">C2</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea86c69dc8849d17673b52b9a8d94d8b9f">D2</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cace9a5783f96994d28bc6ec5c9ece8c80">E2</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caa3c13a70de6599f4470373ec46d4f6bf">F2</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caedce8067580fa0c4c235f8534f25a7b3">G2</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cabc856fd5d1be355fd3d34b860c506cd0">H2</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9eace9a5783f96994d28bc6ec5c9ece8c80">E2</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaa3c13a70de6599f4470373ec46d4f6bf">F2</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaedce8067580fa0c4c235f8534f25a7b3">G2</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eabc856fd5d1be355fd3d34b860c506cd0">H2</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca47dbfcefc8fabadcd82806b21de14bfc">A3</a> = 41
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca008e5845e069ecd71e49f3d18ec21130">B3</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cada966660d95922946f59862d9ce54b1c">C3</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cade8ef7573c5fa770f07ac7616cbf5d34">D3</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea47dbfcefc8fabadcd82806b21de14bfc">A3</a> = 41
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea008e5845e069ecd71e49f3d18ec21130">B3</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eada966660d95922946f59862d9ce54b1c">C3</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eade8ef7573c5fa770f07ac7616cbf5d34">D3</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca460eae7ccdb66a96136eb0afb98ba51b">E3</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca10a5417c8e696606af65ec28c5fb2495">F3</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca99381344bd0c2206ca3bcf98254783f0">G3</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cab5f7333471179f24ed9ce81659847cc7">H3</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea460eae7ccdb66a96136eb0afb98ba51b">E3</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea10a5417c8e696606af65ec28c5fb2495">F3</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea99381344bd0c2206ca3bcf98254783f0">G3</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eab5f7333471179f24ed9ce81659847cc7">H3</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cada06582608e19a3f2438f54eeb0bcad5">A4</a> = 51
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6e242c85f0b91e8879200ec3004a4cab">B4</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca24727389909cb6406ed9483df7810c78">C4</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca12761dd9f3b74590b720d87d6ca9fbcf">D4</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9eada06582608e19a3f2438f54eeb0bcad5">A4</a> = 51
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6e242c85f0b91e8879200ec3004a4cab">B4</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea24727389909cb6406ed9483df7810c78">C4</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea12761dd9f3b74590b720d87d6ca9fbcf">D4</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca21d812cf3e9fd32ae1d834555c5d0baa">E4</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca8d311dd8454951b86e27873c49ff1ec5">F4</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caf0083cb5d419863c9fa614b3e5a3213b">G4</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca2b19eb4f28582dc345e707197160f485">H4</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea21d812cf3e9fd32ae1d834555c5d0baa">E4</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea8d311dd8454951b86e27873c49ff1ec5">F4</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaf0083cb5d419863c9fa614b3e5a3213b">G4</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea2b19eb4f28582dc345e707197160f485">H4</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caacdd5acf9dd0376a4073a1f27d8df74e">A5</a> = 61
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caf238f32976f4a2c27a517bd1ad47be36">B5</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca26c0a10a3dc0a69747539541f4a82172">C5</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca9bfc9615ce2836fe43fe37e0eda2a68a">D5</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9eaacdd5acf9dd0376a4073a1f27d8df74e">A5</a> = 61
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaf238f32976f4a2c27a517bd1ad47be36">B5</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea26c0a10a3dc0a69747539541f4a82172">C5</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea9bfc9615ce2836fe43fe37e0eda2a68a">D5</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6debb3cd347b3a1a2a85500ced6e7c10">E5</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca265fb264db0c419e6cb73bce564cd517">F5</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca33e4e589075c868910acfa95b14efb5f">G5</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca555abd1b0d375a8ae8c77b90afb6695c">H5</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6debb3cd347b3a1a2a85500ced6e7c10">E5</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea265fb264db0c419e6cb73bce564cd517">F5</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea33e4e589075c868910acfa95b14efb5f">G5</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea555abd1b0d375a8ae8c77b90afb6695c">H5</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca260faf43232fc57a22e280e8912d6689">A6</a> = 71
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca0eb7e951c71ad8f7ea59d513e8d57747">B6</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cae138d2e0243a8b4dcca22738eebc2197">C6</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cab6e74cb404ad3a7370b6cbb05f004fcb">D6</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea260faf43232fc57a22e280e8912d6689">A6</a> = 71
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea0eb7e951c71ad8f7ea59d513e8d57747">B6</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eae138d2e0243a8b4dcca22738eebc2197">C6</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eab6e74cb404ad3a7370b6cbb05f004fcb">D6</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca22c7951dba1a1943224d259176412bfd">E6</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caa1e9d714a0238434a819235d4832f7d2">F6</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6ab0f7aca08fd2ba5505168472501d98">G6</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caaa1e5185cf98f81e2e8a710f907c3174">H6</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea22c7951dba1a1943224d259176412bfd">E6</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaa1e9d714a0238434a819235d4832f7d2">F6</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6ab0f7aca08fd2ba5505168472501d98">G6</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaaa1e5185cf98f81e2e8a710f907c3174">H6</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca7ae46613d850fc0cb3d82eb0bb8811c6">A7</a> = 81
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca561ae7a12dd8bf549f1b7e647354297e">B7</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca4f858b829392e960b43c57a9731c98ac">C7</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa">D7</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea7ae46613d850fc0cb3d82eb0bb8811c6">A7</a> = 81
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea561ae7a12dd8bf549f1b7e647354297e">B7</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea4f858b829392e960b43c57a9731c98ac">C7</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa">D7</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca40ca2674103ced2895998d0383ac50e5">E7</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6f111feaebfe5971b1243256d6417dc7">F7</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cae236ad64088ffc77d9e098628d5ba342">G7</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cab5528db6787796e749fa3f4af05bc239">H7</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea40ca2674103ced2895998d0383ac50e5">E7</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6f111feaebfe5971b1243256d6417dc7">F7</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eae236ad64088ffc77d9e098628d5ba342">G7</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eab5528db6787796e749fa3f4af05bc239">H7</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caf3ba956cfc94b23b44487413b27c646a">A8</a> = 91
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca36820f60b2f0bee85a682e3f0b6e0fea">B8</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca6a72e133ec9df7aadaeef87557e5cbb0">C8</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1">D8</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9eaf3ba956cfc94b23b44487413b27c646a">A8</a> = 91
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea36820f60b2f0bee85a682e3f0b6e0fea">B8</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea6a72e133ec9df7aadaeef87557e5cbb0">C8</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1">D8</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca1eacedb7bc191a326eafc02f96c93a6f">E8</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cacb02fa2cede46dab94694927da16433d">F8</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06caa1c865ccd52132fb116c4587969e6ad8">G8</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06cade042a52f63647c9e92085a07bb9fd66">H8</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea1eacedb7bc191a326eafc02f96c93a6f">E8</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eacb02fa2cede46dab94694927da16433d">F8</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaa1c865ccd52132fb116c4587969e6ad8">G8</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eade042a52f63647c9e92085a07bb9fd66">H8</a>
 , <br />
-&#160;&#160;<a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca8920a90700927bb9d204cd229b8c08f8">NO_SQ</a>
-, <a class="el" href="#adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>
+&#160;&#160;<a class="el" href="#a61dadd085c1777f559549e05962b2c9ea8920a90700927bb9d204cd229b8c08f8">NO_SQ</a>
+, <a class="el" href="#a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>
 <br />
  }</td></tr>
-<tr class="memdesc:adc29c2ff13d900c2f185ee95427fb06c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the squares.  <a href="#adc29c2ff13d900c2f185ee95427fb06c">More...</a><br /></td></tr>
-<tr class="separator:adc29c2ff13d900c2f185ee95427fb06c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61dadd085c1777f559549e05962b2c9e" id="r_a61dadd085c1777f559549e05962b2c9e"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>
-, <a class="el" href="#a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839">TRUE</a>
- }</td></tr>
-<tr class="memdesc:a61dadd085c1777f559549e05962b2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store boolean values.  <a href="#a61dadd085c1777f559549e05962b2c9e">More...</a><br /></td></tr>
+<tr class="memdesc:a61dadd085c1777f559549e05962b2c9e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the squares.  <a href="#a61dadd085c1777f559549e05962b2c9e">More...</a><br /></td></tr>
 <tr class="separator:a61dadd085c1777f559549e05962b2c9e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a726ca809ffd3d67ab4b8476646f26635" id="r_a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635ac2f915c8e28362ff0423ae01d4b5c638">WKCA</a> = 1
-, <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635a90ed269227fd51007dd61578124378a2">WQCA</a> = 2
-, <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635adca5d258ee038af989898b86acb9476d">BKCA</a> = 4
-, <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b">BQCA</a> = 8
+<tr class="memitem:a726ca809ffd3d67ab4b8476646f26635" id="r_a726ca809ffd3d67ab4b8476646f26635"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>
+, <a class="el" href="#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>
  }</td></tr>
-<tr class="memdesc:a726ca809ffd3d67ab4b8476646f26635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the castling permissions.  <a href="#a726ca809ffd3d67ab4b8476646f26635">More...</a><br /></td></tr>
+<tr class="memdesc:a726ca809ffd3d67ab4b8476646f26635"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store boolean values.  <a href="#a726ca809ffd3d67ab4b8476646f26635">More...</a><br /></td></tr>
 <tr class="separator:a726ca809ffd3d67ab4b8476646f26635"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0411cd49bb5b71852cecd93bcbf0ca2d" id="r_a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#a0411cd49bb5b71852cecd93bcbf0ca2dac2f915c8e28362ff0423ae01d4b5c638">WKCA</a> = 1
+, <a class="el" href="#a0411cd49bb5b71852cecd93bcbf0ca2da90ed269227fd51007dd61578124378a2">WQCA</a> = 2
+, <a class="el" href="#a0411cd49bb5b71852cecd93bcbf0ca2dadca5d258ee038af989898b86acb9476d">BKCA</a> = 4
+, <a class="el" href="#a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b">BQCA</a> = 8
+ }</td></tr>
+<tr class="memdesc:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enum to store the castling permissions.  <a href="#a0411cd49bb5b71852cecd93bcbf0ca2d">More...</a><br /></td></tr>
+<tr class="separator:a0411cd49bb5b71852cecd93bcbf0ca2d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abed82baf7f470b522273a3e37c24c600" id="r_abed82baf7f470b522273a3e37c24c600"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="#abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132">HFNONE</a>
+, <a class="el" href="#abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91">HFALPHA</a>
+, <a class="el" href="#abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc">HFBETA</a>
+, <a class="el" href="#abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd">HFEXACT</a>
+ }</td></tr>
+<tr class="memdesc:abed82baf7f470b522273a3e37c24c600"><td class="mdescLeft">&#160;</td><td class="mdescRight">Flags for the hash entry.  <a href="#abed82baf7f470b522273a3e37c24c600">More...</a><br /></td></tr>
+<tr class="separator:abed82baf7f470b522273a3e37c24c600"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
@@ -350,7 +380,7 @@ Functions</h2></td></tr>
 <tr class="memdesc:ad905f992dc8ba2c7717ea5e69611e434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to generate the position key using Zobrist hashing.  <br /></td></tr>
 <tr class="separator:ad905f992dc8ba2c7717ea5e69611e434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad85a9ad05108f03534b81f39c5a3f5c0" id="r_ad85a9ad05108f03534b81f39c5a3f5c0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad85a9ad05108f03534b81f39c5a3f5c0">ResetBoard</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
-<tr class="memdesc:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Print the board.  <br /></td></tr>
+<tr class="memdesc:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the board.  <br /></td></tr>
 <tr class="separator:ad85a9ad05108f03534b81f39c5a3f5c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae1947aedff90dd90cd9ad0db1b884a57" id="r_ae1947aedff90dd90cd9ad0db1b884a57"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae1947aedff90dd90cd9ad0db1b884a57">ParseFen</a> (char *fen, <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ae1947aedff90dd90cd9ad0db1b884a57"><td class="mdescLeft">&#160;</td><td class="mdescRight">Parse the FEN string.  <br /></td></tr>
@@ -364,6 +394,9 @@ Functions</h2></td></tr>
 <tr class="memitem:a94a8326712cd3ca77f7e99e5a7ce2663" id="r_a94a8326712cd3ca77f7e99e5a7ce2663"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a94a8326712cd3ca77f7e99e5a7ce2663">CheckBoard</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:a94a8326712cd3ca77f7e99e5a7ce2663"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if board is valid.  <br /></td></tr>
 <tr class="separator:a94a8326712cd3ca77f7e99e5a7ce2663"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd8d85368a8795ab3d37740a1142325e" id="r_abd8d85368a8795ab3d37740a1142325e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abd8d85368a8795ab3d37740a1142325e">MirrorBoard</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:abd8d85368a8795ab3d37740a1142325e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the board.  <br /></td></tr>
+<tr class="separator:abd8d85368a8795ab3d37740a1142325e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4e9a4c9edd9d5d825d83c415343da5f" id="r_ab4e9a4c9edd9d5d825d83c415343da5f"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab4e9a4c9edd9d5d825d83c415343da5f">SqAttacked</a> (const int sq, const int side, const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ab4e9a4c9edd9d5d825d83c415343da5f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Determines if a square is attacked by a piece of a certain color.  <br /></td></tr>
 <tr class="separator:ab4e9a4c9edd9d5d825d83c415343da5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -373,6 +406,9 @@ Functions</h2></td></tr>
 <tr class="memitem:adcca8258746cc63bf1794173fc366cc9" id="r_adcca8258746cc63bf1794173fc366cc9"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#adcca8258746cc63bf1794173fc366cc9">PrSq</a> (const int sq)</td></tr>
 <tr class="memdesc:adcca8258746cc63bf1794173fc366cc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the square.  <br /></td></tr>
 <tr class="separator:adcca8258746cc63bf1794173fc366cc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3501422a21fb0b37cf1573dd4f410a60" id="r_a3501422a21fb0b37cf1573dd4f410a60"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3501422a21fb0b37cf1573dd4f410a60">ParseMove</a> (char *ptrChar, <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a3501422a21fb0b37cf1573dd4f410a60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to parse the move and return the integer representation.  <br /></td></tr>
+<tr class="separator:a3501422a21fb0b37cf1573dd4f410a60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a962a285cdfc1ec24237ca176f29a6108" id="r_a962a285cdfc1ec24237ca176f29a6108"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a962a285cdfc1ec24237ca176f29a6108">PrintMoveList</a> (const <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:a962a285cdfc1ec24237ca176f29a6108"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints the move list.  <br /></td></tr>
 <tr class="separator:a962a285cdfc1ec24237ca176f29a6108"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -391,15 +427,78 @@ Functions</h2></td></tr>
 <tr class="memitem:a7f3c9068109d4c781b7e4011db8d5128" id="r_a7f3c9068109d4c781b7e4011db8d5128"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f3c9068109d4c781b7e4011db8d5128">PieceValid</a> (const int pce)</td></tr>
 <tr class="memdesc:a7f3c9068109d4c781b7e4011db8d5128"><td class="mdescLeft">&#160;</td><td class="mdescRight">Checks if a piece is valid.  <br /></td></tr>
 <tr class="separator:a7f3c9068109d4c781b7e4011db8d5128"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a537d79d41386bba7b689b7b56480e186" id="r_a537d79d41386bba7b689b7b56480e186"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a537d79d41386bba7b689b7b56480e186">MirrorEvalTest</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a537d79d41386bba7b689b7b56480e186"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if mirror of board is correct.  <br /></td></tr>
+<tr class="separator:a537d79d41386bba7b689b7b56480e186"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f0218d085cfcb232bc24c7142c5d434" id="r_a0f0218d085cfcb232bc24c7142c5d434"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f0218d085cfcb232bc24c7142c5d434">DebugAnalysisTest</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a0f0218d085cfcb232bc24c7142c5d434"><td class="mdescLeft">&#160;</td><td class="mdescRight">Debug analysis test.  <br /></td></tr>
+<tr class="separator:a0f0218d085cfcb232bc24c7142c5d434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2be60666ed0e5f82fa409c250b4e054" id="r_ae2be60666ed0e5f82fa409c250b4e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:ae2be60666ed0e5f82fa409c250b4e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all moves.  <br /></td></tr>
 <tr class="separator:ae2be60666ed0e5f82fa409c250b4e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02276982406938d2fbcbc273caaa44e" id="r_ab02276982406938d2fbcbc273caaa44e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab02276982406938d2fbcbc273caaa44e">GenerateAllCaps</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
+<tr class="memdesc:ab02276982406938d2fbcbc273caaa44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all captures.  <br /></td></tr>
+<tr class="separator:ab02276982406938d2fbcbc273caaa44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cef5ab5191a75c2b168711c50c756db" id="r_a9cef5ab5191a75c2b168711c50c756db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cef5ab5191a75c2b168711c50c756db">MoveExists</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, const int move)</td></tr>
+<tr class="memdesc:a9cef5ab5191a75c2b168711c50c756db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if move exists.  <br /></td></tr>
+<tr class="separator:a9cef5ab5191a75c2b168711c50c756db"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a43459d3ba36083fef55ef24e6ac097f2" id="r_a43459d3ba36083fef55ef24e6ac097f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43459d3ba36083fef55ef24e6ac097f2">InitMvvLva</a> ()</td></tr>
+<tr class="memdesc:a43459d3ba36083fef55ef24e6ac097f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the MvvLvaScores array.  <br /></td></tr>
+<tr class="separator:a43459d3ba36083fef55ef24e6ac097f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c3644fe98d2e1a3d9ac7f68e40937c2" id="r_a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9c3644fe98d2e1a3d9ac7f68e40937c2">MakeMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, int move)</td></tr>
 <tr class="memdesc:a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a move.  <br /></td></tr>
 <tr class="separator:a9c3644fe98d2e1a3d9ac7f68e40937c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8ebe63f27996af9d769245539d7a9fd" id="r_ae8ebe63f27996af9d769245539d7a9fd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae8ebe63f27996af9d769245539d7a9fd">TakeMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
 <tr class="memdesc:ae8ebe63f27996af9d769245539d7a9fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take back a move.  <br /></td></tr>
 <tr class="separator:ae8ebe63f27996af9d769245539d7a9fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7edb2500642248af2c132abd138751c2" id="r_a7edb2500642248af2c132abd138751c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7edb2500642248af2c132abd138751c2">MakeNullMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a7edb2500642248af2c132abd138751c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to make a null move.  <br /></td></tr>
+<tr class="separator:a7edb2500642248af2c132abd138751c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a204aee6229d709429dcbb9d2e425e670" id="r_a204aee6229d709429dcbb9d2e425e670"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a204aee6229d709429dcbb9d2e425e670">TakeNullMove</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a204aee6229d709429dcbb9d2e425e670"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to take back a null move.  <br /></td></tr>
+<tr class="separator:a204aee6229d709429dcbb9d2e425e670"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1b6b13d186dab20a18cec1a6b041220b" id="r_a1b6b13d186dab20a18cec1a6b041220b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b6b13d186dab20a18cec1a6b041220b">PerftTest</a> (int depth, <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a1b6b13d186dab20a18cec1a6b041220b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function for testing the move generation using perft.  <br /></td></tr>
+<tr class="separator:a1b6b13d186dab20a18cec1a6b041220b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a612414d1ad97c743f6e54d20e4b32e37" id="r_a612414d1ad97c743f6e54d20e4b32e37"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a612414d1ad97c743f6e54d20e4b32e37"><td class="mdescLeft">&#160;</td><td class="mdescRight">Iterative deepening search.  <br /></td></tr>
+<tr class="separator:a612414d1ad97c743f6e54d20e4b32e37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87fed9d5570ea84a3df0c8e208a73098" id="r_a87fed9d5570ea84a3df0c8e208a73098"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a87fed9d5570ea84a3df0c8e208a73098">GetTimeMs</a> ()</td></tr>
+<tr class="memdesc:a87fed9d5570ea84a3df0c8e208a73098"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Time Ms object.  <br /></td></tr>
+<tr class="separator:a87fed9d5570ea84a3df0c8e208a73098"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac35ec650650ae344bdc0985cd4ece431" id="r_ac35ec650650ae344bdc0985cd4ece431"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac35ec650650ae344bdc0985cd4ece431">ReadInput</a> (<a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:ac35ec650650ae344bdc0985cd4ece431"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read input from the user <b>[http://home.arcor.de/dreamlike/chess/]</b>.  <br /></td></tr>
+<tr class="separator:ac35ec650650ae344bdc0985cd4ece431"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd52cb4b2638a8c8c55155f8f51acf5a" id="r_afd52cb4b2638a8c8c55155f8f51acf5a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afd52cb4b2638a8c8c55155f8f51acf5a">InitHashTable</a> (<a class="el" href="struct_s___h_a_s_h_t_a_b_l_e.html">S_HASHTABLE</a> *table, const int MB)</td></tr>
+<tr class="memdesc:afd52cb4b2638a8c8c55155f8f51acf5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the hash table.  <br /></td></tr>
+<tr class="separator:afd52cb4b2638a8c8c55155f8f51acf5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f82a82e2c4a84554d647bc4fc7600e7" id="r_a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a0f82a82e2c4a84554d647bc4fc7600e7">StoreHashEntry</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, const int move, int score, const int flags, const int depth)</td></tr>
+<tr class="memdesc:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to store the hash entry.  <br /></td></tr>
+<tr class="separator:a0f82a82e2c4a84554d647bc4fc7600e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3448e3a94f686d3c806fd17577508770" id="r_a3448e3a94f686d3c806fd17577508770"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a3448e3a94f686d3c806fd17577508770">ProbeHashEntry</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, int *move, int *score, int alpha, int beta, int depth)</td></tr>
+<tr class="memdesc:a3448e3a94f686d3c806fd17577508770"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the hash table.  <br /></td></tr>
+<tr class="separator:a3448e3a94f686d3c806fd17577508770"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9021942d5e83b2876a7ab9798f777c51" id="r_a9021942d5e83b2876a7ab9798f777c51"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9021942d5e83b2876a7ab9798f777c51">ProbePvMove</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a9021942d5e83b2876a7ab9798f777c51"><td class="mdescLeft">&#160;</td><td class="mdescRight">Function to probe the principal variation table.  <br /></td></tr>
+<tr class="separator:a9021942d5e83b2876a7ab9798f777c51"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac6648b94e86e3f2eab1d4f0f2f721a86" id="r_ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac6648b94e86e3f2eab1d4f0f2f721a86">GetPvLine</a> (const int depth, <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the Pv Line object.  <br /></td></tr>
+<tr class="separator:ac6648b94e86e3f2eab1d4f0f2f721a86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad72a51d700e38aa1611d5162fc79627e" id="r_ad72a51d700e38aa1611d5162fc79627e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad72a51d700e38aa1611d5162fc79627e">ClearHashTable</a> (<a class="el" href="struct_s___h_a_s_h_t_a_b_l_e.html">S_HASHTABLE</a> *table)</td></tr>
+<tr class="memdesc:ad72a51d700e38aa1611d5162fc79627e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Clear the hash table.  <br /></td></tr>
+<tr class="separator:ad72a51d700e38aa1611d5162fc79627e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5c4dd2e784cf7f2333cf507e35d8d5fa" id="r_a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5c4dd2e784cf7f2333cf507e35d8d5fa">EvalPosition</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos)</td></tr>
+<tr class="memdesc:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Evaluate the position.  <br /></td></tr>
+<tr class="separator:a5c4dd2e784cf7f2333cf507e35d8d5fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea5d40969d72cd4ed3145580786a56a2" id="r_aea5d40969d72cd4ed3145580786a56a2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aea5d40969d72cd4ed3145580786a56a2">Uci_Loop</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:aea5d40969d72cd4ed3145580786a56a2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle UCI protocol.  <br /></td></tr>
+<tr class="separator:aea5d40969d72cd4ed3145580786a56a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7513485aff2d4a3470ede9595f97beee" id="r_a7513485aff2d4a3470ede9595f97beee"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7513485aff2d4a3470ede9595f97beee">XBoard_Loop</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:a7513485aff2d4a3470ede9595f97beee"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle XBoard protocol.  <br /></td></tr>
+<tr class="separator:a7513485aff2d4a3470ede9595f97beee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5fa6c8e94b5322c3df417a6c46f1752" id="r_ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *info)</td></tr>
+<tr class="memdesc:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle console mode.  <br /></td></tr>
+<tr class="separator:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
@@ -475,6 +574,24 @@ Variables</h2></td></tr>
 <tr class="memitem:aa3d6307973cd43a6689b062e54c04602" id="r_aa3d6307973cd43a6689b062e54c04602"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa3d6307973cd43a6689b062e54c04602">PieceSlides</a> [13]</td></tr>
 <tr class="memdesc:aa3d6307973cd43a6689b062e54c04602"><td class="mdescLeft">&#160;</td><td class="mdescRight">Arrays for the sliding pieces.  <br /></td></tr>
 <tr class="separator:aa3d6307973cd43a6689b062e54c04602"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad97c161274172b00c5281b2d2e2f2fa2" id="r_ad97c161274172b00c5281b2d2e2f2fa2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a> [64]</td></tr>
+<tr class="memdesc:ad97c161274172b00c5281b2d2e2f2fa2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mirror the 64 squares.  <br /></td></tr>
+<tr class="separator:ad97c161274172b00c5281b2d2e2f2fa2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acff51b348649de8e285c1e20e365de5a" id="r_acff51b348649de8e285c1e20e365de5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#acff51b348649de8e285c1e20e365de5a">FileBBMask</a> [8]</td></tr>
+<tr class="memdesc:acff51b348649de8e285c1e20e365de5a"><td class="mdescLeft">&#160;</td><td class="mdescRight">File bit masks.  <br /></td></tr>
+<tr class="separator:acff51b348649de8e285c1e20e365de5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afcee316fc31fdf5d99d4b8138173dba9" id="r_afcee316fc31fdf5d99d4b8138173dba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afcee316fc31fdf5d99d4b8138173dba9">RankBBMask</a> [8]</td></tr>
+<tr class="memdesc:afcee316fc31fdf5d99d4b8138173dba9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Rank bit masks.  <br /></td></tr>
+<tr class="separator:afcee316fc31fdf5d99d4b8138173dba9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9d826e8ac2cc9af13b4706d3a9ca566" id="r_ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab9d826e8ac2cc9af13b4706d3a9ca566">BlackPassedMask</a> [64]</td></tr>
+<tr class="memdesc:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="mdescLeft">&#160;</td><td class="mdescRight">Black passed pawn masks.  <br /></td></tr>
+<tr class="separator:ab9d826e8ac2cc9af13b4706d3a9ca566"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc1265225d49dbbe5d814fee7892595a" id="r_abc1265225d49dbbe5d814fee7892595a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc1265225d49dbbe5d814fee7892595a">WhitePassedMask</a> [64]</td></tr>
+<tr class="memdesc:abc1265225d49dbbe5d814fee7892595a"><td class="mdescLeft">&#160;</td><td class="mdescRight">White passed pawn masks.  <br /></td></tr>
+<tr class="separator:abc1265225d49dbbe5d814fee7892595a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a4f9f616d4d231b9eb9a94f20edd0d0" id="r_a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a6a4f9f616d4d231b9eb9a94f20edd0d0">IsolatedMask</a> [64]</td></tr>
+<tr class="memdesc:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Isolated pawn masks.  <br /></td></tr>
+<tr class="separator:a6a4f9f616d4d231b9eb9a94f20edd0d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Contains definitions for the game. </p>
@@ -499,15 +616,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<b>Value:</b><div class="fragment"><div class="line"><span class="keywordflow">if</span>(!(n)) { \</div>
-<div class="line">printf(<span class="stringliteral">&quot;%s - Failed &quot;</span>, #n); \</div>
-<div class="line">printf(<span class="stringliteral">&quot;On %s &quot;</span>, __DATE__); \</div>
-<div class="line">printf(<span class="stringliteral">&quot;At %s &quot;</span>, __TIME__); \</div>
-<div class="line">printf(<span class="stringliteral">&quot;In File %s &quot;</span>, __FILE__); \</div>
-<div class="line">printf(<span class="stringliteral">&quot;At Line %d\n&quot;</span>, __LINE__); \</div>
-<div class="line">exit(1); }</div>
-</div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00023">23</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00021">21</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -542,7 +652,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00174">174</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00252">252</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -565,7 +675,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00191">191</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00271">271</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -584,23 +694,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00190">190</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
-
-</div>
-</div>
-<a id="ad72dbcf6d0153db1b8d8a58001feed83" name="ad72dbcf6d0153db1b8d8a58001feed83"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad72dbcf6d0153db1b8d8a58001feed83">&#9670;&#160;</a></span>DEBUG</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">#define DEBUG</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00018">18</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00270">270</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -623,7 +717,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00186">186</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00266">266</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -642,7 +736,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00172">172</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00250">250</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="aa84a29002ab81c719c0d07bb446296e0" name="aa84a29002ab81c719c0d07bb446296e0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa84a29002ab81c719c0d07bb446296e0">&#9670;&#160;</a></span>INFINITE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define INFINITE&#160;&#160;&#160;30000</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00044">44</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -661,7 +771,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00194">194</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00274">274</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -680,7 +790,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00197">197</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00277">277</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -699,7 +809,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00196">196</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00276">276</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a8cf3a1db32af35bbaf63c15a9bc75cad" name="a8cf3a1db32af35bbaf63c15a9bc75cad"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8cf3a1db32af35bbaf63c15a9bc75cad">&#9670;&#160;</a></span>ISMATE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define ISMATE&#160;&#160;&#160;(<a class="el" href="#aa84a29002ab81c719c0d07bb446296e0">INFINITE</a> - <a class="el" href="#a0a852ddde438845110943cb3e2a0beea">MAXDEPTH</a>)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00045">45</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -718,7 +844,23 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00195">195</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00275">275</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a0a852ddde438845110943cb3e2a0beea" name="a0a852ddde438845110943cb3e2a0beea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a852ddde438845110943cb3e2a0beea">&#9670;&#160;</a></span>MAXDEPTH</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MAXDEPTH&#160;&#160;&#160;64</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00040">40</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -766,7 +908,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00179">179</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00257">257</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -782,7 +924,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00181">181</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00259">259</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -798,7 +940,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00177">177</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00255">255</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -814,7 +956,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00182">182</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00260">260</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -830,7 +972,26 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00178">178</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00256">256</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a4cd471263505af37f459a0c87f32d79e" name="a4cd471263505af37f459a0c87f32d79e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4cd471263505af37f459a0c87f32d79e">&#9670;&#160;</a></span>MIRROR64</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define MIRROR64</td>
+          <td>(</td>
+          <td class="paramtype"></td>          <td class="paramname"><span class="paramname">sq</span></td><td>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="#ad97c161274172b00c5281b2d2e2f2fa2">Mirror64</a>[(sq)])</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00279">279</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -850,6 +1011,22 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a5fb1e2c08e9bc21f6412285f5a74c02f" name="a5fb1e2c08e9bc21f6412285f5a74c02f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5fb1e2c08e9bc21f6412285f5a74c02f">&#9670;&#160;</a></span>NOMOVE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define NOMOVE&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00262">262</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
 <a id="ad830c7185d5e9db95ae3cf74d73d770e" name="ad830c7185d5e9db95ae3cf74d73d770e"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad830c7185d5e9db95ae3cf74d73d770e">&#9670;&#160;</a></span>POP</h2>
 
@@ -865,7 +1042,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00189">189</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00269">269</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -884,7 +1061,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00175">175</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00253">253</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -907,7 +1084,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00192">192</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00272">272</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -926,7 +1103,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00188">188</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00268">268</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -945,7 +1122,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00187">187</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00267">267</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -961,7 +1138,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00041">41</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00042">42</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -980,7 +1157,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00173">173</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00251">251</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1031,7 +1208,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b" name="a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"></a>bK&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00047">47</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00051">51</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1060,7 +1237,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="adf764cbdea00d65edcd07bb9953ad2b7a72766092149e349d9a71fdb7f8160e10" name="adf764cbdea00d65edcd07bb9953ad2b7a72766092149e349d9a71fdb7f8160e10"></a>FILE_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00053">53</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00057">57</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1089,7 +1266,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="a99fb83031ce9923c84392b4e92f956b5a5b3781d1b86380aa29e37948e85b0060" name="a99fb83031ce9923c84392b4e92f956b5a5b3781d1b86380aa29e37948e85b0060"></a>RANK_NONE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00059">59</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00063">63</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1112,7 +1289,7 @@ Variables</h2></td></tr>
 <tr><td class="fieldname"><a id="abc6126af1d45847bc59afa0aa3216b04a627abe5a430420baf29ebe1940a7f2fb" name="abc6126af1d45847bc59afa0aa3216b04a627abe5a430420baf29ebe1940a7f2fb"></a>BOTH&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00065">65</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00069">69</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1128,77 +1305,14 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store the squares. </p>
+<p>Enum to store mode being used for the game. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6ff26890857c886c86453f0c8078bf95" name="adc29c2ff13d900c2f185ee95427fb06ca6ff26890857c886c86453f0c8078bf95"></a>A1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cad90c5e7444630b8d170b08d0853aae21" name="adc29c2ff13d900c2f185ee95427fb06cad90c5e7444630b8d170b08d0853aae21"></a>B1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae54c31a855b907f263d49edcdbe677bd" name="adc29c2ff13d900c2f185ee95427fb06cae54c31a855b907f263d49edcdbe677bd"></a>C1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca29b8ecb29049f38cbf752d95f479bff7" name="adc29c2ff13d900c2f185ee95427fb06ca29b8ecb29049f38cbf752d95f479bff7"></a>D1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab1710e6a49014ba389d57c8753c530f4" name="adc29c2ff13d900c2f185ee95427fb06cab1710e6a49014ba389d57c8753c530f4"></a>E1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca5afea46882b06768ac8563d462999735" name="adc29c2ff13d900c2f185ee95427fb06ca5afea46882b06768ac8563d462999735"></a>F1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caaec6d2231567cdb9063f093d8effa224" name="adc29c2ff13d900c2f185ee95427fb06caaec6d2231567cdb9063f093d8effa224"></a>G1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca7ec6526640e5add74fe4b322e6343120" name="adc29c2ff13d900c2f185ee95427fb06ca7ec6526640e5add74fe4b322e6343120"></a>H1&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca47329f455692c2a8284d7594405f16d4" name="adc29c2ff13d900c2f185ee95427fb06ca47329f455692c2a8284d7594405f16d4"></a>A2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9bfbe74b27169e5bd5bd5dc020fdd00b" name="adc29c2ff13d900c2f185ee95427fb06ca9bfbe74b27169e5bd5bd5dc020fdd00b"></a>B2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca5e602f1d68586231698bda7be6af7d2e" name="adc29c2ff13d900c2f185ee95427fb06ca5e602f1d68586231698bda7be6af7d2e"></a>C2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca86c69dc8849d17673b52b9a8d94d8b9f" name="adc29c2ff13d900c2f185ee95427fb06ca86c69dc8849d17673b52b9a8d94d8b9f"></a>D2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cace9a5783f96994d28bc6ec5c9ece8c80" name="adc29c2ff13d900c2f185ee95427fb06cace9a5783f96994d28bc6ec5c9ece8c80"></a>E2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa3c13a70de6599f4470373ec46d4f6bf" name="adc29c2ff13d900c2f185ee95427fb06caa3c13a70de6599f4470373ec46d4f6bf"></a>F2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caedce8067580fa0c4c235f8534f25a7b3" name="adc29c2ff13d900c2f185ee95427fb06caedce8067580fa0c4c235f8534f25a7b3"></a>G2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cabc856fd5d1be355fd3d34b860c506cd0" name="adc29c2ff13d900c2f185ee95427fb06cabc856fd5d1be355fd3d34b860c506cd0"></a>H2&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca47dbfcefc8fabadcd82806b21de14bfc" name="adc29c2ff13d900c2f185ee95427fb06ca47dbfcefc8fabadcd82806b21de14bfc"></a>A3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca008e5845e069ecd71e49f3d18ec21130" name="adc29c2ff13d900c2f185ee95427fb06ca008e5845e069ecd71e49f3d18ec21130"></a>B3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cada966660d95922946f59862d9ce54b1c" name="adc29c2ff13d900c2f185ee95427fb06cada966660d95922946f59862d9ce54b1c"></a>C3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cade8ef7573c5fa770f07ac7616cbf5d34" name="adc29c2ff13d900c2f185ee95427fb06cade8ef7573c5fa770f07ac7616cbf5d34"></a>D3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca460eae7ccdb66a96136eb0afb98ba51b" name="adc29c2ff13d900c2f185ee95427fb06ca460eae7ccdb66a96136eb0afb98ba51b"></a>E3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca10a5417c8e696606af65ec28c5fb2495" name="adc29c2ff13d900c2f185ee95427fb06ca10a5417c8e696606af65ec28c5fb2495"></a>F3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca99381344bd0c2206ca3bcf98254783f0" name="adc29c2ff13d900c2f185ee95427fb06ca99381344bd0c2206ca3bcf98254783f0"></a>G3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab5f7333471179f24ed9ce81659847cc7" name="adc29c2ff13d900c2f185ee95427fb06cab5f7333471179f24ed9ce81659847cc7"></a>H3&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cada06582608e19a3f2438f54eeb0bcad5" name="adc29c2ff13d900c2f185ee95427fb06cada06582608e19a3f2438f54eeb0bcad5"></a>A4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6e242c85f0b91e8879200ec3004a4cab" name="adc29c2ff13d900c2f185ee95427fb06ca6e242c85f0b91e8879200ec3004a4cab"></a>B4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca24727389909cb6406ed9483df7810c78" name="adc29c2ff13d900c2f185ee95427fb06ca24727389909cb6406ed9483df7810c78"></a>C4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca12761dd9f3b74590b720d87d6ca9fbcf" name="adc29c2ff13d900c2f185ee95427fb06ca12761dd9f3b74590b720d87d6ca9fbcf"></a>D4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca21d812cf3e9fd32ae1d834555c5d0baa" name="adc29c2ff13d900c2f185ee95427fb06ca21d812cf3e9fd32ae1d834555c5d0baa"></a>E4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca8d311dd8454951b86e27873c49ff1ec5" name="adc29c2ff13d900c2f185ee95427fb06ca8d311dd8454951b86e27873c49ff1ec5"></a>F4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf0083cb5d419863c9fa614b3e5a3213b" name="adc29c2ff13d900c2f185ee95427fb06caf0083cb5d419863c9fa614b3e5a3213b"></a>G4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca2b19eb4f28582dc345e707197160f485" name="adc29c2ff13d900c2f185ee95427fb06ca2b19eb4f28582dc345e707197160f485"></a>H4&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caacdd5acf9dd0376a4073a1f27d8df74e" name="adc29c2ff13d900c2f185ee95427fb06caacdd5acf9dd0376a4073a1f27d8df74e"></a>A5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf238f32976f4a2c27a517bd1ad47be36" name="adc29c2ff13d900c2f185ee95427fb06caf238f32976f4a2c27a517bd1ad47be36"></a>B5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca26c0a10a3dc0a69747539541f4a82172" name="adc29c2ff13d900c2f185ee95427fb06ca26c0a10a3dc0a69747539541f4a82172"></a>C5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9bfc9615ce2836fe43fe37e0eda2a68a" name="adc29c2ff13d900c2f185ee95427fb06ca9bfc9615ce2836fe43fe37e0eda2a68a"></a>D5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6debb3cd347b3a1a2a85500ced6e7c10" name="adc29c2ff13d900c2f185ee95427fb06ca6debb3cd347b3a1a2a85500ced6e7c10"></a>E5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca265fb264db0c419e6cb73bce564cd517" name="adc29c2ff13d900c2f185ee95427fb06ca265fb264db0c419e6cb73bce564cd517"></a>F5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca33e4e589075c868910acfa95b14efb5f" name="adc29c2ff13d900c2f185ee95427fb06ca33e4e589075c868910acfa95b14efb5f"></a>G5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca555abd1b0d375a8ae8c77b90afb6695c" name="adc29c2ff13d900c2f185ee95427fb06ca555abd1b0d375a8ae8c77b90afb6695c"></a>H5&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca260faf43232fc57a22e280e8912d6689" name="adc29c2ff13d900c2f185ee95427fb06ca260faf43232fc57a22e280e8912d6689"></a>A6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca0eb7e951c71ad8f7ea59d513e8d57747" name="adc29c2ff13d900c2f185ee95427fb06ca0eb7e951c71ad8f7ea59d513e8d57747"></a>B6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae138d2e0243a8b4dcca22738eebc2197" name="adc29c2ff13d900c2f185ee95427fb06cae138d2e0243a8b4dcca22738eebc2197"></a>C6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab6e74cb404ad3a7370b6cbb05f004fcb" name="adc29c2ff13d900c2f185ee95427fb06cab6e74cb404ad3a7370b6cbb05f004fcb"></a>D6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca22c7951dba1a1943224d259176412bfd" name="adc29c2ff13d900c2f185ee95427fb06ca22c7951dba1a1943224d259176412bfd"></a>E6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa1e9d714a0238434a819235d4832f7d2" name="adc29c2ff13d900c2f185ee95427fb06caa1e9d714a0238434a819235d4832f7d2"></a>F6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6ab0f7aca08fd2ba5505168472501d98" name="adc29c2ff13d900c2f185ee95427fb06ca6ab0f7aca08fd2ba5505168472501d98"></a>G6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caaa1e5185cf98f81e2e8a710f907c3174" name="adc29c2ff13d900c2f185ee95427fb06caaa1e5185cf98f81e2e8a710f907c3174"></a>H6&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca7ae46613d850fc0cb3d82eb0bb8811c6" name="adc29c2ff13d900c2f185ee95427fb06ca7ae46613d850fc0cb3d82eb0bb8811c6"></a>A7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca561ae7a12dd8bf549f1b7e647354297e" name="adc29c2ff13d900c2f185ee95427fb06ca561ae7a12dd8bf549f1b7e647354297e"></a>B7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca4f858b829392e960b43c57a9731c98ac" name="adc29c2ff13d900c2f185ee95427fb06ca4f858b829392e960b43c57a9731c98ac"></a>C7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa" name="adc29c2ff13d900c2f185ee95427fb06ca0701f86c777d8dde5be3a916a510cdfa"></a>D7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca40ca2674103ced2895998d0383ac50e5" name="adc29c2ff13d900c2f185ee95427fb06ca40ca2674103ced2895998d0383ac50e5"></a>E7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6f111feaebfe5971b1243256d6417dc7" name="adc29c2ff13d900c2f185ee95427fb06ca6f111feaebfe5971b1243256d6417dc7"></a>F7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cae236ad64088ffc77d9e098628d5ba342" name="adc29c2ff13d900c2f185ee95427fb06cae236ad64088ffc77d9e098628d5ba342"></a>G7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cab5528db6787796e749fa3f4af05bc239" name="adc29c2ff13d900c2f185ee95427fb06cab5528db6787796e749fa3f4af05bc239"></a>H7&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf3ba956cfc94b23b44487413b27c646a" name="adc29c2ff13d900c2f185ee95427fb06caf3ba956cfc94b23b44487413b27c646a"></a>A8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca36820f60b2f0bee85a682e3f0b6e0fea" name="adc29c2ff13d900c2f185ee95427fb06ca36820f60b2f0bee85a682e3f0b6e0fea"></a>B8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca6a72e133ec9df7aadaeef87557e5cbb0" name="adc29c2ff13d900c2f185ee95427fb06ca6a72e133ec9df7aadaeef87557e5cbb0"></a>C8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1" name="adc29c2ff13d900c2f185ee95427fb06caea0726597b1f1d4e1fbe5bc51978a5e1"></a>D8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca1eacedb7bc191a326eafc02f96c93a6f" name="adc29c2ff13d900c2f185ee95427fb06ca1eacedb7bc191a326eafc02f96c93a6f"></a>E8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cacb02fa2cede46dab94694927da16433d" name="adc29c2ff13d900c2f185ee95427fb06cacb02fa2cede46dab94694927da16433d"></a>F8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caa1c865ccd52132fb116c4587969e6ad8" name="adc29c2ff13d900c2f185ee95427fb06caa1c865ccd52132fb116c4587969e6ad8"></a>G8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06cade042a52f63647c9e92085a07bb9fd66" name="adc29c2ff13d900c2f185ee95427fb06cade042a52f63647c9e92085a07bb9fd66"></a>H8&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca8920a90700927bb9d204cd229b8c08f8" name="adc29c2ff13d900c2f185ee95427fb06ca8920a90700927bb9d204cd229b8c08f8"></a>NO_SQ&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b" name="adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca50ad28561f0aac3c76dd95dd97fffe74" name="adc29c2ff13d900c2f185ee95427fb06ca50ad28561f0aac3c76dd95dd97fffe74"></a>UCIMODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06caf8753b09d02a203105f442af32e63260" name="adc29c2ff13d900c2f185ee95427fb06caf8753b09d02a203105f442af32e63260"></a>XBOARDMODE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79" name="adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79"></a>CONSOLEMODE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00071">71</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00075">75</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1214,13 +1328,77 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store boolean values. </p>
+<p>Enum to store the squares. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1e095cc966dbecf6a0d8aad75348d1a" name="a61dadd085c1777f559549e05962b2c9eaa1e095cc966dbecf6a0d8aad75348d1a"></a>FALSE&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839" name="a61dadd085c1777f559549e05962b2c9eaa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6ff26890857c886c86453f0c8078bf95" name="a61dadd085c1777f559549e05962b2c9ea6ff26890857c886c86453f0c8078bf95"></a>A1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ead90c5e7444630b8d170b08d0853aae21" name="a61dadd085c1777f559549e05962b2c9ead90c5e7444630b8d170b08d0853aae21"></a>B1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae54c31a855b907f263d49edcdbe677bd" name="a61dadd085c1777f559549e05962b2c9eae54c31a855b907f263d49edcdbe677bd"></a>C1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea29b8ecb29049f38cbf752d95f479bff7" name="a61dadd085c1777f559549e05962b2c9ea29b8ecb29049f38cbf752d95f479bff7"></a>D1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab1710e6a49014ba389d57c8753c530f4" name="a61dadd085c1777f559549e05962b2c9eab1710e6a49014ba389d57c8753c530f4"></a>E1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea5afea46882b06768ac8563d462999735" name="a61dadd085c1777f559549e05962b2c9ea5afea46882b06768ac8563d462999735"></a>F1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaaec6d2231567cdb9063f093d8effa224" name="a61dadd085c1777f559549e05962b2c9eaaec6d2231567cdb9063f093d8effa224"></a>G1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea7ec6526640e5add74fe4b322e6343120" name="a61dadd085c1777f559549e05962b2c9ea7ec6526640e5add74fe4b322e6343120"></a>H1&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea47329f455692c2a8284d7594405f16d4" name="a61dadd085c1777f559549e05962b2c9ea47329f455692c2a8284d7594405f16d4"></a>A2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9bfbe74b27169e5bd5bd5dc020fdd00b" name="a61dadd085c1777f559549e05962b2c9ea9bfbe74b27169e5bd5bd5dc020fdd00b"></a>B2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea5e602f1d68586231698bda7be6af7d2e" name="a61dadd085c1777f559549e05962b2c9ea5e602f1d68586231698bda7be6af7d2e"></a>C2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea86c69dc8849d17673b52b9a8d94d8b9f" name="a61dadd085c1777f559549e05962b2c9ea86c69dc8849d17673b52b9a8d94d8b9f"></a>D2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eace9a5783f96994d28bc6ec5c9ece8c80" name="a61dadd085c1777f559549e05962b2c9eace9a5783f96994d28bc6ec5c9ece8c80"></a>E2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa3c13a70de6599f4470373ec46d4f6bf" name="a61dadd085c1777f559549e05962b2c9eaa3c13a70de6599f4470373ec46d4f6bf"></a>F2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaedce8067580fa0c4c235f8534f25a7b3" name="a61dadd085c1777f559549e05962b2c9eaedce8067580fa0c4c235f8534f25a7b3"></a>G2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eabc856fd5d1be355fd3d34b860c506cd0" name="a61dadd085c1777f559549e05962b2c9eabc856fd5d1be355fd3d34b860c506cd0"></a>H2&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea47dbfcefc8fabadcd82806b21de14bfc" name="a61dadd085c1777f559549e05962b2c9ea47dbfcefc8fabadcd82806b21de14bfc"></a>A3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea008e5845e069ecd71e49f3d18ec21130" name="a61dadd085c1777f559549e05962b2c9ea008e5845e069ecd71e49f3d18ec21130"></a>B3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eada966660d95922946f59862d9ce54b1c" name="a61dadd085c1777f559549e05962b2c9eada966660d95922946f59862d9ce54b1c"></a>C3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eade8ef7573c5fa770f07ac7616cbf5d34" name="a61dadd085c1777f559549e05962b2c9eade8ef7573c5fa770f07ac7616cbf5d34"></a>D3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea460eae7ccdb66a96136eb0afb98ba51b" name="a61dadd085c1777f559549e05962b2c9ea460eae7ccdb66a96136eb0afb98ba51b"></a>E3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea10a5417c8e696606af65ec28c5fb2495" name="a61dadd085c1777f559549e05962b2c9ea10a5417c8e696606af65ec28c5fb2495"></a>F3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea99381344bd0c2206ca3bcf98254783f0" name="a61dadd085c1777f559549e05962b2c9ea99381344bd0c2206ca3bcf98254783f0"></a>G3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab5f7333471179f24ed9ce81659847cc7" name="a61dadd085c1777f559549e05962b2c9eab5f7333471179f24ed9ce81659847cc7"></a>H3&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eada06582608e19a3f2438f54eeb0bcad5" name="a61dadd085c1777f559549e05962b2c9eada06582608e19a3f2438f54eeb0bcad5"></a>A4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6e242c85f0b91e8879200ec3004a4cab" name="a61dadd085c1777f559549e05962b2c9ea6e242c85f0b91e8879200ec3004a4cab"></a>B4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea24727389909cb6406ed9483df7810c78" name="a61dadd085c1777f559549e05962b2c9ea24727389909cb6406ed9483df7810c78"></a>C4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea12761dd9f3b74590b720d87d6ca9fbcf" name="a61dadd085c1777f559549e05962b2c9ea12761dd9f3b74590b720d87d6ca9fbcf"></a>D4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea21d812cf3e9fd32ae1d834555c5d0baa" name="a61dadd085c1777f559549e05962b2c9ea21d812cf3e9fd32ae1d834555c5d0baa"></a>E4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea8d311dd8454951b86e27873c49ff1ec5" name="a61dadd085c1777f559549e05962b2c9ea8d311dd8454951b86e27873c49ff1ec5"></a>F4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf0083cb5d419863c9fa614b3e5a3213b" name="a61dadd085c1777f559549e05962b2c9eaf0083cb5d419863c9fa614b3e5a3213b"></a>G4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea2b19eb4f28582dc345e707197160f485" name="a61dadd085c1777f559549e05962b2c9ea2b19eb4f28582dc345e707197160f485"></a>H4&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaacdd5acf9dd0376a4073a1f27d8df74e" name="a61dadd085c1777f559549e05962b2c9eaacdd5acf9dd0376a4073a1f27d8df74e"></a>A5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf238f32976f4a2c27a517bd1ad47be36" name="a61dadd085c1777f559549e05962b2c9eaf238f32976f4a2c27a517bd1ad47be36"></a>B5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea26c0a10a3dc0a69747539541f4a82172" name="a61dadd085c1777f559549e05962b2c9ea26c0a10a3dc0a69747539541f4a82172"></a>C5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9bfc9615ce2836fe43fe37e0eda2a68a" name="a61dadd085c1777f559549e05962b2c9ea9bfc9615ce2836fe43fe37e0eda2a68a"></a>D5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6debb3cd347b3a1a2a85500ced6e7c10" name="a61dadd085c1777f559549e05962b2c9ea6debb3cd347b3a1a2a85500ced6e7c10"></a>E5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea265fb264db0c419e6cb73bce564cd517" name="a61dadd085c1777f559549e05962b2c9ea265fb264db0c419e6cb73bce564cd517"></a>F5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea33e4e589075c868910acfa95b14efb5f" name="a61dadd085c1777f559549e05962b2c9ea33e4e589075c868910acfa95b14efb5f"></a>G5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea555abd1b0d375a8ae8c77b90afb6695c" name="a61dadd085c1777f559549e05962b2c9ea555abd1b0d375a8ae8c77b90afb6695c"></a>H5&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea260faf43232fc57a22e280e8912d6689" name="a61dadd085c1777f559549e05962b2c9ea260faf43232fc57a22e280e8912d6689"></a>A6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea0eb7e951c71ad8f7ea59d513e8d57747" name="a61dadd085c1777f559549e05962b2c9ea0eb7e951c71ad8f7ea59d513e8d57747"></a>B6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae138d2e0243a8b4dcca22738eebc2197" name="a61dadd085c1777f559549e05962b2c9eae138d2e0243a8b4dcca22738eebc2197"></a>C6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab6e74cb404ad3a7370b6cbb05f004fcb" name="a61dadd085c1777f559549e05962b2c9eab6e74cb404ad3a7370b6cbb05f004fcb"></a>D6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea22c7951dba1a1943224d259176412bfd" name="a61dadd085c1777f559549e05962b2c9ea22c7951dba1a1943224d259176412bfd"></a>E6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1e9d714a0238434a819235d4832f7d2" name="a61dadd085c1777f559549e05962b2c9eaa1e9d714a0238434a819235d4832f7d2"></a>F6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6ab0f7aca08fd2ba5505168472501d98" name="a61dadd085c1777f559549e05962b2c9ea6ab0f7aca08fd2ba5505168472501d98"></a>G6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaaa1e5185cf98f81e2e8a710f907c3174" name="a61dadd085c1777f559549e05962b2c9eaaa1e5185cf98f81e2e8a710f907c3174"></a>H6&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea7ae46613d850fc0cb3d82eb0bb8811c6" name="a61dadd085c1777f559549e05962b2c9ea7ae46613d850fc0cb3d82eb0bb8811c6"></a>A7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea561ae7a12dd8bf549f1b7e647354297e" name="a61dadd085c1777f559549e05962b2c9ea561ae7a12dd8bf549f1b7e647354297e"></a>B7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea4f858b829392e960b43c57a9731c98ac" name="a61dadd085c1777f559549e05962b2c9ea4f858b829392e960b43c57a9731c98ac"></a>C7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa" name="a61dadd085c1777f559549e05962b2c9ea0701f86c777d8dde5be3a916a510cdfa"></a>D7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea40ca2674103ced2895998d0383ac50e5" name="a61dadd085c1777f559549e05962b2c9ea40ca2674103ced2895998d0383ac50e5"></a>E7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6f111feaebfe5971b1243256d6417dc7" name="a61dadd085c1777f559549e05962b2c9ea6f111feaebfe5971b1243256d6417dc7"></a>F7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eae236ad64088ffc77d9e098628d5ba342" name="a61dadd085c1777f559549e05962b2c9eae236ad64088ffc77d9e098628d5ba342"></a>G7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eab5528db6787796e749fa3f4af05bc239" name="a61dadd085c1777f559549e05962b2c9eab5528db6787796e749fa3f4af05bc239"></a>H7&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaf3ba956cfc94b23b44487413b27c646a" name="a61dadd085c1777f559549e05962b2c9eaf3ba956cfc94b23b44487413b27c646a"></a>A8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea36820f60b2f0bee85a682e3f0b6e0fea" name="a61dadd085c1777f559549e05962b2c9ea36820f60b2f0bee85a682e3f0b6e0fea"></a>B8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea6a72e133ec9df7aadaeef87557e5cbb0" name="a61dadd085c1777f559549e05962b2c9ea6a72e133ec9df7aadaeef87557e5cbb0"></a>C8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1" name="a61dadd085c1777f559549e05962b2c9eaea0726597b1f1d4e1fbe5bc51978a5e1"></a>D8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea1eacedb7bc191a326eafc02f96c93a6f" name="a61dadd085c1777f559549e05962b2c9ea1eacedb7bc191a326eafc02f96c93a6f"></a>E8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eacb02fa2cede46dab94694927da16433d" name="a61dadd085c1777f559549e05962b2c9eacb02fa2cede46dab94694927da16433d"></a>F8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eaa1c865ccd52132fb116c4587969e6ad8" name="a61dadd085c1777f559549e05962b2c9eaa1c865ccd52132fb116c4587969e6ad8"></a>G8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9eade042a52f63647c9e92085a07bb9fd66" name="a61dadd085c1777f559549e05962b2c9eade042a52f63647c9e92085a07bb9fd66"></a>H8&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea8920a90700927bb9d204cd229b8c08f8" name="a61dadd085c1777f559549e05962b2c9ea8920a90700927bb9d204cd229b8c08f8"></a>NO_SQ&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b" name="a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b"></a>OFFBOARD&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00086">86</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00081">81</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1236,15 +1414,61 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Enum to store the castling permissions. </p>
+<p>Enum to store boolean values. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635ac2f915c8e28362ff0423ae01d4b5c638" name="a726ca809ffd3d67ab4b8476646f26635ac2f915c8e28362ff0423ae01d4b5c638"></a>WKCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a90ed269227fd51007dd61578124378a2" name="a726ca809ffd3d67ab4b8476646f26635a90ed269227fd51007dd61578124378a2"></a>WQCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635adca5d258ee038af989898b86acb9476d" name="a726ca809ffd3d67ab4b8476646f26635adca5d258ee038af989898b86acb9476d"></a>BKCA&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b" name="a726ca809ffd3d67ab4b8476646f26635a910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a" name="a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a"></a>FALSE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839" name="a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839"></a>TRUE&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
-<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00092">92</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00096">96</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="a0411cd49bb5b71852cecd93bcbf0ca2d" name="a0411cd49bb5b71852cecd93bcbf0ca2d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0411cd49bb5b71852cecd93bcbf0ca2d">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Enum to store the castling permissions. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2dac2f915c8e28362ff0423ae01d4b5c638" name="a0411cd49bb5b71852cecd93bcbf0ca2dac2f915c8e28362ff0423ae01d4b5c638"></a>WKCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2da90ed269227fd51007dd61578124378a2" name="a0411cd49bb5b71852cecd93bcbf0ca2da90ed269227fd51007dd61578124378a2"></a>WQCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2dadca5d258ee038af989898b86acb9476d" name="a0411cd49bb5b71852cecd93bcbf0ca2dadca5d258ee038af989898b86acb9476d"></a>BKCA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b" name="a0411cd49bb5b71852cecd93bcbf0ca2da910d51b4da7f402dc4416fe3237afb7b"></a>BQCA&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00102">102</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
+
+</div>
+</div>
+<a id="abed82baf7f470b522273a3e37c24c600" name="abed82baf7f470b522273a3e37c24c600"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abed82baf7f470b522273a3e37c24c600">&#9670;&#160;</a></span>anonymous enum</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">anonymous enum</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Flags for the hash entry. </p>
+<table class="fieldtable">
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132" name="abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132"></a>HFNONE&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91" name="abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91"></a>HFALPHA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc" name="abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc"></a>HFBETA&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd" name="abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd"></a>HFEXACT&#160;</td><td class="fielddoc"></td></tr>
+</table>
+
+<p class="definition">Definition at line <a class="el" href="defs_8h_source.html#l00126">126</a> of file <a class="el" href="defs_8h_source.html">defs.h</a>.</p>
 
 </div>
 </div>
@@ -1274,7 +1498,7 @@ Variables</h2></td></tr>
 
 <p>Initializes the board. </p>
 
-<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00171">171</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00276">276</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>
@@ -1314,6 +1538,75 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ad72a51d700e38aa1611d5162fc79627e" name="ad72a51d700e38aa1611d5162fc79627e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad72a51d700e38aa1611d5162fc79627e">&#9670;&#160;</a></span>ClearHashTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClearHashTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___h_a_s_h_t_a_b_l_e.html">S_HASHTABLE</a> *</td>          <td class="paramname"><span class="paramname"><em>table</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Clear the hash table. </p>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00054">54</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="ac5fa6c8e94b5322c3df417a6c46f1752" name="ac5fa6c8e94b5322c3df417a6c46f1752"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5fa6c8e94b5322c3df417a6c46f1752">&#9670;&#160;</a></span>Console_Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Console_Loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Main loop to handle console mode. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00290">290</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
+
+</div>
+</div>
 <a id="ac3175e5b15b2b236d8ba40f395819d21" name="ac3175e5b15b2b236d8ba40f395819d21"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac3175e5b15b2b236d8ba40f395819d21">&#9670;&#160;</a></span>CountBits()</h2>
 
@@ -1350,6 +1643,83 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a0f0218d085cfcb232bc24c7142c5d434" name="a0f0218d085cfcb232bc24c7142c5d434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f0218d085cfcb232bc24c7142c5d434">&#9670;&#160;</a></span>DebugAnalysisTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DebugAnalysisTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Debug analysis test. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00122">122</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="a5c4dd2e784cf7f2333cf507e35d8d5fa" name="a5c4dd2e784cf7f2333cf507e35d8d5fa"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5c4dd2e784cf7f2333cf507e35d8d5fa">&#9670;&#160;</a></span>EvalPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int EvalPosition </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Evaluate the position. </p>
+<p>The evaluation function calculates the score of the position based on the material and the position of the pieces</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Score of the position </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="evaluate_8c_source.html#l00192">192</a> of file <a class="el" href="evaluate_8c_source.html">evaluate.c</a>.</p>
+
+</div>
+</div>
 <a id="ab07d4a10c99178b3ac54a5c42c01127f" name="ab07d4a10c99178b3ac54a5c42c01127f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab07d4a10c99178b3ac54a5c42c01127f">&#9670;&#160;</a></span>FileRankValid()</h2>
 
@@ -1382,7 +1752,47 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the file is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00040">40</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00092">92</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="ab02276982406938d2fbcbc273caaa44e" name="ab02276982406938d2fbcbc273caaa44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02276982406938d2fbcbc273caaa44e">&#9670;&#160;</a></span>GenerateAllCaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenerateAllCaps </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generate all captures. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">list</td><td>Pointer to the move list </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00449">449</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -1422,7 +1832,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00203">203</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00270">270</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -1459,6 +1869,138 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>U64 Key for the position </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="hashkey_8c_source.html#l00020">20</a> of file <a class="el" href="hashkey_8c_source.html">hashkey.c</a>.</p>
+
+</div>
+</div>
+<a id="ac6648b94e86e3f2eab1d4f0f2f721a86" name="ac6648b94e86e3f2eab1d4f0f2f721a86"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac6648b94e86e3f2eab1d4f0f2f721a86">&#9670;&#160;</a></span>GetPvLine()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetPvLine </td>
+          <td>(</td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>depth</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Pv Line object. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>The depth of the search </td></tr>
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Count of the moves in the PV line </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00022">22</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="a87fed9d5570ea84a3df0c8e208a73098" name="a87fed9d5570ea84a3df0c8e208a73098"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87fed9d5570ea84a3df0c8e208a73098">&#9670;&#160;</a></span>GetTimeMs()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int GetTimeMs </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Get the Time Ms object. </p>
+<dl class="section return"><dt>Returns</dt><dd>int The time in milliseconds </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00030">30</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
+
+</div>
+</div>
+<a id="afd52cb4b2638a8c8c55155f8f51acf5a" name="afd52cb4b2638a8c8c55155f8f51acf5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd52cb4b2638a8c8c55155f8f51acf5a">&#9670;&#160;</a></span>InitHashTable()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void InitHashTable </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___h_a_s_h_t_a_b_l_e.html">S_HASHTABLE</a> *</td>          <td class="paramname"><span class="paramname"><em>table</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>MB</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">table</td><td>Pointer to the hash table </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00073">73</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="a43459d3ba36083fef55ef24e6ac097f2" name="a43459d3ba36083fef55ef24e6ac097f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43459d3ba36083fef55ef24e6ac097f2">&#9670;&#160;</a></span>InitMvvLva()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InitMvvLva </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize the MvvLvaScores array. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00083">83</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -1503,6 +2045,152 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7edb2500642248af2c132abd138751c2" name="a7edb2500642248af2c132abd138751c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7edb2500642248af2c132abd138751c2">&#9670;&#160;</a></span>MakeNullMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MakeNullMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to make a null move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00355">355</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
+<a id="abd8d85368a8795ab3d37740a1142325e" name="abd8d85368a8795ab3d37740a1142325e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd8d85368a8795ab3d37740a1142325e">&#9670;&#160;</a></span>MirrorBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mirror the board. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00341">341</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+
+</div>
+</div>
+<a id="a537d79d41386bba7b689b7b56480e186" name="a537d79d41386bba7b689b7b56480e186"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a537d79d41386bba7b689b7b56480e186">&#9670;&#160;</a></span>MirrorEvalTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void MirrorEvalTest </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Test if mirror of board is correct. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00156">156</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="a9cef5ab5191a75c2b168711c50c756db" name="a9cef5ab5191a75c2b168711c50c756db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef5ab5191a75c2b168711c50c756db">&#9670;&#160;</a></span>MoveExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MoveExists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>move</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Check if move exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>The move to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int TRUE if move exists, FALSE otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00109">109</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
 <a id="ae1947aedff90dd90cd9ad0db1b884a57" name="ae1947aedff90dd90cd9ad0db1b884a57"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae1947aedff90dd90cd9ad0db1b884a57">&#9670;&#160;</a></span>ParseFen()</h2>
 
@@ -1544,6 +2232,87 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3501422a21fb0b37cf1573dd4f410a60" name="a3501422a21fb0b37cf1573dd4f410a60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3501422a21fb0b37cf1573dd4f410a60">&#9670;&#160;</a></span>ParseMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ParseMove </td>
+          <td>(</td>
+          <td class="paramtype">char *</td>          <td class="paramname"><span class="paramname"><em>ptrChar</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to parse the move and return the integer representation. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">ptrChar</td><td>Pointer to the character </td></tr>
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int Integer representing the move </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="io_8c_source.html#l00075">75</a> of file <a class="el" href="io_8c_source.html">io.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b6b13d186dab20a18cec1a6b041220b" name="a1b6b13d186dab20a18cec1a6b041220b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b6b13d186dab20a18cec1a6b041220b">&#9670;&#160;</a></span>PerftTest()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void PerftTest </td>
+          <td>(</td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>depth</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function for testing the move generation using perft. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">depth</td><td>The depth to test the move generation </td></tr>
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="perft_8c_source.html#l00058">58</a> of file <a class="el" href="perft_8c_source.html">perft.c</a>.</p>
+
+</div>
+</div>
 <a id="a7f3c9068109d4c781b7e4011db8d5128" name="a7f3c9068109d4c781b7e4011db8d5128"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a7f3c9068109d4c781b7e4011db8d5128">&#9670;&#160;</a></span>PieceValid()</h2>
 
@@ -1576,7 +2345,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00060">60</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00112">112</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -1612,7 +2381,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid and not empty, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00050">50</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00102">102</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -1718,7 +2487,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00306">306</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00305">305</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
 
 </div>
 </div>
@@ -1753,7 +2522,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="io_8c_source.html#l00073">73</a> of file <a class="el" href="io_8c_source.html">io.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="io_8c_source.html#l00121">121</a> of file <a class="el" href="io_8c_source.html">io.c</a>.</p>
 
 </div>
 </div>
@@ -1793,6 +2562,107 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a3448e3a94f686d3c806fd17577508770" name="a3448e3a94f686d3c806fd17577508770"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3448e3a94f686d3c806fd17577508770">&#9670;&#160;</a></span>ProbeHashEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProbeHashEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>move</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *</td>          <td class="paramname"><span class="paramname"><em>score</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>alpha</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>beta</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to probe the hash table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>Pointer to the move </td></tr>
+    <tr><td class="paramname">score</td><td>Pointer to the score </td></tr>
+    <tr><td class="paramname">alpha</td><td>Pointer to the alpha </td></tr>
+    <tr><td class="paramname">beta</td><td>Pointer to the beta </td></tr>
+    <tr><td class="paramname">depth</td><td>Pointer to the depth </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the hash table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00104">104</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
+<a id="a9021942d5e83b2876a7ab9798f777c51" name="a9021942d5e83b2876a7ab9798f777c51"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9021942d5e83b2876a7ab9798f777c51">&#9670;&#160;</a></span>ProbePvMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ProbePvMove </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to probe the principal variation table. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int The move from the PV table </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00193">193</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
+
+</div>
+</div>
 <a id="adcca8258746cc63bf1794173fc366cc9" name="adcca8258746cc63bf1794173fc366cc9"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adcca8258746cc63bf1794173fc366cc9">&#9670;&#160;</a></span>PrSq()</h2>
 
@@ -1829,6 +2699,33 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="ac35ec650650ae344bdc0985cd4ece431" name="ac35ec650650ae344bdc0985cd4ece431"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac35ec650650ae344bdc0985cd4ece431">&#9670;&#160;</a></span>ReadInput()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ReadInput </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Read input from the user <b>[http://home.arcor.de/dreamlike/chess/]</b>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="misc_8c_source.html#l00085">85</a> of file <a class="el" href="misc_8c_source.html">misc.c</a>.</p>
+
+</div>
+</div>
 <a id="ad85a9ad05108f03534b81f39c5a3f5c0" name="ad85a9ad05108f03534b81f39c5a3f5c0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad85a9ad05108f03534b81f39c5a3f5c0">&#9670;&#160;</a></span>ResetBoard()</h2>
 
@@ -1852,7 +2749,7 @@ Variables</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Print the board. </p>
+<p>Reset the board. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
@@ -1861,6 +2758,46 @@ Variables</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="board_8c_source.html#l00259">259</a> of file <a class="el" href="board_8c_source.html">board.c</a>.</p>
+
+</div>
+</div>
+<a id="a612414d1ad97c743f6e54d20e4b32e37" name="a612414d1ad97c743f6e54d20e4b32e37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a612414d1ad97c743f6e54d20e4b32e37">&#9670;&#160;</a></span>SearchPosition()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void SearchPosition </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Iterative deepening search. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td></td></tr>
+    <tr><td class="paramname">info</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="search_8c_source.html#l00347">347</a> of file <a class="el" href="search_8c_source.html">search.c</a>.</p>
 
 </div>
 </div>
@@ -1896,7 +2833,7 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the side is valid, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00030">30</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00082">82</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
 
 </div>
 </div>
@@ -1979,7 +2916,65 @@ Variables</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the square is on the board, 0 otherwise </dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00020">20</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00072">72</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="a0f82a82e2c4a84554d647bc4fc7600e7" name="a0f82a82e2c4a84554d647bc4fc7600e7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f82a82e2c4a84554d647bc4fc7600e7">&#9670;&#160;</a></span>StoreHashEntry()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StoreHashEntry </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>move</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>score</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>flags</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>depth</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to store the hash entry. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>The move to be stored </td></tr>
+    <tr><td class="paramname">score</td><td>The score of the move </td></tr>
+    <tr><td class="paramname">flags</td><td>The flags of the move </td></tr>
+    <tr><td class="paramname">depth</td><td>The depth of the search </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="pvtable_8c_source.html#l00161">161</a> of file <a class="el" href="pvtable_8c_source.html">pvtable.c</a>.</p>
 
 </div>
 </div>
@@ -2018,6 +3013,81 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a204aee6229d709429dcbb9d2e425e670" name="a204aee6229d709429dcbb9d2e425e670"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a204aee6229d709429dcbb9d2e425e670">&#9670;&#160;</a></span>TakeNullMove()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void TakeNullMove </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Function to take back a null move. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="makemove_8c_source.html#l00385">385</a> of file <a class="el" href="makemove_8c_source.html">makemove.c</a>.</p>
+
+</div>
+</div>
+<a id="aea5d40969d72cd4ed3145580786a56a2" name="aea5d40969d72cd4ed3145580786a56a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aea5d40969d72cd4ed3145580786a56a2">&#9670;&#160;</a></span>Uci_Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Uci_Loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Main loop to handle UCI protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="uci_8c_source.html#l00132">132</a> of file <a class="el" href="uci_8c_source.html">uci.c</a>.</p>
+
+</div>
+</div>
 <a id="aea43ba2bdbb26b6de990979798de7e0f" name="aea43ba2bdbb26b6de990979798de7e0f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aea43ba2bdbb26b6de990979798de7e0f">&#9670;&#160;</a></span>UpdateListMaterial()</h2>
 
@@ -2053,7 +3123,73 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="a7513485aff2d4a3470ede9595f97beee" name="a7513485aff2d4a3470ede9595f97beee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7513485aff2d4a3470ede9595f97beee">&#9670;&#160;</a></span>XBoard_Loop()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void XBoard_Loop </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___s_e_a_r_c_h_i_n_f_o.html">S_SEARCHINFO</a> *</td>          <td class="paramname"><span class="paramname"><em>info</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Main loop to handle XBoard protocol. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">info</td><td>Pointer to the search info </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00124">124</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
+
+</div>
+</div>
 <h2 class="groupheader">Variable Documentation</h2>
+<a id="ab9d826e8ac2cc9af13b4706d3a9ca566" name="ab9d826e8ac2cc9af13b4706d3a9ca566"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab9d826e8ac2cc9af13b4706d3a9ca566">&#9670;&#160;</a></span>BlackPassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a> BlackPassedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Black passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00091">91</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="a6ca9e201015eea408b71908751d1bb17" name="a6ca9e201015eea408b71908751d1bb17"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a6ca9e201015eea408b71908751d1bb17">&#9670;&#160;</a></span>CastleKeys</h2>
 
@@ -2106,6 +3242,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="acff51b348649de8e285c1e20e365de5a" name="acff51b348649de8e285c1e20e365de5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acff51b348649de8e285c1e20e365de5a">&#9670;&#160;</a></span>FileBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a> FileBBMask[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>File bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00079">79</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="aec8c302ff6e888d089e0333928884e5d" name="aec8c302ff6e888d089e0333928884e5d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aec8c302ff6e888d089e0333928884e5d">&#9670;&#160;</a></span>FileChar</h2>
 
@@ -2155,6 +3317,58 @@ Variables</h2></td></tr>
 <p>Board files. </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00067">67</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="a6a4f9f616d4d231b9eb9a94f20edd0d0" name="a6a4f9f616d4d231b9eb9a94f20edd0d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6a4f9f616d4d231b9eb9a94f20edd0d0">&#9670;&#160;</a></span>IsolatedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a> IsolatedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Isolated pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00103">103</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="ad97c161274172b00c5281b2d2e2f2fa2" name="ad97c161274172b00c5281b2d2e2f2fa2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad97c161274172b00c5281b2d2e2f2fa2">&#9670;&#160;</a></span>Mirror64</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Mirror64[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Mirror the 64 squares. </p>
+
+<p class="definition">Definition at line <a class="el" href="data_8c_source.html#l00108">108</a> of file <a class="el" href="data_8c_source.html">data.c</a>.</p>
 
 </div>
 </div>
@@ -2496,6 +3710,32 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a id="afcee316fc31fdf5d99d4b8138173dba9" name="afcee316fc31fdf5d99d4b8138173dba9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcee316fc31fdf5d99d4b8138173dba9">&#9670;&#160;</a></span>RankBBMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a> RankBBMask[8]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Rank bit masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00085">85</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
 <a id="afb69e9819628d0b8283f0fb21f3fe85c" name="afb69e9819628d0b8283f0fb21f3fe85c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afb69e9819628d0b8283f0fb21f3fe85c">&#9670;&#160;</a></span>RankChar</h2>
 
@@ -2675,6 +3915,32 @@ Variables</h2></td></tr>
 <p>64 square to 120 square conversion </p>
 
 <p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00031">31</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
+
+</div>
+</div>
+<a id="abc1265225d49dbbe5d814fee7892595a" name="abc1265225d49dbbe5d814fee7892595a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc1265225d49dbbe5d814fee7892595a">&#9670;&#160;</a></span>WhitePassedMask</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="#a24c386d3758eba951eb7532fdbb45804">U64</a> WhitePassedMask[64]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">extern</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>White passed pawn masks. </p>
+
+<p class="definition">Definition at line <a class="el" href="init_8c_source.html#l00097">97</a> of file <a class="el" href="init_8c_source.html">init.c</a>.</p>
 
 </div>
 </div>

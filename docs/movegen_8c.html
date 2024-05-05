@@ -25,7 +25,7 @@
   <td id="projectalign">
    <div id="projectname">Vice Chess Engine
    </div>
-   <div id="projectbrief">A chess enginer written in C</div>
+   <div id="projectbrief">A chess engine written in C</div>
   </td>
  </tr>
  </tbody>
@@ -95,21 +95,30 @@ $(function() {
 Macros</h2></td></tr>
 <tr class="memitem:a7d3abb5d4d71b095e74cff5d1d2bcc27" id="r_a7d3abb5d4d71b095e74cff5d1d2bcc27"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7d3abb5d4d71b095e74cff5d1d2bcc27">MOVE</a>(f,  t,  ca,  pro,  fl)&#160;&#160;&#160;( (f) | ((t) &lt;&lt; 7) | ( (ca) &lt;&lt; 14 ) | ( (pro) &lt;&lt; 20 ) | (fl))</td></tr>
 <tr class="separator:a7d3abb5d4d71b095e74cff5d1d2bcc27"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a56b9c9e9a6be2311869c4a39f8ad89d6" id="r_a56b9c9e9a6be2311869c4a39f8ad89d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b9c9e9a6be2311869c4a39f8ad89d6">SQOFFBOARD</a>(sq)&#160;&#160;&#160;(<a class="el" href="defs_8h.html#ac16a2fd356966459ce481edcdde858d2">FilesBrd</a>[(sq)] == <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>)</td></tr>
+<tr class="memitem:a56b9c9e9a6be2311869c4a39f8ad89d6" id="r_a56b9c9e9a6be2311869c4a39f8ad89d6"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a56b9c9e9a6be2311869c4a39f8ad89d6">SQOFFBOARD</a>(sq)&#160;&#160;&#160;(<a class="el" href="defs_8h.html#ac16a2fd356966459ce481edcdde858d2">FilesBrd</a>[(sq)] == <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>)</td></tr>
 <tr class="separator:a56b9c9e9a6be2311869c4a39f8ad89d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
+<tr class="memitem:a43459d3ba36083fef55ef24e6ac097f2" id="r_a43459d3ba36083fef55ef24e6ac097f2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a43459d3ba36083fef55ef24e6ac097f2">InitMvvLva</a> ()</td></tr>
+<tr class="memdesc:a43459d3ba36083fef55ef24e6ac097f2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the MvvLvaScores array.  <br /></td></tr>
+<tr class="separator:a43459d3ba36083fef55ef24e6ac097f2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9cef5ab5191a75c2b168711c50c756db" id="r_a9cef5ab5191a75c2b168711c50c756db"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a9cef5ab5191a75c2b168711c50c756db">MoveExists</a> (<a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, const int move)</td></tr>
+<tr class="memdesc:a9cef5ab5191a75c2b168711c50c756db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Check if move exists.  <br /></td></tr>
+<tr class="separator:a9cef5ab5191a75c2b168711c50c756db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae2be60666ed0e5f82fa409c250b4e054" id="r_ae2be60666ed0e5f82fa409c250b4e054"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ae2be60666ed0e5f82fa409c250b4e054">GenerateAllMoves</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
 <tr class="memdesc:ae2be60666ed0e5f82fa409c250b4e054"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all moves.  <br /></td></tr>
 <tr class="separator:ae2be60666ed0e5f82fa409c250b4e054"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab02276982406938d2fbcbc273caaa44e" id="r_ab02276982406938d2fbcbc273caaa44e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ab02276982406938d2fbcbc273caaa44e">GenerateAllCaps</a> (const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *pos, <a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *list)</td></tr>
+<tr class="memdesc:ab02276982406938d2fbcbc273caaa44e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generate all captures.  <br /></td></tr>
+<tr class="separator:ab02276982406938d2fbcbc273caaa44e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="var-members" name="var-members"></a>
 Variables</h2></td></tr>
-<tr class="memitem:aaad861bd80c2de89515b64fc4dda1d71" id="r_aaad861bd80c2de89515b64fc4dda1d71"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad861bd80c2de89515b64fc4dda1d71">LoopSlidePce</a> [8] = { <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a>, 0, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a>, 0 }</td></tr>
+<tr class="memitem:aaad861bd80c2de89515b64fc4dda1d71" id="r_aaad861bd80c2de89515b64fc4dda1d71"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aaad861bd80c2de89515b64fc4dda1d71">LoopSlidePce</a> [8]</td></tr>
 <tr class="memdesc:aaad861bd80c2de89515b64fc4dda1d71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of sliding pieces.  <br /></td></tr>
 <tr class="separator:aaad861bd80c2de89515b64fc4dda1d71"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa241d1d0c35dbaeaec3f39e901f39a54" id="r_aa241d1d0c35dbaeaec3f39e901f39a54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa241d1d0c35dbaeaec3f39e901f39a54">LoopNonSlidePce</a> [6] = { <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a>, 0, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a>, 0 }</td></tr>
+<tr class="memitem:aa241d1d0c35dbaeaec3f39e901f39a54" id="r_aa241d1d0c35dbaeaec3f39e901f39a54"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aa241d1d0c35dbaeaec3f39e901f39a54">LoopNonSlidePce</a> [6]</td></tr>
 <tr class="memdesc:aa241d1d0c35dbaeaec3f39e901f39a54"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of non-sliding pieces.  <br /></td></tr>
 <tr class="separator:aa241d1d0c35dbaeaec3f39e901f39a54"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af3a74ec2a7f0f48a812764de59ac887d" id="r_af3a74ec2a7f0f48a812764de59ac887d"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af3a74ec2a7f0f48a812764de59ac887d">LoopSlideIndex</a> [2] = { 0, 4 }</td></tr>
@@ -121,7 +130,10 @@ Variables</h2></td></tr>
 <tr class="memitem:afbbe7e25783085e9feeebc2fd16031fd" id="r_afbbe7e25783085e9feeebc2fd16031fd"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#afbbe7e25783085e9feeebc2fd16031fd">PceDir</a> [13][8]</td></tr>
 <tr class="memdesc:afbbe7e25783085e9feeebc2fd16031fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of directions for each piece.  <br /></td></tr>
 <tr class="separator:afbbe7e25783085e9feeebc2fd16031fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5b2cd45fa3a5dba79ecef57e855a1ea8" id="r_a5b2cd45fa3a5dba79ecef57e855a1ea8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b2cd45fa3a5dba79ecef57e855a1ea8">NumDir</a> [13] = { 0, 0, 8, 4, 4, 8, 8, 0, 8, 4, 4, 8, 8 }</td></tr>
+<tr class="memitem:a1b0565fb6ffb24a9635d0fe9405a44cb" id="r_a1b0565fb6ffb24a9635d0fe9405a44cb"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a1b0565fb6ffb24a9635d0fe9405a44cb">VictimScore</a> [13] = { 0, 100, 200, 300, 400, 500, 600, 100, 200, 300, 400, 500, 600 }</td></tr>
+<tr class="memdesc:a1b0565fb6ffb24a9635d0fe9405a44cb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Scores for each piece when they are the victim.  <br /></td></tr>
+<tr class="separator:a1b0565fb6ffb24a9635d0fe9405a44cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b2cd45fa3a5dba79ecef57e855a1ea8" id="r_a5b2cd45fa3a5dba79ecef57e855a1ea8"><td class="memItemLeft" align="right" valign="top">const int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a5b2cd45fa3a5dba79ecef57e855a1ea8">NumDir</a> [13]</td></tr>
 <tr class="memdesc:a5b2cd45fa3a5dba79ecef57e855a1ea8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Array of number of directions for each piece.  <br /></td></tr>
 <tr class="separator:a5b2cd45fa3a5dba79ecef57e855a1ea8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -182,7 +194,7 @@ Variables</h2></td></tr>
           <td class="memname">#define SQOFFBOARD</td>
           <td>(</td>
           <td class="paramtype"></td>          <td class="paramname"><span class="paramname">sq</span></td><td>)</td>
-          <td>&#160;&#160;&#160;(<a class="el" href="defs_8h.html#ac16a2fd356966459ce481edcdde858d2">FilesBrd</a>[(sq)] == <a class="el" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>)</td>
+          <td>&#160;&#160;&#160;(<a class="el" href="defs_8h.html#ac16a2fd356966459ce481edcdde858d2">FilesBrd</a>[(sq)] == <a class="el" href="defs_8h.html#a61dadd085c1777f559549e05962b2c9ea9ee110df4934a8bb74b999c6a9eaf98b">OFFBOARD</a>)</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -192,6 +204,38 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Function Documentation</h2>
+<a id="ab02276982406938d2fbcbc273caaa44e" name="ab02276982406938d2fbcbc273caaa44e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab02276982406938d2fbcbc273caaa44e">&#9670;&#160;</a></span>GenerateAllCaps()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void GenerateAllCaps </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="struct_s___m_o_v_e_l_i_s_t.html">S_MOVELIST</a> *</td>          <td class="paramname"><span class="paramname"><em>list</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Generate all captures. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">list</td><td>Pointer to the move list </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00449">449</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
 <a id="ae2be60666ed0e5f82fa409c250b4e054" name="ae2be60666ed0e5f82fa409c250b4e054"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae2be60666ed0e5f82fa409c250b4e054">&#9670;&#160;</a></span>GenerateAllMoves()</h2>
 
@@ -220,7 +264,62 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00203">203</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00270">270</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
+<a id="a43459d3ba36083fef55ef24e6ac097f2" name="a43459d3ba36083fef55ef24e6ac097f2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a43459d3ba36083fef55ef24e6ac097f2">&#9670;&#160;</a></span>InitMvvLva()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int InitMvvLva </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Initialize the MvvLvaScores array. </p>
+<dl class="section return"><dt>Returns</dt><dd>int </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00083">83</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
+<a id="a9cef5ab5191a75c2b168711c50c756db" name="a9cef5ab5191a75c2b168711c50c756db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9cef5ab5191a75c2b168711c50c756db">&#9670;&#160;</a></span>MoveExists()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int MoveExists </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="struct_s___b_o_a_r_d.html">S_BOARD</a> *</td>          <td class="paramname"><span class="paramname"><em>pos</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>move</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Check if move exists. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">pos</td><td>Pointer to the board </td></tr>
+    <tr><td class="paramname">move</td><td>The move to be checked </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>int TRUE if move exists, FALSE otherwise </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00109">109</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -239,7 +338,7 @@ Variables</h2></td></tr>
 
 <p>Index for non-sliding pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00040">40</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00044">44</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -250,14 +349,21 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int LoopNonSlidePce[6] = { <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a>, 0, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a>, 0 }</td>
+          <td class="memname">const int LoopNonSlidePce[6]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a>, 0, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a>, 0</div>
+<div class="line">}</div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba1af5b0cc29a02d8abe5ec09dbb35789e">wN</a></div><div class="ttdeci">@ wN</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba3d5b44ec8710049da801e4f0ad74e8c2">bN</a></div><div class="ttdeci">@ bN</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae563898f2eb35891b28311f1bdd6d74b">bK</a></div><div class="ttdeci">@ bK</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bae842db43d469ce506eba652063d0ac39">wK</a></div><div class="ttdeci">@ wK</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+</div><!-- fragment -->
 <p>Array of non-sliding pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00028">28</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00030">30</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -275,7 +381,7 @@ Variables</h2></td></tr>
 
 <p>Index for sliding pieces. </p>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00034">34</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00038">38</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -286,11 +392,20 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int LoopSlidePce[8] = { <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a>, 0, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a>, <a class="el" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a>, 0 }</td>
+          <td class="memname">const int LoopSlidePce[8]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a>, 0, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a>, <a class="code hl_enumvalue" href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a>, 0</div>
+<div class="line">}</div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba0c7e8e5d9e9597075a4aec0af5c9033f">bQ</a></div><div class="ttdeci">@ bQ</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba585593772f76f3b12f6d197ba78d42b6">wR</a></div><div class="ttdeci">@ wR</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55ba8b6736d91dfcadd8e1dc5d72e729e370">bR</a></div><div class="ttdeci">@ bR</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bab0c70cf58d95ae054b33676333c16b41">bB</a></div><div class="ttdeci">@ bB</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55bad05a93f654f39e95140b59417d529e5c">wB</a></div><div class="ttdeci">@ wB</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+<div class="ttc" id="adefs_8h_html_a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac"><div class="ttname"><a href="defs_8h.html#a06fc87d81c62e9abb8790b6e5713c55baeecaba457cf8aea8414b6043fb6a76ac">wQ</a></div><div class="ttdeci">@ wQ</div><div class="ttdef"><b>Definition</b> <a href="defs_8h_source.html#l00051">defs.h:51</a></div></div>
+</div><!-- fragment -->
 <p>Array of sliding pieces. </p>
 
 <p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00022">22</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
@@ -304,14 +419,17 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const int NumDir[13] = { 0, 0, 8, 4, 4, 8, 8, 0, 8, 4, 4, 8, 8 }</td>
+          <td class="memname">const int NumDir[13]</td>
         </tr>
       </table>
 </div><div class="memdoc">
-
+<b>Initial value:</b><div class="fragment"><div class="line">= {</div>
+<div class="line">    0, 0, 8, 4, 4, 8, 8, 0, 8, 4, 4, 8, 8</div>
+<div class="line">}</div>
+</div><!-- fragment -->
 <p>Array of number of directions for each piece. </p>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00066">66</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00098">98</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>
@@ -344,7 +462,25 @@ Variables</h2></td></tr>
 </div><!-- fragment -->
 <p>Array of directions for each piece. </p>
 
-<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00046">46</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00050">50</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
+
+</div>
+</div>
+<a id="a1b0565fb6ffb24a9635d0fe9405a44cb" name="a1b0565fb6ffb24a9635d0fe9405a44cb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1b0565fb6ffb24a9635d0fe9405a44cb">&#9670;&#160;</a></span>VictimScore</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const int VictimScore[13] = { 0, 100, 200, 300, 400, 500, 600, 100, 200, 300, 400, 500, 600 }</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Scores for each piece when they are the victim. </p>
+
+<p class="definition">Definition at line <a class="el" href="movegen_8c_source.html#l00070">70</a> of file <a class="el" href="movegen_8c_source.html">movegen.c</a>.</p>
 
 </div>
 </div>

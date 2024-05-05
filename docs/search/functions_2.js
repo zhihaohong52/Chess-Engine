@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['filerankvalid_0',['FileRankValid',['../defs_8h.html#ab07d4a10c99178b3ac54a5c42c01127f',1,'FileRankValid(const int fr):&#160;validate.c'],['../validate_8c.html#ab07d4a10c99178b3ac54a5c42c01127f',1,'FileRankValid(const int fr):&#160;validate.c']]]
+  ['debuganalysistest_0',['DebugAnalysisTest',['../defs_8h.html#a0f0218d085cfcb232bc24c7142c5d434',1,'DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info):&#160;validate.c'],['../validate_8c.html#a0f0218d085cfcb232bc24c7142c5d434',1,'DebugAnalysisTest(S_BOARD *pos, S_SEARCHINFO *info):&#160;validate.c']]],
+  ['drawmaterial_1',['DrawMaterial',['../xboard_8c.html#af23ec99e21481a26747819f0f5412203',1,'xboard.c']]]
 ];

@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['validate_2ec_0',['validate.c',['../validate_8c.html',1,'']]],
-  ['vice_2ec_1',['vice.c',['../vice_8c.html',1,'']]]
+  ['mainpage_2edox_0',['mainpage.dox',['../mainpage_8dox.html',1,'']]],
+  ['makemove_2ec_1',['makemove.c',['../makemove_8c.html',1,'']]],
+  ['misc_2ec_2',['misc.c',['../misc_8c.html',1,'']]],
+  ['movegen_2ec_3',['movegen.c',['../movegen_8c.html',1,'']]]
 ];

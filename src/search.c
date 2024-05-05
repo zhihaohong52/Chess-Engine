@@ -47,6 +47,10 @@ static void PickNextMove(int moveNum, S_MOVELIST *list) {
         }
     }
 
+    ASSERT(moveNum >= 0 && moveNum < list->count);
+    ASSERT(bestNum >= 0 && bestNum < list->count);
+    ASSERT(bestNum >= moveNum);
+
     temp = list->moves[moveNum];
     list->moves[moveNum] = list->moves[bestNum];
     list->moves[bestNum] = temp;
@@ -207,7 +211,7 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
 
     ASSERT(CheckBoard(pos));
 
-    if (depth == 0) {
+    if (depth <= 0) {
         return Quiessence(alpha, beta, pos, info);
     }
 
@@ -246,7 +250,8 @@ static int AlphaBeta(int alpha, int beta, int depth, S_BOARD *pos, S_SEARCHINFO 
         if (info->stopped == TRUE) {
             return 0;
         }
-        if (Score >= beta) {
+        if (Score >= beta && abs(Score) < ISMATE) {
+            info->nullCut++;
             return beta;
         }
     }
