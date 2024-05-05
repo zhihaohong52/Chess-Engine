@@ -4,7 +4,7 @@ var searchData=
   ['parsego_412',['ParseGo',['../uci_8c.html#ac25e26c1ac9461615a26a5a361d217f1',1,'uci.c']]],
   ['parsemove_413',['ParseMove',['../defs_8h.html#a3501422a21fb0b37cf1573dd4f410a60',1,'ParseMove(char *ptrChar, S_BOARD *pos):&#160;io.c'],['../io_8c.html#a3501422a21fb0b37cf1573dd4f410a60',1,'ParseMove(char *ptrChar, S_BOARD *pos):&#160;io.c']]],
   ['parseposition_414',['ParsePosition',['../uci_8c.html#a166e7492e73a1db9b8a74d09e1817360',1,'uci.c']]],
-  ['pcevalidemptyoffbrd_415',['PceValidEmptyOffbrd',['../validate_8c.html#aac5a1baab60b7b72d85de73be258f91b',1,'validate.c']]],
+  ['pcevalidemptyoffbrd_415',['PceValidEmptyOffbrd',['../defs_8h.html#aac5a1baab60b7b72d85de73be258f91b',1,'PceValidEmptyOffbrd(const int pce):&#160;validate.c'],['../validate_8c.html#aac5a1baab60b7b72d85de73be258f91b',1,'PceValidEmptyOffbrd(const int pce):&#160;validate.c']]],
   ['perft_416',['Perft',['../perft_8c.html#a84c7e465b44101a59f96b9c21ed0224b',1,'perft.c']]],
   ['perfttest_417',['PerftTest',['../defs_8h.html#a1b6b13d186dab20a18cec1a6b041220b',1,'PerftTest(int depth, S_BOARD *pos):&#160;perft.c'],['../perft_8c.html#a1b6b13d186dab20a18cec1a6b041220b',1,'PerftTest(int depth, S_BOARD *pos):&#160;perft.c']]],
   ['piecevalid_418',['PieceValid',['../defs_8h.html#a7f3c9068109d4c781b7e4011db8d5128',1,'PieceValid(const int pce):&#160;validate.c'],['../validate_8c.html#a7f3c9068109d4c781b7e4011db8d5128',1,'PieceValid(const int pce):&#160;validate.c']]],
