@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.9.1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Vice Chess Engine: src/main.c Source File</title>
+<title>PACE: src/main.c Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -21,9 +21,9 @@
  <tbody>
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
-   <div id="projectname">Vice Chess Engine
+   <div id="projectname">PACE
    </div>
-   <div id="projectbrief">A chess engine written in C</div>
+   <div id="projectbrief">Predictive Alpha-beta Chess Engine, A chess engine written in C</div>
   </td>
  </tr>
  </tbody>
@@ -87,7 +87,7 @@ $(function() {
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <a class="code" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> info[1];</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    info-&gt;<a class="code" href="structS__SEARCHINFO.html#a8728790e506f2422ba67e323bc24d6ae">quit</a> = <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa1e095cc966dbecf6a0d8aad75348d1a">FALSE</a>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    pos-&gt;<a class="code" href="structS__BOARD.html#a070a613b5aca126025de6aa1f0f99bd8">HashTable</a>-&gt;<a class="code" href="structS__HASHTABLE.html#ab404848756d22a4879362ee60416ef10">pTable</a> = NULL;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="defs_8h.html#afd52cb4b2638a8c8c55155f8f51acf5a">InitHashTable</a>(pos-&gt;<a class="code" href="structS__BOARD.html#a070a613b5aca126025de6aa1f0f99bd8">HashTable</a>, 64);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <a class="code" href="defs_8h.html#afd52cb4b2638a8c8c55155f8f51acf5a">InitHashTable</a>(pos-&gt;<a class="code" href="structS__BOARD.html#a070a613b5aca126025de6aa1f0f99bd8">HashTable</a>, 2048);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    setbuf(stdin, NULL);</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    setbuf(stdout, NULL);</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
