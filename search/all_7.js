@@ -14,11 +14,12 @@ var searchData=
   ['hash_5fside_142',['HASH_SIDE',['../makemove_8c.html#aa57ffe7698ca37bc9fca03e65b0278b2',1,'makemove.c']]],
   ['hashkey_2ec_143',['hashkey.c',['../hashkey_8c.html',1,'']]],
   ['hashtable_144',['HashTable',['../structS__BOARD.html#a070a613b5aca126025de6aa1f0f99bd8',1,'S_BOARD']]],
-  ['hfalpha_145',['HFALPHA',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91',1,'defs.h']]],
-  ['hfbeta_146',['HFBETA',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc',1,'defs.h']]],
-  ['hfexact_147',['HFEXACT',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd',1,'defs.h']]],
-  ['hfnone_148',['HFNONE',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132',1,'defs.h']]],
-  ['hisply_149',['hisPly',['../structS__BOARD.html#a89e192e1d3f053129d4205e0655dab50',1,'S_BOARD']]],
-  ['history_150',['history',['../structS__BOARD.html#afc566b47e1f2a3ef8bcf87655ffab195',1,'S_BOARD']]],
-  ['hit_151',['hit',['../structS__HASHTABLE.html#a6bf1290a7f52baec1bea81fa42359c03',1,'S_HASHTABLE']]]
+  ['haspawnforcapture_145',['HasPawnForCapture',['../polybook_8c.html#a07f897fa9b5f4a64907c43f4aa96e9aa',1,'polybook.c']]],
+  ['hfalpha_146',['HFALPHA',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600ade43752423e66862ad75a97093baed91',1,'defs.h']]],
+  ['hfbeta_147',['HFBETA',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a45597772e8d6d7b5b0d06fab0c6762bc',1,'defs.h']]],
+  ['hfexact_148',['HFEXACT',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a4f9ade60e71429511a1ecfe0eb96f9fd',1,'defs.h']]],
+  ['hfnone_149',['HFNONE',['../defs_8h.html#abed82baf7f470b522273a3e37c24c600a0cd8f9207863ed0f8ff7083fe1936132',1,'defs.h']]],
+  ['hisply_150',['hisPly',['../structS__BOARD.html#a89e192e1d3f053129d4205e0655dab50',1,'S_BOARD']]],
+  ['history_151',['history',['../structS__BOARD.html#afc566b47e1f2a3ef8bcf87655ffab195',1,'S_BOARD']]],
+  ['hit_152',['hit',['../structS__HASHTABLE.html#a6bf1290a7f52baec1bea81fa42359c03',1,'S_HASHTABLE']]]
 ];

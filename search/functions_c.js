@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['uci_5floop_440',['Uci_Loop',['../defs_8h.html#aea5d40969d72cd4ed3145580786a56a2',1,'Uci_Loop(S_BOARD *pos, S_SEARCHINFO *info):&#160;uci.c'],['../uci_8c.html#aea5d40969d72cd4ed3145580786a56a2',1,'Uci_Loop(S_BOARD *pos, S_SEARCHINFO *info):&#160;uci.c']]],
-  ['updatelistmaterial_441',['UpdateListMaterial',['../defs_8h.html#aea43ba2bdbb26b6de990979798de7e0f',1,'UpdateListMaterial(S_BOARD *pos):&#160;board.c'],['../board_8c.html#aea43ba2bdbb26b6de990979798de7e0f',1,'UpdateListMaterial(S_BOARD *pos):&#160;board.c']]]
+  ['takemove_450',['TakeMove',['../defs_8h.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c'],['../makemove_8c.html#ae8ebe63f27996af9d769245539d7a9fd',1,'TakeMove(S_BOARD *pos):&#160;makemove.c']]],
+  ['takenullmove_451',['TakeNullMove',['../defs_8h.html#a204aee6229d709429dcbb9d2e425e670',1,'TakeNullMove(S_BOARD *pos):&#160;makemove.c'],['../makemove_8c.html#a204aee6229d709429dcbb9d2e425e670',1,'TakeNullMove(S_BOARD *pos):&#160;makemove.c']]],
+  ['threefoldrep_452',['ThreeFoldRep',['../xboard_8c.html#a2f93ccdc4f50377a20f987bee407940f',1,'xboard.c']]]
 ];

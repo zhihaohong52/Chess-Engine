@@ -499,6 +499,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="el" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info)</td></tr>
 <tr class="memdesc:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="mdescLeft">&#160;</td><td class="mdescRight">Main loop to handle console mode.  <a href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">More...</a><br /></td></tr>
 <tr class="separator:ac5fa6c8e94b5322c3df417a6c46f1752"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f022c6f358e9674754dc7212d765823"><td class="memItemLeft" align="right" valign="top"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="defs_8h.html#a3f022c6f358e9674754dc7212d765823">PolyKeyFromBoard</a> (<a class="el" href="structS__BOARD.html">S_BOARD</a> *board)</td></tr>
+<tr class="memdesc:a3f022c6f358e9674754dc7212d765823"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get PolyKey from the board <b>[H.G]</b>. Muller <a href="http://hgm.nubati.net/book_format.html">http://hgm.nubati.net/book_format.html</a>.  <a href="defs_8h.html#a3f022c6f358e9674754dc7212d765823">More...</a><br /></td></tr>
+<tr class="separator:a3f022c6f358e9674754dc7212d765823"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
 Variables</h2></td></tr>
@@ -1615,7 +1618,7 @@ Variables</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00290">290</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
+<p class="definition">Definition at line <a class="el" href="xboard_8c_source.html#l00298">298</a> of file <a class="el" href="xboard_8c_source.html">xboard.c</a>.</p>
 
 </div>
 </div>
@@ -2382,6 +2385,35 @@ Variables</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>int 1 if the piece is valid and not empty, 0 otherwise </dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="validate_8c_source.html#l00102">102</a> of file <a class="el" href="validate_8c_source.html">validate.c</a>.</p>
+
+</div>
+</div>
+<a id="a3f022c6f358e9674754dc7212d765823"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3f022c6f358e9674754dc7212d765823">&#9670;&nbsp;</a></span>PolyKeyFromBoard()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="defs_8h.html#a24c386d3758eba951eb7532fdbb45804">U64</a> PolyKeyFromBoard </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="structS__BOARD.html">S_BOARD</a> *&#160;</td>
+          <td class="paramname"><em>board</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get PolyKey from the board <b>[H.G]</b>. Muller <a href="http://hgm.nubati.net/book_format.html">http://hgm.nubati.net/book_format.html</a>. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">board</td><td>Pointer to the board </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>U64 PolyKey </dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="polybook_8c_source.html#l00055">55</a> of file <a class="el" href="polybook_8c_source.html">polybook.c</a>.</p>
 
 </div>
 </div>
