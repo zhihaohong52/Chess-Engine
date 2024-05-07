@@ -30,7 +30,7 @@ int main(){
     S_SEARCHINFO info[1];
 	info->quit = FALSE;
 	pos->HashTable->pTable = NULL;
-    InitHashTable(pos->HashTable, 64);
+    InitHashTable(pos->HashTable, 2048);
 	setbuf(stdin, NULL);
 	setbuf(stdout, NULL);
 
