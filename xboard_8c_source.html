@@ -105,17 +105,17 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno"><a class="line" href="xboard_8c.html#a8c886966aac9ba144ae2c75e0c3b8bc3">   61</a></span>&#160;<span class="keywordtype">int</span> <a class="code" href="xboard_8c.html#a8c886966aac9ba144ae2c75e0c3b8bc3">checkresult</a>(<a class="code" href="structS__BOARD.html">S_BOARD</a> *pos) {</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keywordflow">if</span> (pos-&gt;<a class="code" href="structS__BOARD.html#a52100a52e2a6d3702df41f805dfc5735">fiftyMove</a> &gt; 100) {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {fifty move rule (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {fifty move rule (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="xboard_8c.html#a2f93ccdc4f50377a20f987bee407940f">ThreeFoldRep</a>(pos) &gt;= 2) {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {3-fold repetition (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {3-fold repetition (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keywordflow">if</span> (<a class="code" href="xboard_8c.html#af23ec99e21481a26747819f0f5412203">DrawMaterial</a>(pos) == <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {insufficient material (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        printf(<span class="stringliteral">&quot;1/2-1/2 {insufficient material (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
@@ -140,14 +140,14 @@ $(function() {
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="keywordflow">if</span> (InCheck == <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>) {</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (pos-&gt;<a class="code" href="structS__BOARD.html#a80db5374985461ca66388e413bfae243">side</a> == <a class="code" href="defs_8h.html#abc6126af1d45847bc59afa0aa3216b04a283fc479650da98250635b9c3c0e7e50">WHITE</a>) {</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            printf(<span class="stringliteral">&quot;0-1 {black mates (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            printf(<span class="stringliteral">&quot;0-1 {black mates (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            printf(<span class="stringliteral">&quot;0-1 {white mates (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            printf(<span class="stringliteral">&quot;0-1 {white mates (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    } <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        printf(<span class="stringliteral">&quot;\n1/2-1/2 {stalemate (claimed by Vice)}\n&quot;</span>);</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        printf(<span class="stringliteral">&quot;\n1/2-1/2 {stalemate (claimed by Pace)}\n&quot;</span>);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="defs_8h.html#a726ca809ffd3d67ab4b8476646f26635aa82764c3079aea4e60c80e45befbb839">TRUE</a>;</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
@@ -321,7 +321,7 @@ $(function() {
 <div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
 <div class="line"><a name="l00290"></a><span class="lineno"><a class="line" href="defs_8h.html#ac5fa6c8e94b5322c3df417a6c46f1752">  290</a></span>&#160;<span class="keywordtype">void</span> <a class="code" href="xboard_8c.html#ac5fa6c8e94b5322c3df417a6c46f1752">Console_Loop</a>(<a class="code" href="structS__BOARD.html">S_BOARD</a> *pos, <a class="code" href="structS__SEARCHINFO.html">S_SEARCHINFO</a> *info) {</div>
 <div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160; </div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    printf(<span class="stringliteral">&quot;Welcome to Vice In Console Mode!\n&quot;</span>);</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    printf(<span class="stringliteral">&quot;Welcome to Pace In Console Mode!\n&quot;</span>);</div>
 <div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    printf(<span class="stringliteral">&quot;Type help for commands\n\n&quot;</span>);</div>
 <div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
 <div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;    info-&gt;<a class="code" href="structS__SEARCHINFO.html#a72e987e1f61d8034f837c0adf387b64e">GAME_MODE</a> = <a class="code" href="defs_8h.html#adc29c2ff13d900c2f185ee95427fb06ca4a6c8307d519c78b8b3d783afd706c79">CONSOLEMODE</a>;</div>
@@ -353,7 +353,7 @@ $(function() {
 <div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;            <a class="code" href="defs_8h.html#a612414d1ad97c743f6e54d20e4b32e37">SearchPosition</a>(pos, info);</div>
 <div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;        }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        printf(<span class="stringliteral">&quot;\nVice &gt; &quot;</span>);</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;        printf(<span class="stringliteral">&quot;\nPace &gt; &quot;</span>);</div>
 <div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160; </div>
 <div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        fflush(stdout);</div>
 <div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160; </div>
