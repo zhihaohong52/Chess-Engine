@@ -2,7 +2,7 @@
 CC := gcc
 
 # Define any compile-time flags
-CFLAGS :=
+CFLAGS := -Os
 
 # Define the target executable
 TARGET := pace

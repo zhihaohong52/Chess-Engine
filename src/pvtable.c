@@ -21,7 +21,7 @@
  */
 int GetPvLine(const int depth, S_BOARD *pos) {
 
-    ASSERT(depth < MAXDEPTH);
+    ASSERT(depth < MAXDEPTH && depth >= 1);
 
     int move = ProbePvMove(pos);
     int count = 0;
