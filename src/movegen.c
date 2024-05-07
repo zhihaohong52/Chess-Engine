@@ -70,7 +70,7 @@ const int PceDir[13][8] = {
 const int VictimScore[13] = { 0, 100, 200, 300, 400, 500, 600, 100, 200, 300, 400, 500, 600 };
 
 /**
- * @brief Scores for each piece when they are the attacker
+ * @brief Most valuable victim least valuable attacker scores
  *
  */
 static int MvvLvaScores[13][13];

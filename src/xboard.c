@@ -185,6 +185,8 @@ void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
 
         sscanf(inBuf, "%s", command);
 
+        printf("command seen:%s\n", inBuf);
+
         if (!strcmp(command, "quit")) {
             break;
         }
@@ -215,6 +217,12 @@ void XBoard_Loop(S_BOARD *pos, S_SEARCHINFO *info) {
             sscanf(inBuf, "time %d", &time);
             time *= 10;
             printf("DEBUG time:%d\n", time);
+            continue;
+        }
+
+        if (!strcmp(command, "polykey")) {
+            PrintBoard(pos);
+            printf("PolyKey:%lld\n", PolyKeyFromBoard(pos));
             continue;
         }
 
